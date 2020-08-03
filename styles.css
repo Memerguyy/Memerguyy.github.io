@@ -3,4 +3,15 @@
     font-size: 22px;
     text-align: left;
     margin: 100px;
+    margin-left: 50px;
+}
+
+.bgimage{
+    background-image: url(website-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.ST{
+    text-decoration: line-through;
 }
