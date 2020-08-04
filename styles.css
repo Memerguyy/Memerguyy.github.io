@@ -26,6 +26,8 @@
     transition: 0.4;
 }
 
-.box{
-    display: inline;
+
+.idk {
+    margin: 10px auto 20px;
+    display: block;
 }
