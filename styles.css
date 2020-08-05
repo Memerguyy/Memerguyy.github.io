@@ -1,10 +1,17 @@
-.styled{
+.logs{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     text-align: left;
     margin: 100px;
     margin-left: 50px;
 }
+
+.styled{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
 
 .bgimage{
     background-image: url(website-bg.png);
