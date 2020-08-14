@@ -40,13 +40,14 @@ color: white;
 
 
 .link {
-    flex: 1 0 auto;
     transition: 0.4s;
+    margin: 0%;
 }
 
 .link:hover {
     transform: scale(1.1);
     transition: 0.4;
+    margin: 0%;
 }
 
 
