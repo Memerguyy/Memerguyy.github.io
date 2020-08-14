@@ -23,6 +23,22 @@
     text-decoration: line-through;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+  
+a:link:active, a:visited:active {
+color: white;
+}
+
+.what{
+    padding-top: 75px;
+}
+
+
 .link {
     flex: 1 0 auto;
     transition: 0.4s;
