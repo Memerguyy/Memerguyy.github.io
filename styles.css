@@ -12,11 +12,8 @@
     text-align: center;
 }
 
-
-.bgimage{
-    background-image: url(website-bg.png);
-    background-position: center;
-    background-size: cover;
+.bruv{
+    margin: 0px;
 }
 
 .ST{
@@ -28,7 +25,23 @@ a:link, a:visited {
     color: white;
 }
 
+.bgimage {
+    background-image: url("website-bg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+}
 
+.bgimagebottom{
+    background-image: url("website-bg-moreblue.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+}
   
 a:link:active, a:visited:active {
 color: white;
