@@ -3,7 +3,7 @@
     font-size: 22px;
     text-align: left;
     margin: 100px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .styled{
@@ -26,7 +26,7 @@ a:link, a:visited {
 }
 
 .bgimage {
-    background-image: url("website-bg.png");
+    background-image: url("/images/website-bg.png");
     background-repeat: no-repeat;
     background-size: auto;
     color: #fff;
@@ -34,8 +34,16 @@ a:link, a:visited {
     background-attachment: fixed;
 }
 
+.bglog {
+    background-image: url("/images/logs-bg.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+}
+
 .bgimagebottom{
-    background-image: url("website-bg-moreblue.png");
+    background-image: url("/images/website-bg-moreblue.png");
     background-repeat: no-repeat;
     background-size: auto;
     color: #fff;
@@ -72,3 +80,5 @@ color: white;
 .test{
     padding: 10;
 }
+
+/* i stole most of this from my friend, check him out whatscps.com */
