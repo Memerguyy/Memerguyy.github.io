@@ -80,5 +80,14 @@ color: white;
 .test{
     padding: 10;
 }
-
 /* i stole most of this from my friend, check him out whatscps.com */
+.btn {
+    border: none;
+    background-color: inherit;
+    font-size: 32px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+

@@ -33,12 +33,12 @@
         </p>
         
         <div class="styled" style="text-align: left;">
-            <ul>
+            <ul style="margin-bottom: 50px;">
                 List of stuff<br>
                 <!--This is the list of stuff-->
                 <li class="ST">add bg</li>
                 <li class="ST">make logs appear only when you press a button</li>
-                <li>add a button that shows how many times you've clicked it</li>
+                <li class="ST">add a button that shows how many times you've clicked it</li>
                 <li class="ST">make the website look better</li>
                 <li>make a working snake game</li><br>
 
@@ -49,6 +49,22 @@
                 <li>Master Python</li>
                 <li>Master C++</li>
             </ul>
+                <div style="text-align: center; margin-bottom: 70px;">
+                    <input type="button" value="Press me" id="countButton" class="btn" style="margin-bottom: 20px;" />
+
+                    <p style="margin-bottom: 0px; padding-bottom: 60px;" class="styled">HE has been pressed <span id="displayCount">0</span> times.</p>
+                
+                    <script type="text/javascript">
+                      var count = 0;
+                      var button = document.getElementById("countButton");
+                      var display = document.getElementById("displayCount");
+                
+                      button.onclick = function(){
+                        count++;
+                        display.innerHTML = count;
+                      }
+                    </script>
+                </div>
         </div>
 
         <div style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 24px; padding-bottom: 100px;">
