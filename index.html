@@ -1,118 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Memerguyy's nuclear testing grounds</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Memer's website</title>
 </head>
-<body class="bruv">
-    <div style="color: white;" class="bgimage">
-        <div> <!--For future me: if you know how to optimise this code then please do since i feel like this is absolute spaghetti code-->
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 69px; text-align: center;">
-                Memerguyy's nuclear testing grounds
-            </div>
-
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 32px; text-align: center; text-decoration: line-through;">
-                (now with dark theme for viewing pleasure)
-            </div>
-            
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 32px; text-align: center;">
-                (now with a BLUE-ISH BACKGROUND!)<br>
-            </div>
-
-            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; text-align: center;">
-                This is a website where I will test stuff out as I learn HTML, CSS and JS. If you have some feedback dm me on discord Memerguy#9382<br>Also my friend helped me with this website so <a href="https://whatscps.com/" style="color: black; text-decoration: underline;">go check him out </a>
-            </p>
+<body style="font-family: Poppins; margin: 0;">
+    <header id="Home"></header>
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul class="submenu">
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#rhythmgames">Rhythm games</a></li>
+                    <li><a href="#">Minecraft</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="fade" style="text-align: center;">Hello</div>
+    <div class="fade2" style="text-align: center;">Welcome to my site</div>
+    <!-- <img src="/website_temp/monkey.png" alt="lole" style="margin: auto; display: block; visibility: hidden;" class="monkey"> -->
+    <section id="aboutme">
+        <h1>About me</h1>
+        <hr>
+        <div class="col">
+            <h2>Who I am</h2>
+            <p>Honestly I'm still figuring that out, so for now I'll just say that I'm a student for simplicity's sake</p>
         </div>
-
-        <p style="text-align: center;"> <!--Remember, don't put images in div boxes or it will mess shit up-->
-            <img src="/images/V2Bz5a7.jpg" alt="Get some better internet lmao" width="256" height="512" class="link" style="padding-right: 20px;" class="idk" title="This is my cute cat Mailo, he is a lovely cat that's also very fluffy. I am the only person that he comes up to for pats from his own will.">
-            <img src="/images/pixel.jpg" alt="Get some better internet lmao" width="256" height="512" class="link" class="idk" style="padding-right: 20px;" title="This is also my cat, his name is Pixel, he's always angry unless he's sleeping. When he's sleeping you can cuddle him as much as you want.">
-            <img src="/images/mruczek.jpg" alt="Get some better internet lmao" width="256" height="512" class="link" class="idk" style="padding-right: 20px;" title="This is the 2nd cat I've ever gotten, his name roughly translates to 'Purrer'. He's the best cat one could ask for, he always comes to cuddle and, as his name suggests, he purrs a lot.">
-        </p>
-        
-        <div class="styled" style="text-align: left;">
-            <ul style="margin-bottom: 50px;">
-                List of stuff<br>
-                <!--This is the list of stuff-->
-                <li class="ST">add bg</li>
-                <li class="ST">make logs appear only when you press a button</li>
-                <li class="ST">add a button that shows how many times you've clicked it</li>
-                <li class="ST">make the website look better</li>
-                <li>make a working snake game</li><br>
-
-                Here come ultra-hard ones:
-                <li>Master HTML</li>
-                <li>Master CSS</li>
-                <li>Master JS</li>
-                <li>Master Python</li>
-                <li>Master C++</li>
-            </ul>
-                <div style="text-align: center; margin-bottom: 70px;">
-                    <input type="button" value="Press me" id="countButton" class="btn" style="margin-bottom: 20px;" />
-
-                    <p style="margin-bottom: 0px; padding-bottom: 60px;" class="styled">HE has been pressed <span id="displayCount">0</span> times.</p>
-                
-                    <script type="text/javascript">
-                      var count = 0;
-                      var button = document.getElementById("countButton");
-                      var display = document.getElementById("displayCount");
-                
-                      button.onclick = function(){
-                        count++;
-                        display.innerHTML = count;
-                      }
-                    </script>
-                </div>
+        <div class="col">
+            <h2>Why did I make this site</h2>
+            <p>I wanted to try my skills at html and css (probably javascript soon too)</p>
         </div>
-
-        <div style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 24px; padding-bottom: 100px;">
-            Chill beats to vibe to<br>
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col">
+            <h2>How long have I used html and css for</h2>
+            <p>I started around 2 August 2020, since then I've been doing it on and off, I still suck at it tho lol</p>
         </div>
-    </div>
-    <div class="bgimagebottom" style="padding-top: 125px;">
-        <p style="text-align: center; width: 416.35px; margin: auto;" class="link"> 
-            <a href="logs.html" style="font-size: 192px; font-family: Arial, Helvetica, sans-serif;">
-                Logs
-            </a>
-        </p>
-        <!-- hippity hoppity i have no idea how to improve this property -->
-        <p class="styled" style="font-size: 32px; padding-bottom: 150px; padding-top: 75px;">
-            I will improve this later, for now this is a link that takes you to the logs.
-        </p>
-        <!-- Spaghetti code i think -->
-        <p style="text-align: center; width: 330.85px; margin: auto;" class="link">
-            <a href="ItemShop.html" style="font-size: 64px; font-family: Arial, Helvetica, sans-serif;">
-                /r/ItemShop
-            </a>
-        </p>
-        <!-- pretty sure i can somehow fix this but yeah, that's for future me :)
-        edit: future me fixed it -->
-        <p class="styled" style="font-size: 32px; padding-bottom: 75px; padding-top: 75px; margin-bottom: 0px;">
-            A friend requested it so, here ya go, have fun browsing
-        </p>
-    </div>
+        <div class="col">
+            <h2>Did I have any other projects besides this?</h2>
+            <p>Yes actually, currently the only ""semi-serious"" projects are the previous version of this site and a discord bot which I'm hosting using heroku </p>
+        </div>
+    </section>
+    <header id="osumaniabg" style="top: 1000px;"></header>
+    <section id="rhythmgames">
+        <h1>Rhythm games</h1>
+        <img src="D:\website_temp\osumania.png" style="height: 223.2px; width: 772.8px; padding-right: 15%; "  alt="">
+        <hr style="justify-content: right;">
+
+        <div class="col" style="transform: translate(0, -50px);">
+            <p>Rhythm games have a special place in my heart, as many, I started out with Guitar hero, but my first ever real rhythm game I'd have to say would be osu!mania, currently I'm almost #76k globally, </p>
+        </div>
+    </section>
 </body>
 </html>
-<!-- 
-    ⣿⣿⣿⣿⣿⠟⠉⠁⠄⠄⠄⠈⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
-    ⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⢿⣿⣿⣿⣿⣿⣿⣿⣿ 
-    ⣿⣿⣿⣏⠄⡠⡤⡤⡤⡤⡤⡤⡠⡤⡤⣸⣿⣿⣿⣿⣿⣿⣿⣿ 
-    ⣿⣿⣿⣗⢝⢮⢯⡺⣕⢡⡑⡕⡍⣘⢮⢿⣿⣿⣿⣿⣿⣿⣿⣿ 
-    ⣿⣿⣿⣿⡧⣝⢮⡪⡪⡪⡎⡎⡮⡲⣱⣻⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⠟⠁⢸⡳⡽⣝⢝⢌⢣⢃⡯⣗⢿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⠟⠁⠄⠄⠄⠹⡽⣺⢽⢽⢵⣻⢮⢯⠟⠿⠿⢿⣿⣿⣿⣿⣿
-    ⡟⢀⠄⠄⠄⠄⠄⠙⠽⠽⡽⣽⣺⢽⠝⠄⠄⢰⢸⢝⠽⣙⢝⢿
-    ⡄⢸⢹⢸⢱⢘⠄⠄⠄⠄⠄⠈⠄⠄⠄⣀⠄⠄⣵⣧⣫⣶⣜⣾
-    ⣧⣬⣺⠸⡒⠬⡨⠄⠄⠄⠄⠄⠄⠄⣰⣿⣿⣿⣿⣿⣷⣽⣿⣿
-    ⣿⣿⣿⣷⠡⠑⠂⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣄⠠⢀⢀⢀⡀⡀⠠⢀⢲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⢐⢀⠂⢄⠇⠠⠈⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣧⠄⠠⠈⢈⡄⠄⢁⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⡀⠠⠐⣼⠇⠄⡀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣯⠄⠄⡀⠈⠂⣀⠄⢀⠄⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    get gnomed
- -->
