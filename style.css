@@ -94,7 +94,7 @@ div > p {
 }
 
 .bgimage {
-  background-image: url("/website_temp/minecraftbg.png");
+  background-image: url("images/minecraftbg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -250,7 +250,7 @@ div > p {
 }
 
 #Home{
-  background-image: url(/website_temp/minecraftbg.png);
+  background-image: url("images/minecraftbg.png");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
@@ -265,7 +265,7 @@ div > p {
 }
 
 #osumaniabg{
-  background-image: url(/website_temp/whatscpsbg.png);
+  background-image: url("images/whatscpsbg");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
