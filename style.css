@@ -1,8 +1,20 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 
+.scroll-lock{
+  overflow-x: hidden;
+  overflow: hidden;
+  animation: lock 1s forwards;
+  animation-delay: 6s;
+}
+
+@keyframes lock{
+  0%{overflow: hidden;}
+  100%{overflow: auto;}
+}
+
 ul {
   text-align: center;
-  padding-left: 8px;
+  padding-left: 14px;
   position: sticky;
 }
 ul li {
@@ -114,7 +126,7 @@ div > p {
   text-align: center;
   transform: translate(0, 500px);
   padding-top: 66px; padding-bottom: 66px;
-  width: fit-content;
+  width: 100%;
   position: absolute;
   right:0;
   z-index: 1;
@@ -156,7 +168,7 @@ div > p {
  transform: translate(0, 1500px);
  text-align: right;
  position: relative;
- padding-top: 66px; padding-bottom: 66px; padding-right: calc(35% - 500px);
+ padding-top: 66px; padding-bottom: 66px; padding-right: 300px;
  z-index: 2;
 }
 
@@ -219,9 +231,10 @@ div > p {
   transform: translate(0, 1700px);
   text-align: left;
   position: relative;
-  height: 400px;
-  padding-top: 66px; padding-bottom: 66px; padding-left: calc(35% - 500px);
-  z-index: 2;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  padding-left: 300px;
+  z-index: 3;
  }
  
 #minecraft > .col {
@@ -234,11 +247,11 @@ div > p {
 #minecraft hr {
   display: inline-block;
   unicode-bidi: isolate;
-  transform: translate(-15px, -10px);
+  transform: translate(-7px, 25px);
   position: absolute;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  width: 350px;
+  width: 240px;
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
@@ -247,10 +260,11 @@ div > p {
  
  
 #minecraft h1 {
+ transform: translate(0, 40px);
  font-size: 42px;
  font-weight: 600;
  margin-bottom: 0px;
- left: 0;
+ right: 0;
  text-align: left;
  text-transform: uppercase;
  margin-top: 15px;
@@ -275,6 +289,7 @@ div > p {
 }
 
 #minecraft p {
+  transform: translate(0, 40px);
  margin-top: 3px;
  font-size: 20px;
 }
@@ -328,7 +343,7 @@ div > p {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  top: 0; right: 0; width: 1920px; visibility: hidden; margin-bottom: 0px;
+  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
 }
 
 #osumaniabg{
@@ -343,7 +358,7 @@ div > p {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  top: 0; right: 0; width: 1920px; visibility: hidden; margin-bottom: 0px;
+  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
 }
 
 #minecraftbg{
@@ -358,7 +373,7 @@ div > p {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  top: 0; right: 0; width: 1920px; visibility: hidden; margin-bottom: 0px;
+  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
 }
 
 
