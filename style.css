@@ -212,6 +212,71 @@ div > p {
  font-size: 20px;
 }
 
+#minecraft {
+  background-color: white;
+  transform: translate(0, 1700px);
+  text-align: left;
+  position: relative;
+  height: 400px;
+  padding-top: 66px; padding-bottom: 66px; padding-left: calc(35% - 500px);
+  z-index: 2;
+ }
+ 
+#minecraft > .col {
+  margin: auto;
+  display: inline-block;
+  width: fit-content;
+  margin-left: 0px;
+}
+ 
+#minecraft hr {
+  display: inline-block;
+  unicode-bidi: isolate;
+  transform: translate(-15px, -10px);
+  position: absolute;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 350px;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  margin-bottom: 10px;
+}
+ 
+ 
+#minecraft h1 {
+ font-size: 42px;
+ font-weight: 600;
+ margin-bottom: 0px;
+ left: 0;
+ text-align: left;
+ text-transform: uppercase;
+ margin-top: 15px;
+ }
+
+#minecraft .infome {
+ max-width: 1280px;
+ margin: 0 auto;
+ padding-top: 66px;
+ }
+
+#minecraft .feature {
+ font-size: 60px;
+ color: #fff;
+ margin-top: 17px; 
+}
+
+
+#minecraft h2 {
+ margin-top: 5px;
+ font-size: 24px;
+}
+
+#minecraft p {
+ margin-top: 3px;
+ font-size: 20px;
+}
+
 .fade{
     transform: translate(0px, -1000px);
     user-select: none;
@@ -266,6 +331,21 @@ div > p {
 
 #osumaniabg{
   background-image: url("./images/whatscpsbg.png");
+  height: 100%;
+  user-select: none;
+  animation: reveal 3s forwards;
+  animation-delay: 4s;
+  text-align: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  top: 0; right: 0; width: 1920px; visibility: hidden; margin-bottom: 0px;
+}
+
+#minecraftbg{
+  background-image: url("./images/osumaniabg2.png");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
