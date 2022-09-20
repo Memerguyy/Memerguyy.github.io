@@ -108,7 +108,7 @@ div > p {
 }
 
 .bgimage {
-  background-image: url("./images/minecraftbg.png");
+  background-image: url("./images/minecraftbg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -332,7 +332,7 @@ div > p {
 }
 
 #Home{
-  background-image: url("./images/minecraftbg.png");
+  background-image: url("./images/minecraftbg.jpg");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
@@ -347,7 +347,7 @@ div > p {
 }
 
 #osumaniabg{
-  background-image: url("./images/whatscpsbg.png");
+  background-image: url("./images/whatscpsbg.jpg");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
@@ -362,7 +362,7 @@ div > p {
 }
 
 #minecraftbg{
-  background-image: url("./images/osumaniabg2.png");
+  background-image: url("./images/osumaniabg2.jpg");
   height: 100%;
   user-select: none;
   animation: reveal 3s forwards;
