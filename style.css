@@ -1,7 +1,7 @@
 .scroll-lock{
   /* !!! REMEMBER TO CHANGE THIS BACK SO IT LOCKS AT THE START !!! */
-  overflow-x:visible;
-  overflow: visible;
+  overflow-x:hidden;
+  overflow: hidden;
   animation: lock 1s forwards;
   animation-delay: 6s;
 }
