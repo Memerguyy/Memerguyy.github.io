@@ -1,8 +1,7 @@
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-
 .scroll-lock{
-  overflow-x: hidden;
-  overflow: hidden;
+  /* !!! REMEMBER TO CHANGE THIS BACK SO IT LOCKS AT THE START !!! */
+  overflow-x:visible;
+  overflow: visible;
   animation: lock 1s forwards;
   animation-delay: 6s;
 }
@@ -109,11 +108,9 @@ div > p {
 
 .bgimage {
   background-image: url("./images/minecraftbg.jpg");
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  text-align: center;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -122,14 +119,12 @@ div > p {
 }
 
 #aboutme {
-  background-color: white;
+  background-color: rgb(50, 52, 61);
   text-align: center;
-  transform: translate(0, 500px);
   padding-top: 66px; padding-bottom: 66px;
   width: 100%;
-  position: absolute;
+  position: relative;
   right:0;
-  z-index: 1;
  }
 
  #aboutme h1 {
@@ -140,102 +135,57 @@ div > p {
   margin-top: 15px;
  }
 
- #aboutme .infome {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 66px;
- }
-
- #aboutme .feature {
-  font-size: 60px;
-  color: #fff;
-  margin-top: 17px; 
-}
-
-
- #aboutme h2 {
-  margin-top: 5px;
-  font-size: 24px;
- }
-
  #aboutme p {
   margin-top: 3px;
   font-size: 20px;
  }
 
 #rhythmgames {
- background-color: white;
- transform: translate(0, 1500px);
- text-align: right;
- position: relative;
- padding-top: 66px; padding-bottom: 66px; padding-right: 300px;
- z-index: 2;
+  background-color: rgb(50, 52, 61);
+  text-align: center;
+  display: block;
+  position: relative;
+  padding-top: 66px; padding-bottom: 66px;
+}
+
+#rhythmgames .osumania{
+  text-align: center;
+  max-width: 761.188px;
+  max-height: 219.844px;
+  height: 40%; 
+  width: 40%;
+  transform: translate(0, 15px);
 }
 
 #rhythmgames > .col {
   margin: auto;
-  display: inline-block;
+  padding: 0 4rem 0 4rem;
   width: fit-content;
   margin-right: 0px;
- }
-
-#rhythmgames hr {
-  display: inline-block;
-  unicode-bidi: isolate;
-  transform: translate(160px, -10px);
-  position: absolute;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  width: 350px;
-  overflow: hidden;
-  border-style: inset;
-  border-width: 1px;
-  margin-bottom: 10px;
 }
-
 
 #rhythmgames h1 {
- font-size: 42px;
- font-weight: 600;
- margin-bottom: 0px;
- left: 0;
- text-transform: uppercase;
- margin-top: 15px;
- }
-
-#rhythmgames .infome {
- max-width: 1280px;
- margin: 0 auto;
- padding-top: 66px;
- }
-
-#rhythmgames .feature {
- font-size: 60px;
- color: #fff;
- margin-top: 17px; 
+  font-size: 42px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-
-#rhythmgames h2 {
- margin-top: 5px;
- font-size: 24px;
-}
-
-#rhythmgames p {
- margin-top: 3px;
- font-size: 20px;
-}
 
 #minecraft {
-  background-color: white;
-  transform: translate(0, 1700px);
-  text-align: left;
-  position: relative;
+  background-color: rgb(50, 52, 61);
+  text-align: center;
+  width: 100%;
   padding-top: 33px;
   padding-bottom: 33px;
-  padding-left: 300px;
-  z-index: 3;
- }
+}
+
+#minecraft > .minecwaf{
+  padding-left: 100px; 
+  width: 30%; height: 30%; 
+  transform: translate(0, 10px); 
+  max-width: 570.891px; 
+  max-height: 321.594px;
+}
  
 #minecraft > .col {
   margin: auto;
@@ -244,201 +194,139 @@ div > p {
   margin-left: 0px;
 }
  
-#minecraft hr {
-  display: inline-block;
-  unicode-bidi: isolate;
-  transform: translate(-7px, 25px);
-  position: absolute;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  width: 240px;
-  overflow: hidden;
-  border-style: inset;
-  border-width: 1px;
-  margin-bottom: 10px;
-}
- 
- 
 #minecraft h1 {
- transform: translate(0, 40px);
- font-size: 42px;
- font-weight: 600;
- margin-bottom: 0px;
- right: 0;
- text-align: left;
- text-transform: uppercase;
- margin-top: 15px;
- }
-
-#minecraft .infome {
- max-width: 1280px;
- margin: 0 auto;
- padding-top: 66px;
- }
-
-#minecraft .feature {
- font-size: 60px;
- color: #fff;
- margin-top: 17px; 
-}
-
-
-#minecraft h2 {
- margin-top: 5px;
- font-size: 24px;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  display: inline;
+  text-transform: uppercase;
+  margin-top: 15px;
 }
 
 #minecraft p {
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+#projects {
+  background-color: rgb(50, 52, 61);
+  text-align: center;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+ 
+#projects p {
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+#projects > .col {
+  margin: auto;
+  margin: 0 0 0 0;
+  padding: 0 4rem 0 4rem;
+  transform: translate(0, -55%);
+  text-align: left;
+  width: fit-content;
+  margin-right: 0px;
+}
+
+#projects h1 {
+  font-size: 42px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#projects .catbot{
+  text-align: center;
+  max-width: 641.188px;
+  max-height: 670.703;
+  height: 40%; 
+  width: 40%;
   transform: translate(0, 40px);
- margin-top: 3px;
- font-size: 20px;
 }
 
 .fade{
-    transform: translate(0px, -1000px);
-    user-select: none;
-    animation: slide-up 2s forwards;
-    animation-delay: 1s;
-    font-family: Poppins; 
-    font-size: 64px; 
-    justify-content: center;
-    text-align: center;
+  user-select: none;
+  animation: slide-up 2s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  font-family: Poppins; 
+  font-size: 64px; 
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes slide-up {
-    0%{opacity: 0; transform: translate(0px, 500px);}
-    25%{opacity: 1; transform: translate(0px, 200px);}
-    50%{opacity: 1; transform: translate(0px, 200px);}
-    100%{opacity: 0; transform: translate(0px, -1000px);}
+  0%{opacity: 0; transform: translate(0px, 200px);}
+  25%{opacity: 1; transform: translate(0px, 0px);}
+  50%{opacity: 1; transform: translate(0px, 0px);}
+  100%{opacity: 0; transform: translate(0px, -1000px);}
 }
 
-.fade2{
-    transform: translate(0px, -1000px);
-    user-select: none;
-    background-attachment: fixed;
-    animation: slide-up2 2s forwards;
-    animation-delay: 3s;
-    font-family: Poppins; 
-    font-size: 64px; 
-    justify-content: center;
-    text-align: center;
+.fadestay{
+  user-select: none;
+  opacity: 0;
+  background-attachment: fixed;
+  animation: slide-up-stay 2s forwards;
+  animation-delay: 3s;
+  font-family: Poppins; 
+  font-size: 64px; 
+  justify-content: center;
+  text-align: center;
 }
 
-@keyframes slide-up2 {
-    0%{opacity: 0; transform: translate(0px, 500px);}
-    25%{opacity: 1; transform: translate(0px, 105px);}
-    50%{opacity: 1; transform: translate(0px, 105px);}
-    100%{opacity: 1; transform: translate(0px, 200px);}
+@keyframes slide-up-stay {
+  0%{opacity: 0; transform: translate(0px, 500px);}
+  25%{opacity: 1; transform: translate(0px, 105px);}
+  50%{opacity: 1; transform: translate(0px, 105px);}
+  100%{opacity: 1; transform: translate(0px, -100px);}
 }
 
 #Home{
   background-image: url("./images/minecraftbg.jpg");
-  height: 100%;
-  user-select: none;
-  animation: reveal 3s forwards;
-  animation-delay: 4s;
-  text-align: center;
-  background-repeat: no-repeat;
-  position: absolute;
+  padding: 222px 0 222px 0;
+  margin: 0 0 0 0;
   background-attachment: fixed;
-  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
+  user-select: none;
+  text-align: center;
 }
 
-#osumaniabg{
+#whatscpsbg{
   background-image: url("./images/whatscpsbg.jpg");
-  height: 100%;
-  user-select: none;
-  animation: reveal 3s forwards;
-  animation-delay: 4s;
-  text-align: center;
-  background-repeat: no-repeat;
-  position: absolute;
+  padding: 111px 0 111px 0;
+  margin: 0 0 0 0;
   background-attachment: fixed;
-  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
+  user-select: none;
+  text-align: center;
 }
 
 #minecraftbg{
   background-image: url("./images/osumaniabg2.jpg");
-  height: 100%;
-  user-select: none;
-  animation: reveal 3s forwards;
-  animation-delay: 4s;
-  text-align: center;
-  background-repeat: no-repeat;
-  position: absolute;
+  padding: 111px 0 111px 0;
+  margin: 0 0 0 0;
   background-attachment: fixed;
-  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  top: 0; right: 0; width: 100%; visibility: hidden; margin-bottom: 0px;
+  user-select: none;
+  text-align: center;
 }
 
+#minecraftbg2{
+  background-image: url("./images/minecraftbg2.jpg");
+  padding: 111px 0 111px 0;
+  margin: 0 0 0 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  user-select: none;
+  text-align: center;
+}
 
 @keyframes reveal {
     0%{opacity: 0; visibility: visible;}
     100%{opacity: 1; visibility: visible;}
-}
-
-.footer-social-links{
-  font-size: 14px;
-text-align: center;
-margin-top: 20%;
-}
-.footer-social-links a{
-  width: 25px;
-  height: 25px;
-  line-height: 25px !important;
-  position: relative;
-  margin: 0 5px;
-  text-align: center;
-  display: inline-block;
-  color: #111;
-  
-  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
-  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
-  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
-  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-}
-.footer-social-links a i,
-.footer-social-links a span{
-  position: relative;
-  top: 2px;
-  left: 1px; 
-}
-.footer-social-links a:before{
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid #111;
-  
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  
-  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
-  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
-  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
-  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-  
-}
-.footer-social-links a:hover{
-  color: #fff;
-}
-.footer-social-links a:hover:before{
-  background: #111;
 }
