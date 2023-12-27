@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background: url(mainAssets/stars.gif);
+    background: url(../assets/mainAssets/stars.gif);
     color: white;
     font-size: x-large;
     font-family: ADDSBP__;
@@ -40,20 +40,37 @@ nav {
 }
 
 #mainDiv {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding: 20px;
     display: grid;
     justify-content: center;
     background: rgb(57, 48, 72);
 }
 
+#flexDiv {
+    display: flex;
+}
+
+#leftBar {
+    max-width: 15%;
+    max-height: inherit;
+    word-wrap: break-word;
+    background: url(../assets/mainAssets/flowers.jpg);
+}
+
+#rightBar {
+    max-width: 15%;
+    word-wrap: break-word;
+    background-color: rgb(80, 45, 107);
+    background: url(../assets/mainAssets/flowers.jpg);
+}
+
 #container {
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 #header {
     height: 150px;
-    background: url(mainAssets/purplerosesblkbg.gif);
+    background: url(../assets/mainAssets/purplerosesblkbg.gif);
     background-repeat: repeat;
 }

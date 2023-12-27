@@ -39,6 +39,7 @@ body {
 div span {
     max-height: 50px;
     justify-content: center;
+    text-align: center;
 }
 
 #WIP {
