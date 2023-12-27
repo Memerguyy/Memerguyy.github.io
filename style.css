@@ -1,332 +1,37 @@
-.scroll-lock{
-  /* !!! REMEMBER TO CHANGE THIS BACK SO IT LOCKS AT THE START !!! */
-  overflow-x:hidden;
-  overflow: hidden;
-  animation: lock 1s forwards;
-  animation-delay: 6s;
+@font-face {
+    font-family: ADDSBP__;
+    src: url(ADDSBP__.TTF);
 }
 
-@keyframes lock{
-  0%{overflow: hidden;}
-  100%{overflow: auto;}
+body {
+    background: url(pplstar.gif);
+    color: white;
+    font-size: x-large;
+    font-family: ADDSBP__;
 }
 
-ul {
-  text-align: center;
-  padding-left: 24px;
-  position: sticky;
-}
-ul li {
-  display: inline-block;
-  margin-right: 15px;
-  transition: all 0.3s ease-in-out;
-  text-align: 50%;
-}
-ul li:hover .submenu {
-  height: 85px;
-}
-ul li:hover a {
-  color: #3862a0;
-}
-ul li:hover a::before {
-  visibility: visible;
-  transform: scale(1, 1);
-}
-ul li .submenu {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  background-color: #79a4e4;
-  height: 0;
-  line-height: 40px;
-  box-sizing: border-box;
-  transition: height 0.3s ease-in-out;
-  transition-delay: 0.1s;
-}
-ul li .submenu a {
-  color: #fff;
-  margin-top: 20px;
-  font-size: 16px;
-}
-ul li .submenu a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-ul li a {
-  color: rgb(255, 255, 255);
-  display: block;
-  padding: 0 7px 0 7px;
-  margin: 0 0 10px;
-  text-decoration: none;
-  position: relative;
-}
-ul li a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: -10px;
-  left: 0px;
-  background-color: #79a4e4;
-  transition: all 0.2s ease-in-out;
-  transform: scale(0, 0);
-  visibility: hidden;
-}
-
-.col{
-  display: inline-block;
-  width: auto;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.text{
-    font-family: Poppins; 
-    font-size: 128px; 
-    display:flex; 
+div {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
     justify-content: center;
-    text-align: center;
+    background: url(bubred3.gif);
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 7px solid rgba(133, 36, 237, 0.401);
 }
 
-hr {
-  display: block;
-  unicode-bidi: isolate;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  width: 250px;
-  overflow: hidden;
-  border-style: inset;
-  border-width: 1px;
-  margin-bottom: 50px;
+div span {
+    max-height: 50px;
+    justify-content: center;
 }
 
-div > p {
-  padding-bottom: 100px;
-  width: 500px;
-}
-
-.bgimage {
-  background-image: url("./images/minecraftbg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  user-select: none;
-  animation: reveal 3s forwards;
-  animation-delay: 6s;
-}
-
-#aboutme {
-  background-color: rgb(50, 52, 61);
-  text-align: center;
-  padding-top: 66px; padding-bottom: 66px;
-  width: 100%;
-  position: relative;
-  right:0;
- }
-
- #aboutme h1 {
-  font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 0px;
-  text-transform: uppercase;
-  margin-top: 15px;
- }
-
- #aboutme p {
-  margin-top: 3px;
-  font-size: 20px;
- }
-
-#rhythmgames {
-  background-color: rgb(50, 52, 61);
-  text-align: center;
-  display: block;
-  position: relative;
-  padding-top: 66px; padding-bottom: 66px;
-}
-
-#rhythmgames .osumania{
-  text-align: center;
-  max-width: 761.188px;
-  max-height: 219.844px;
-  height: 40%; 
-  width: 40%;
-  transform: translate(0, 15px);
-}
-
-#rhythmgames > .col {
-  margin: auto;
-  padding: 0 4rem 0 4rem;
-  width: fit-content;
-  margin-right: 0px;
-}
-
-#rhythmgames h1 {
-  font-size: 42px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-
-#minecraft {
-  background-color: rgb(50, 52, 61);
-  text-align: center;
-  width: 100%;
-  padding-top: 33px;
-  padding-bottom: 33px;
-}
-
-#minecraft > .minecwaf{
-  padding-left: 100px; 
-  width: 30%; height: 30%; 
-  transform: translate(0, 10px); 
-  max-width: 570.891px; 
-  max-height: 321.594px;
-}
- 
-#minecraft > .col {
-  margin: auto;
-  display: inline-block;
-  width: fit-content;
-  margin-left: 0px;
-}
- 
-#minecraft h1 {
-  font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 0px;
-  display: inline;
-  text-transform: uppercase;
-  margin-top: 15px;
-}
-
-#minecraft p {
-  margin-top: 3px;
-  font-size: 20px;
-}
-
-#projects {
-  background-color: rgb(50, 52, 61);
-  text-align: center;
-  padding-top: 33px;
-  padding-bottom: 33px;
-}
- 
-#projects p {
-  margin-top: 3px;
-  font-size: 20px;
-}
-
-#projects > .col {
-  margin: auto;
-  margin: 0 0 0 0;
-  padding: 0 4rem 0 4rem;
-  transform: translate(0, -55%);
-  text-align: left;
-  width: fit-content;
-  margin-right: 0px;
-}
-
-#projects h1 {
-  font-size: 42px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-#projects .catbot{
-  text-align: center;
-  max-width: 641.188px;
-  max-height: 670.703;
-  height: 40%; 
-  width: 40%;
-  transform: translate(0, 40px);
-}
-
-.fade{
-  user-select: none;
-  animation: slide-up 2s forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  font-family: Poppins; 
-  font-size: 64px; 
-  justify-content: center;
-  text-align: center;
-}
-
-@keyframes slide-up {
-  0%{opacity: 0; transform: translate(0px, 200px);}
-  25%{opacity: 1; transform: translate(0px, 0px);}
-  50%{opacity: 1; transform: translate(0px, 0px);}
-  100%{opacity: 0; transform: translate(0px, -1000px);}
-}
-
-.fadestay{
-  user-select: none;
-  opacity: 0;
-  background-attachment: fixed;
-  animation: slide-up-stay 2s forwards;
-  animation-delay: 3s;
-  font-family: Poppins; 
-  font-size: 64px; 
-  justify-content: center;
-  text-align: center;
-}
-
-@keyframes slide-up-stay {
-  0%{opacity: 0; transform: translate(0px, 500px);}
-  25%{opacity: 1; transform: translate(0px, 105px);}
-  50%{opacity: 1; transform: translate(0px, 105px);}
-  100%{opacity: 1; transform: translate(0px, -100px);}
-}
-
-#Home{
-  background-image: url("./images/minecraftbg.jpg");
-  padding: 222px 0 222px 0;
-  margin: 0 0 0 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  user-select: none;
-  text-align: center;
-}
-
-#whatscpsbg{
-  background-image: url("./images/whatscpsbg.jpg");
-  padding: 111px 0 111px 0;
-  margin: 0 0 0 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  user-select: none;
-  text-align: center;
-}
-
-#minecraftbg{
-  background-image: url("./images/osumaniabg2.jpg");
-  padding: 111px 0 111px 0;
-  margin: 0 0 0 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  user-select: none;
-  text-align: center;
-}
-
-#minecraftbg2{
-  background-image: url("./images/minecraftbg2.jpg");
-  padding: 111px 0 111px 0;
-  margin: 0 0 0 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  user-select: none;
-  text-align: center;
-}
-
-@keyframes reveal {
-    0%{opacity: 0; visibility: visible;}
-    100%{opacity: 1; visibility: visible;}
+#WIP {
+    width: auto;
+    height: 150px;
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.129);
+    border: 3px dotted rgba(255, 255, 255, 0.208);
+    margin: 0 auto;
 }
