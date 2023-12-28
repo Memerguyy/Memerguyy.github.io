@@ -43,7 +43,7 @@ function switchTab(newTab) {
 }
 
 function alertLol(){
-    alert("Lol I'm not for hire xd I can barely move my own ass up for myself in the mornings, no way can I do the same for others")
+    alert("Lol I'm not for hire I'm wayy too lazy")
 }
 
 function startMeow() {
