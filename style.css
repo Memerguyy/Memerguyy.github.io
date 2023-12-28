@@ -17,6 +17,12 @@ a:hover{
     text-decoration: underline dashed;
 }
 
+html{
+    cursor: url(assets/cursor.cur), auto;
+    min-height: 100%;
+    height: 100%;
+}
+
 body {
     background: url(assets/pplstar.gif);
     color: white;

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: ADDSBP__;
+    src: url(../ADDSBP__.TTF);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline dashed;
+}
+
+html{
+    cursor: url(../cursor.cur), auto;
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    margin-top: 150px;
+    text-shadow: 2px 2px black;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    font-family: ADDSBP__;
+    background: url(background.gif);
+}
+
+.layout {
+    width: 500px;
+    height: auto;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+}
+
+.wife {
+    position: absolute;
+    z-index: 1;
+    rotate: -74deg;
+    transform: scale(0.5);
+    top: -200px;
+    right: -180px;
+}
+
+#cdhomepage {
+    font-size: medium;
+    text-align: right;
+    padding: 15px;
+}

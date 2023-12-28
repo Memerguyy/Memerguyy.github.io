@@ -1,0 +1,19 @@
+@font-face {
+    font-family: ADDSBP__;
+    src: url(../ADDSBP__.TTF);
+}
+
+body {
+    background: url('plaid.png');
+    font-family: ADDSBP__;
+    color: white;
+    text-shadow: 5px 5px black;
+    padding: 15px;
+}
+
+hr {
+    background-color: rgba(136, 84, 81, 0.5);
+    background-image: url("alternatestars.gif");
+    height: 30px;
+    border: none;
+}
