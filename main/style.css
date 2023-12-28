@@ -3,8 +3,42 @@
     src: url(../assets/ADDSBP__.TTF);
 }
 
+footer {
+    font-size: small;
+    margin: 5px;
+    bottom:0px;
+    height:15px;
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background-color: rgb(47, 47, 47);
+}
+
+ul {
+    padding: 10px;
+    font-size: small;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+ul .buttons {
+    border: 2px outset black;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: small;
+    background-color: #5e3070;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
 html{
-    cursor: url(../assets/cursor.cur), auto;
+    cursor: url(../assets/cursor.cur), default !important;
     min-height: 100%;
     height: 100%;
 }
@@ -13,30 +47,82 @@ body {
     cursor: url(../assets/cursor.cur), auto;
     background: url(../assets/mainAssets/stars.gif);
     color: white;
+    margin: 0;
+    height: 100vh;
     font-size: x-large;
     font-family: ADDSBP__;
     text-shadow: 3px 3px black;
+    padding-bottom: 250px;
 }
 
 a{
     text-decoration: none;
     color: inherit;
+    cursor: url(../assets/cursor.cur), auto;
 }
 
 a:visited{
     color: inherit;
     text-decoration: none;
+    cursor: url(../assets/cursor.cur), auto;
 }
 
 a:hover{
     text-decoration: underline dashed;
+    cursor: url(../assets/cursor.cur), auto;
 }
 
 nav {
     display: block;
 }
+/* thank you to the person who made 98.css, true lifesaver, check them out at https://jdan.github.io/98.css/ while im not using his whole library (just the scrollbar) I still thought I should credit him*/
+::-webkit-scrollbar {
+    width: 16px
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 17px
+}
+
+::-webkit-scrollbar-corner {
+    background: #dfdfdf
+}
+
+::-webkit-scrollbar-track {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0H0v1h1v1h1V1H1V0z' fill='silver'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0H1v1H0v1h1V1h1V0z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment,::-webkit-scrollbar-button:horizontal:start:decrement,::-webkit-scrollbar-button:vertical:end:increment,::-webkit-scrollbar-button:vertical:start:decrement {
+    display: block
+}
+
+::-webkit-scrollbar-button:vertical:start {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 6H7v1H6v1H5v1H4v1h7V9h-1V8H9V7H8V6z' fill='%23000'/%3E%3C/svg%3E");
+    height: 17px
+}
+
+::-webkit-scrollbar-button:vertical:end {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 6H4v1h1v1h1v1h1v1h1V9h1V8h1V7h1V6z' fill='%23000'/%3E%3C/svg%3E");
+    height: 17px
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 4H8v1H7v1H6v1H5v1h1v1h1v1h1v1h1V4z' fill='%23000'/%3E%3C/svg%3E");
+    width: 16px
+}
+
+::-webkit-scrollbar-button:horizontal:end {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 4H6v7h1v-1h1V9h1V8h1V7H9V6H8V5H7V4z' fill='%23000'/%3E%3C/svg%3E");
+    width: 16px
+}
 
 #navbar ul {
+    border: 2px outset black;
     padding: 3px;
     font-size: small;
     background-color: rgb(70, 39, 95);
@@ -51,9 +137,15 @@ nav {
     display: grid;
     justify-content: center;
     background: rgb(57, 48, 72);
+    display: block;
 }
 
 #flexDiv {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+#griddy {
     display: flex;
 }
 
@@ -63,6 +155,7 @@ nav {
     word-wrap: break-word;
     background: url(../assets/mainAssets/flowers.jpg);
     padding: 10px;
+    display: block;
 }
 
 #rightBar {
@@ -71,6 +164,7 @@ nav {
     background-color: rgb(80, 45, 107);
     background: url(../assets/mainAssets/flowers.jpg);
     padding: 10px;
+    display: block;
 }
 
 .bars{
@@ -87,4 +181,60 @@ nav {
     height: 150px;
     background: url(../assets/mainAssets/purplerosesblkbg.gif);
     background-repeat: repeat;
+}
+
+#box {
+    display: flex;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+#musicbox {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 15px;
+}
+
+#games{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: rgb(57, 48, 72);
+    border-radius: 12px;
+}
+
+#tablist {
+    padding-bottom: 15px;
+    background: rgb(57, 48, 72);
+}
+
+#tabsPanels {
+    padding: 15px;
+}
+
+#tabsPanels div{
+    padding: 15px;
+}
+
+
+.title {
+    border: 2px outset black;
+    background-color: rgb(70, 39, 95);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.title::after {
+    content: "x";
+    float: right;
+}
+
+.text {
+    padding: 15px;
+    font-size: medium;
+    
 }

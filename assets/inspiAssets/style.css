@@ -18,6 +18,7 @@ body {
 a{
     text-decoration: none;
     color: inherit;
+    cursor: url(../cursor.cur), default !important;
 }
 
 a:visited{
