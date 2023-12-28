@@ -15,6 +15,6 @@ function startMeow() {
 
 async function itsMyBest() {
     jScript.style.opacity = 0
-    await delay(700)
+    await delay(400)
     rightBar.innerHTML = "<h1>NO MORE JAVA<br>SCRIPT YOU LOST THOSE RIGHTS<hr></h1>"
 }

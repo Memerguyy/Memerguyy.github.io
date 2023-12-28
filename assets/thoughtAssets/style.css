@@ -50,6 +50,11 @@ body {
     right: -180px;
 }
 
+.random {
+    font-size: small;
+    padding: 30px;
+}
+
 #cdhomepage {
     font-size: medium;
     text-align: right;
