@@ -15,6 +15,7 @@ body {
     color: white;
     font-size: x-large;
     font-family: ADDSBP__;
+    text-shadow: 3px 3px black;
 }
 
 a{
@@ -61,6 +62,7 @@ nav {
     max-height: inherit;
     word-wrap: break-word;
     background: url(../assets/mainAssets/flowers.jpg);
+    padding: 10px;
 }
 
 #rightBar {
@@ -68,6 +70,12 @@ nav {
     word-wrap: break-word;
     background-color: rgb(80, 45, 107);
     background: url(../assets/mainAssets/flowers.jpg);
+    padding: 10px;
+}
+
+.bars{
+    text-align: center;
+    font-size: medium;
 }
 
 #container {

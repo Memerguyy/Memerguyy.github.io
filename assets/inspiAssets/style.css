@@ -46,3 +46,9 @@ li {
     background-image: url(tumblrDivBg.png);
     border: 7px dashed rgba(45, 148, 120, 0.605);
 }
+
+#cdhomepage {
+    font-size: medium;
+    text-align: right;
+    padding: 15px;
+}
