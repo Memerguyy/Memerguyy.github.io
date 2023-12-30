@@ -29,6 +29,12 @@ container.addEventListener("click", (e) => {
         list.style.backgroundColor = '#5e3070'
     })
 
+    if (clickedTab.id == 'tab1') {
+        container.style.backgroundImage = 'url(/assets/mainAssets/RGbg.gif)'
+    } else {
+        container.style.backgroundImage = 'url(/assets/mainAssets/flowerzdark.png)'
+    }
+
     switchTab(clickedTab)
     clickedTab.style.backgroundColor = '#644686'
 });
