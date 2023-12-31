@@ -1,0 +1,36 @@
+@font-face {
+    font-family: ADDSBP__;
+    src: url(../ADDSBP__.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    
+}
+
+body {
+    display: flex;
+    font-family: ADDSBP__;
+    background: url(/assets/VSRGassets/yellowstar.gif);
+    text-shadow: 3px 3px rgb(165, 120, 53);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    flex: none;
+}
+
+section p1 {
+    margin-top: 30px;
+    line-height: 30px;
+    width: 85%;
+    text-align: justify;
+}
