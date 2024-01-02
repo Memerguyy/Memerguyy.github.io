@@ -10,14 +10,6 @@ const tabsList = container.querySelector("ul")
 const tabButtons = tabsList.querySelectorAll(".buttons")
 const tabPanels = container.querySelectorAll("#tabsPanels > div")
 
-tabButtons.forEach((tab, index) => {
-    if (index === 0) {
-
-    } else {
-        tabPanels[index].setAttribute("hidden", "")
-    }
-});
-
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
     const tabber = container.querySelectorAll("ul li a")
@@ -59,6 +51,7 @@ function startMeow() {
 async function itsMyBest() {
     jScript.style.opacity = 0
     await delay(400)
-    rightBar.innerHTML = "<h1>NO MORE JAVASCRIPT YOU LOST THOSE RIGHTS<hr></h1>"
+    rightBar.innerHTML = "<h1>NO MORE RIGHT BAR SINCE YOU WANTED TO BE SO SMART<hr></h1>"
+    rightBar.style.lineHeight = "50px"
 }
 // add jarek button that fades in obscuring entire screen because funny

@@ -52,6 +52,7 @@ body {
     font-family: ADDSBP__;
     text-shadow: 3px 3px black;
     line-height: 20px;
+    word-wrap: normal;
 }
 
 a{
@@ -150,7 +151,7 @@ nav {
 
   .window {
     box-shadow: var(--border-window-outer), var(--border-window-inner);
-    background: var(--surface);
+    background: rgb(180, 111, 111);
     padding: 3px;
   }
   
@@ -296,7 +297,7 @@ nav {
 
 .window {
     box-shadow: var(--border-window-outer), var(--border-window-inner);
-    background: var(--surface);
+    background: #b8b8b8;
     padding: 3px;
 }
   
@@ -406,10 +407,8 @@ nav {
 
 #mainDiv {
     padding: 20px;
-    display: grid;
     text-align: center;
     background: url(/assets/mainAssets/purplesatinbg.gif);
-    display: block;
 }
 
 #flexDiv {
@@ -424,7 +423,7 @@ nav {
 #leftBar {
     max-width: 15%;
     max-height: inherit;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     background: url(../assets/mainAssets/flowers.jpg);
     padding: 10px;
     display: block;
@@ -432,7 +431,7 @@ nav {
 
 #rightBar {
     max-width: 15%;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     background-color: rgb(80, 45, 107);
     background: url(../assets/mainAssets/flowers.jpg);
     padding: 10px;
