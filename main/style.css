@@ -516,3 +516,10 @@ nav {
     padding: 15px;
     font-size: medium;
 }
+
+.cbox {
+  width: 230px;
+  left: 10px;
+  position: fixed;
+  bottom: 0;
+}

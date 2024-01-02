@@ -10,6 +10,10 @@ const tabsList = container.querySelector("ul")
 const tabButtons = tabsList.querySelectorAll(".buttons")
 const tabPanels = container.querySelectorAll("#tabsPanels > div")
 
+let cboxCounter = 1
+const cboxTitle = document.getElementById("cboxTitle")
+const cbox = document.getElementById("cbox")
+
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
     const tabber = container.querySelectorAll("ul li a")
@@ -48,6 +52,8 @@ function startMeow() {
     meowThing.play()
 }
 
+
+
 async function itsMyBest() {
     jScript.style.opacity = 0
     await delay(400)
@@ -55,3 +61,21 @@ async function itsMyBest() {
     rightBar.style.lineHeight = "50px"
 }
 // add jarek button that fades in obscuring entire screen because funny
+
+cboxTitle.addEventListener("click", (e) => {
+    cbox.click()
+    console.log("clicked!")
+});
+
+cbox.onclick = () => {
+    console.log(cboxCounter)
+    
+    if (cboxCounter == 1) {
+        cbox.removeAttribute("hidden")
+        
+        cboxCounter += 1 
+    } else if(cboxCounter >= 2) {
+        cbox.setAttribute("hidden", true)
+        cboxCounter = 1
+    }
+}
