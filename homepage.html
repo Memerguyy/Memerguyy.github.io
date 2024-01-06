@@ -7,14 +7,23 @@
     <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
     <title>Homepage!!</title>
 </head>
-<body>      	            
+<body>               
     <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png" width="15%" style="position: relative; float: right; right: 5%; top: 10%; transform: skew(1deg, -2deg);" alt=""></a>
     <div class="cbox">
         <div class="title" id="cboxTitle">CBOX</div>
         <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
     </div> 
     <div id="container">
-        <div id="header"></div>
+        <div id="header">
+            <div id="ahriMessage" hidden>
+                <div class="title">Don't comment pls</div>
+                <div class="text">My mastery's pretty cool huh</div>
+            </div>
+            <div id="fourchanWarning" hidden>
+                <div class="title">No.</div>
+                <div class="text">Originally I thought of this taking you to a 4chan board but decided against it for obvious reasons</div>
+            </div>
+        </div>
         <nav id="navbar">
             <ul>
                 <li><a href="index">Home</a></li>
@@ -27,7 +36,7 @@
         </nav>
         <div id="flexDiv">
             <div id="leftBar" class="bars">
-                <a href="notfound"><img src="/assets/mainAssets/wifeFrame.png" alt="" height="150px"></a><p>⇑⇑⇑</p> oh wow look at that what a cute foxgirl maybe you should click her <hr><a href="https://www.half-life.com/en/halflife25/" target="_blank"><img src="/assets/buttons/newlambda.gif" alt=""></a><br>This site is Black Mesa approved&#128077; <hr> <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt=""><br><img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" alt=""> <img src="/assets/mainAssets/nekojiru2.gif" style="padding: 5px;" alt="">
+                <a href="https://masterychart.com/profile/eune/Memer-Ahrii" target="_blank" onclick="Ahrimessage()"><img src="/assets/mainAssets/wifeFrame.png" alt="" height="150px"></a><p>⇑⇑⇑</p> oh wow look at that what a cute foxgirl maybe you should click her <hr><a href="https://www.half-life.com/en/halflife25/" target="_blank"><img src="/assets/buttons/newlambda.gif" alt=""></a><br>This site is Black Mesa approved&#128077; <hr> <a href="https://www.leagueoflegends.com/en-us/champions/ahri/" target="_blank"><img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt=""></a><br><img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt=""> <img src="/assets/mainAssets/nekojiru2.gif" style="padding: 5px;" alt="">
             </div>
             <div id="mainDiv"> 
                 <span style="text-align: center; font-size: x-large;">Lolololo yes it still is WIP, I just added a main page<sub><img src="assets/mainAssets/chomp.gif" alt="" width="6%"></sub></span><br><br>
@@ -36,7 +45,7 @@
                 <span style="font-size: medium;">For now I need to focus on what to do here. For now the only interesting link is Inspirations and Thoughts, feel free to check them out</span><br><br>                
                 <span class="bars">Current roadmap for the site is this : 
                     <ul style="display: grid; text-decoration: none;">
-                        <li>❥ Add Ahri shrine</li>
+                        <li><s>❥ Add Ahri shrine</s> Done somewhat but hidden</li>
                         <li>❥ Add page about rhythm games</li>
                         <li>❥ Decorate main page with more stuff</li>
                         <li><s>❥ Add a CBOX maybe??? idk??? probably??</s> DONE!</li>
@@ -135,6 +144,7 @@
         </div>        
     </div>     
     <footer>I <i>REALLY</i> wanna say something like "Copyright Memer 2024-2024" but I honestly don't think it fits here lol, I still want my own footer though</footer>
+    <audio src="main/windowsXpChordSfx.mp3" id="audiotag" preload="auto"></audio>
     <script src="main/script.js"></script>
     <script>NekoType="ghost"</script>
     <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>    

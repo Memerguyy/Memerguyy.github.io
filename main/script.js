@@ -1,4 +1,8 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
+const XPChord = document.getElementById("audiotag")
+
+const Ahri = document.getElementById("ahriMessage")
+const fourchan = document.getElementById("fourchanWarning")
 
 const meowThing = document.getElementById("meow")
 const jScript = document.getElementById("javascript")
@@ -13,6 +17,21 @@ const tabPanels = container.querySelectorAll("#tabsPanels > div")
 let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
+
+async function Ahrimessage() {
+    await delay(700)
+    XPChord.play()
+    Ahri.removeAttribute("hidden")
+    await delay(5000)
+    Ahri.setAttribute("hidden", true)
+}
+
+async function fourChanWarning() {
+    XPChord.play()
+    fourchan.removeAttribute("hidden")
+    await delay(5000)
+    fourchan.setAttribute("hidden", true)
+}
 
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
@@ -57,7 +76,7 @@ function startMeow() {
 async function itsMyBest() {
     jScript.style.opacity = 0
     await delay(400)
-    rightBar.innerHTML = "<h1>NO MORE RIGHT BAR SINCE YOU WANTED TO BE SO SMART<hr></h1>"
+    rightBar.innerHTML = "<h1>NO MORE RIGHT BAR SINCE YOU WANTED TO BE SO SMART</h1>"
     rightBar.style.lineHeight = "50px"
 }
 // add jarek button that fades in obscuring entire screen because funny

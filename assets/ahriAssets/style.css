@@ -1,0 +1,139 @@
+:root {
+    --ahriWidth: 500px;
+}
+
+@font-face {
+    font-family: ADDSBP__;
+    src: url(/assets/ADDSBP__.TTF);
+}
+
+
+* {
+    cursor: url(/assets/cursor.cur), default;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/assets/ahriAssets/background.png');
+    color: white;
+    text-shadow: 3px 3px black;
+    background-blend-mode: hard-light;
+    background-color: rgb(77, 71, 78);
+    font-family: ADDSBP__;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: url(../assets/cursor.cur), default !important;
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: none;
+    cursor: url(../assets/cursor.cur), default !important;
+}
+
+a:hover{
+    text-decoration: none;
+    cursor: url(../assets/cursor.cur), default !important;
+}
+
+/* title */
+.title {
+    background-color: #2a2134;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px black;
+}
+
+.title::after {
+    content: "x";
+    float: right;
+}
+
+/* carousel */
+#slider {
+    position: relative;
+    overflow: hidden;
+    width: var(--ahriWidth);
+}
+
+#slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 1000vw;
+    padding: 0;
+    margin: 0;
+    transition: left 280ms ease-in-out;
+}
+
+#slider ul li {
+    position: relative;
+    height: 100%;
+    float: left;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider ul li img {
+    width: var(--ahriWidth);
+}
+
+#slider #prev,
+#slider #next {
+    width: 50px;
+    position: absolute;
+    line-height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    border-radius: 3px;
+}
+
+#slider #prev {
+    left: 5px;
+}
+
+#slider #next {
+    right: 5px;
+}
+
+#slider #next:hover,
+#slider #prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+
+/* box */
+#boxBorder {
+    border-top: 2px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #393939;
+    border-bottom: 2px solid #393939;
+    background: #C0C0C0;
+    margin-right: 150px;
+    width: 500px;
+    margin: 100px;
+    margin-top: 20px;
+}
+
+/* images */
+#images {
+    display: flexbox;
+    flex-direction: row;
+    margin: 5px;
+}
