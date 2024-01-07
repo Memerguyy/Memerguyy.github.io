@@ -15,7 +15,7 @@ body {
     display: flex;
     font-family: ADDSBP__;
     background: url(/assets/VSRGassets/yellowstar.gif);
-    text-shadow: 3px 3px rgb(165, 120, 53);
+    text-shadow: 3px 3px rgb(0, 0, 0);
 }
 
 section {
@@ -33,4 +33,26 @@ section p1 {
     line-height: 30px;
     width: 85%;
     text-align: justify;
+}
+
+#placeholder {
+    width: 600px;
+    height: 400px;
+    background-color: aliceblue;    
+    justify-content: start !important; 
+}
+
+.title {
+    border: 2px outset rgb(124, 78, 26);
+    background-color: rgb(139, 99, 24);
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+  
+.title::after {
+  content: "x";
+  float: right;
 }
