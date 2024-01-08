@@ -1,4 +1,7 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
+const tabXclass = document.getElementsByClassName("x")
+const specialX = document.getElementById("x-special")
+
 const XPChord = document.getElementById("audiotag")
 
 const Ahri = document.getElementById("ahriMessage")
@@ -18,6 +21,15 @@ let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
 
+for (let i = 0; i < tabXclass.length; i++) {
+    tabXclass[i].addEventListener('click', (e) => {
+        console.log(tabXclass[i].parentElement.parentElement.style = "display:none;")
+    })
+}
+
+specialX.addEventListener('click', (e) => {
+    specialX.parentElement.parentElement.style = "display:none;"
+})
 
 async function Ahrimessage() {
     await delay(700)
