@@ -12,6 +12,10 @@ const jScript = document.getElementById("javascript")
 const rightBar = document.getElementById("rightBar")
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
+const tab1 = document.getElementById("tab1")
+const tab2 = document.getElementById("tab2")
+const gaming = document.getElementById("specialTitle")
+
 const container = document.getElementById("thoughtTabs")
 const tabsList = container.querySelector("ul")
 const tabButtons = tabsList.querySelectorAll(".buttons")
@@ -48,23 +52,37 @@ async function fourChanWarning() {
 
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
+    // const forStyle = e.target.closest("href")
+    const whichHref = clickedTab.getAttribute("href")
     const tabber = container.querySelectorAll("ul li a")
     console.log(tabber)
     if(!clickedTab) return;
     e.preventDefault()
     
     tabber.forEach((list) => {
-        list.style.backgroundColor = '#5e3070'
+        list.style.backgroundColor = '#5e3070'    
+        list.style.border = '2px outset rgb(67, 41, 82)'    
     })
 
     if (clickedTab.id == 'tab1') {
         container.style.backgroundImage = 'url(/assets/mainAssets/RGbg.gif)'
-    } else {
-        container.style.backgroundImage = 'url(/assets/mainAssets/flowerzdark.png)'
+        clickedTab.style.backgroundColor = '#644686'
+    } else if (clickedTab.id == 'tab2') {
+        container.style.backgroundImage = 'url(assets/mainAssets/StatusBg.gif)'
     }
-
+    
     switchTab(clickedTab)
     clickedTab.style.backgroundColor = '#644686'
+
+    if (whichHref == '#statuscafe') {
+        console.log(tab2.style = 'background-color: #1c6d62 !important; border: 2px outset #0a332a;')
+        tab1.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
+        gaming.classList.remove("title")
+        gaming.classList.add("titleStatus")        
+    } else {
+        gaming.classList.remove("titleStatus")
+        gaming.classList.add("title")
+    }
 });
 
 function switchTab(newTab) {
@@ -73,7 +91,7 @@ function switchTab(newTab) {
     tabPanels.forEach((panel) => {
         panel.setAttribute("hidden", true)
     });
-    activePanel.removeAttribute("hidden", false)
+    activePanel.removeAttribute("hidden")
 }
 
 function alertLol(){

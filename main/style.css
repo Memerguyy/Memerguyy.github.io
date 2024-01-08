@@ -355,8 +355,7 @@ ul .buttons {
 }
 
 html {
-  cursor: url(../assets/cursor.cur), default !important;
-  
+  cursor: url(../assets/cursor.cur), default !important;  
   height: 100%;
 }
 
@@ -512,6 +511,18 @@ nav {
   background-image: url(/assets/mainAssets/fourChanBg.png);
 }
 
+#statuscafe {
+  padding: .5em;
+  background-color: #3c5753;
+  border: 4px dashed #263a32;
+}
+#statuscafe-username {
+  margin-bottom: .5em;
+}
+#statuscafe-content {
+  margin: 0 1em 0.5em 1em;
+}
+
 .title {
   border: 2px outset rgb(67, 41, 82);
   background-color: rgb(70, 39, 95);
@@ -544,4 +555,15 @@ nav {
   left: 10px;
   position: fixed;
   bottom: 0;
+}
+
+
+.titleStatus {
+  background-color: #114740;
+  border: 2px outset #0a332a;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
