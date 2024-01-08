@@ -18,6 +18,7 @@ let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
 
+
 async function Ahrimessage() {
     await delay(700)
     XPChord.play()
@@ -70,8 +71,6 @@ function alertLol(){
 function startMeow() {
     meowThing.play()
 }
-
-
 
 async function itsMyBest() {
     jScript.style.opacity = 0

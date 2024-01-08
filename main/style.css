@@ -516,9 +516,11 @@ nav {
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.title::after {
-  content: "x";
-  float: right;
+.x {
+  float: right; 
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .text {
