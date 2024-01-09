@@ -343,7 +343,7 @@ ul {
 
 ul .buttons {
   border: 2px outset rgb(67, 41, 82);
-  padding: 5px;
+  padding: 8px;
   padding-right: 10px;
   padding-left: 10px;
   font-size: small;
@@ -366,10 +366,8 @@ body {
   margin: 0;
   min-height: 100%;
   font-weight: 400;
-  font-size: x-large;
   font-family: ADDSBP__;
   text-shadow: 3px 3px black;
-  line-height: 20px;
   word-wrap: normal;
 }
 
@@ -396,8 +394,9 @@ nav {
 
 #navbar ul {
   border: 2px outset rgb(67, 41, 82);
-  padding: 3px;
-  font-size: small;
+  padding: 8px;
+  word-wrap: normal;
+  font-size: 0.7vw;
   background-color: rgb(70, 39, 95);
   display: flex;
   margin: 0;
@@ -405,7 +404,9 @@ nav {
   justify-content: space-evenly;
 }
 
-#mainDiv {
+#mainDiv {  
+  line-height: 1vw;
+  font-size: 1vw;
   padding: 20px;
   text-align: center;
   background: url(/assets/mainAssets/purplesatinbg.gif);
@@ -414,13 +415,17 @@ nav {
 #flexDiv {
   display: flex;
   padding-bottom: 15px;
+  img{width: 5vw; height: auto;}
 }
+
 
 #griddy {
   display: flex;
 }
 
 #leftBar {
+  line-height: 1vw;
+  font-size: 1vw;
   max-width: 15%;
   max-height: inherit;
   /* word-wrap: break-word; */
@@ -430,6 +435,8 @@ nav {
 }
 
 #rightBar {
+  line-height: 1vw;
+  font-size: 1vw;
   max-width: 15%;
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
@@ -440,7 +447,7 @@ nav {
 
 .bars {
   text-align: center;
-  font-size: medium;
+  font-size: 1vw;
 }
 
 #container {
@@ -471,6 +478,8 @@ nav {
 #games {
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  padding-bottom: 19px;
   width: 50%;
   background: url(../assets/mainAssets/purplebackground.png);
   border-radius: 12px;
@@ -498,14 +507,14 @@ nav {
 }
 
 #ahriMessage {
-  width: 200px;
+  width: 20vw;
   margin: 0 auto;
   background-image: url(/assets/mainAssets/ahriMessageBg.png);
   text-align: center;
 }
 
 #fourchanWarning {
-  width: 500px;
+  width: 20vw;
   margin: 0 auto;
   text-align: center;
   background-image: url(/assets/mainAssets/fourChanBg.png);
@@ -547,7 +556,7 @@ nav {
 
 .text {
   padding: 15px;
-  font-size: medium;
+  font-size: 0.9vw;
 }
 
 .cbox {
