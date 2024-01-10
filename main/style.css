@@ -425,7 +425,7 @@ nav {
 
 #leftBar {
   line-height: 1vw;
-  font-size: 1vw;
+  font-size: 0.8vw;
   max-width: 15%;
   max-height: inherit;
   /* word-wrap: break-word; */
@@ -436,7 +436,7 @@ nav {
 
 #rightBar {
   line-height: 1vw;
-  font-size: 1vw;
+  font-size: 0.8vw;
   max-width: 15%;
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
@@ -561,7 +561,7 @@ nav {
 
 .cbox {
   width: 230px;
-  left: 10px;
+  left: 2%;
   position: fixed;
   bottom: 0;
 }
