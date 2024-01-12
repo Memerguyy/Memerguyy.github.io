@@ -316,20 +316,16 @@
 }
 
 footer {
-  font-size: small;
-  margin-top: 10px;
-  bottom: -10px;
-  height: 25px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-bottom: 15px;
+  padding: 6px;
   text-align: center;
-  background-color: rgb(47, 47, 47);
+  background-color: #372449;
+  font-size: 0.6vw;
+  border: #372449 2px groove;
 }
 
-footer > p {
-  vertical-align: middle;
-  position: relative;
-  top: 5px;
+footer a {
+  background-color: #333333; padding: 3px; border:ridge 1px white;
 }
 
 ul {
@@ -414,7 +410,6 @@ nav {
 
 #flexDiv {
   display: flex;
-  padding-bottom: 15px;
   img{width: 5vw; height: auto;}
 }
 
@@ -499,6 +494,7 @@ nav {
 
 #tabsPanels {
   padding: 15px;
+  margin: 15px;
   font-size: medium;
 }
 
