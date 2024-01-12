@@ -27,59 +27,34 @@ html{
 }
 
 body {
-    background: url(assets/pplstar.gif);
+    background: url(assets/mainBg.png);
+    background-color: rgba(34, 34, 34, 0.699);
+    background-blend-mode:color-burn;
     color: white;
     font-size: x-large;
     font-family: ADDSBP__;
-    margin-top: 100px;
 }
 
 #WIPDiv {
-    padding-top: 30px;
-    padding-bottom: 10px;
-    display: grid;
-    justify-content: center;
-    background: url(assets/bubred3.gif);
-    margin-left: 40%;
-    margin-right: 40%;
-    box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
-    border: 2px outset black;
-}
-
-div span {
-    max-height: 50px;
-    justify-content: center;
+    background: url(assets/warningBg.png);
+    background-blend-mode: color-burn;
+    background-color: rgba(90, 0, 71, 0.726);
+    padding: 20px;
+    width: 30vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 15vw);
+    transform: translate(0, -50%);
     text-align: center;
 }
 
-#WIP {
-    width: auto;
-    height: 150px;
-    display: grid;
-    background-color: rgba(255, 255, 255, 0.129);
-    margin: 0 auto;
+@keyframes proceed {
+    from {color:darkslateblue;}
+    to {color:rgb(179, 162, 255);}
 }
 
-#buttonEdge {
-    display: flex;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.title {
-    border: 2px outset black;
-    background-color: rgb(70, 39, 95);
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px;
-    box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-.title::after {
-    content: "x";
-    float: right;
+#ENGAGE:hover {
+    animation: proceed 2s;
+    animation-fill-mode: forwards;
 }
