@@ -324,8 +324,13 @@ footer {
   border: #372449 2px groove;
 }
 
-footer a {
+footer > a {
   background-color: #333333; padding: 3px; border:ridge 1px white;
+}
+
+hr {
+  border: 1px #503f5c;
+  border-style:dashed;
 }
 
 ul {
@@ -358,12 +363,12 @@ html {
 body {
   cursor: url(../assets/cursor.cur), auto;
   background: url(../assets/mainAssets/stars.gif);
-  color: white;
+  color: #ede5f1;
   margin: 0;
   min-height: 100%;
   font-weight: 400;
   font-family: ADDSBP__;
-  text-shadow: 3px 3px black;
+  text-shadow: 3px 3px rgb(17, 0, 32);
   word-wrap: normal;
 }
 
@@ -400,17 +405,21 @@ nav {
   justify-content: space-evenly;
 }
 
-#mainDiv {  
+#mainDiv {
+  padding-top: 5vw !important;
   line-height: 1vw;
   font-size: 1vw;
   padding: 20px;
   text-align: center;
   background: url(/assets/mainAssets/purplesatinbg.gif);
+  background-blend-mode: color-dodge;
+  background-color: #1c0e1f;
 }
 
 #flexDiv {
   display: flex;
-  img{width: 5vw; height: auto;}
+  img{width: 5vw; height: auto;};  
+  gap: 2px;
 }
 
 
@@ -424,20 +433,26 @@ nav {
   max-width: 15%;
   max-height: inherit;
   /* word-wrap: break-word; */
-  background: url(../assets/mainAssets/flowers.jpg);
+  background: url(../assets/mainAssets/stars2.gif);
+  background-color: #170e22;
+  background-blend-mode:color-dodge;
   padding: 10px;
   display: block;
+  border: #0f0518 3px ridge;
 }
 
 #rightBar {
   line-height: 1vw;
   font-size: 0.8vw;
-  max-width: 15%;
+  min-width: 15%;
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
-  background: url(../assets/mainAssets/flowers.jpg);
+  background: url(../assets/mainAssets/stars2.gif);
+  background-color: #170e22;
+  background-blend-mode:color-dodge;
   padding: 10px;
-  display: block;
+  display: block;  
+  border: #0f0518 3px ridge;
 }
 
 .bars {
@@ -481,6 +496,7 @@ nav {
 }
 
 #webmaster {
+  color: white;
   display: flex;
   flex-direction: column;
   width: 100%;

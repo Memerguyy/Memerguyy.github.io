@@ -104,9 +104,6 @@ function startMeow() {
 
 async function itsMyBest() {
     jScript.style.opacity = 0
-    await delay(400)
-    rightBar.innerHTML = "<h1>NO MORE RIGHT BAR SINCE YOU WANTED TO BE SO SMART</h1>"
-    rightBar.style.lineHeight = "50px"
 }
 // add jarek button that fades in obscuring entire screen because funny
 

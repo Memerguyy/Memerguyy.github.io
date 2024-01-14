@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Magica';
+    src: url(https://static.tumblr.com/p6yopnt/Qkiqnu0r5/theheart.ttf);     
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    background-color: rgba(104, 12, 23, 0.5);
+    background-image: url(divider.jpg);
+    background-blend-mode:darken;
+    height: 30px;
+    border: none;
+}
+
+body {
+    background: url(tempUntilISayOtherwise.gif);
+    background-blend-mode: overlay;
+    background-color: rgb(71, 52, 57);
+    font-family: 'Magica';
+    color: rgb(255, 223, 233);
+    font-size: 2vw;
+}
+
+#cLogContainer {
+    padding: 120px;
+}
+
+#cLogContainer > ul {
+    padding-left: 75px;
+}
