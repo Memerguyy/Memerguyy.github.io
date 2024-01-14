@@ -368,7 +368,7 @@ body {
   min-height: 100%;
   font-weight: 400;
   font-family: ADDSBP__;
-  text-shadow: 3px 3px rgb(17, 0, 32);
+  text-shadow: 3px 4px rgb(17, 0, 32);
   word-wrap: normal;
 }
 
@@ -530,6 +530,18 @@ nav {
   margin: 0 auto;
   text-align: center;
   background-image: url(/assets/mainAssets/fourChanBg.png);
+}
+
+#memerButton > .title {
+  background-color: #0a332a;
+  border-color: #263a32;
+}
+
+#memerButton {
+  width: 30vw;
+  margin: 0 auto;
+  text-align: center;
+  background: url(/assets/mainAssets/memerButtonBg.jpg);
 }
 
 #statuscafe {

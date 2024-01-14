@@ -3,9 +3,11 @@ const tabXclass = document.getElementsByClassName("x")
 const specialX = document.getElementById("x-special")
 
 const XPChord = document.getElementById("audiotag")
+const XPExclem = document.getElementById("exclemSound")
 
 const Ahri = document.getElementById("ahriMessage")
 const fourchan = document.getElementById("fourchanWarning")
+const memer = document.getElementById("memerButton")
 
 const meowThing = document.getElementById("meow")
 const jScript = document.getElementById("javascript")
@@ -24,6 +26,13 @@ const tabPanels = container.querySelectorAll("#tabsPanels > div")
 let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
+
+async function memerButton() {
+    XPExclem.play()
+    memer.removeAttribute("hidden")
+    await delay(8000)
+    memer.setAttribute("hidden", true)
+}
 
 for (let i = 0; i < tabXclass.length; i++) {
     tabXclass[i].addEventListener('click', (e) => {
