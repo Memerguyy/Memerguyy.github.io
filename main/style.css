@@ -434,11 +434,11 @@ nav {
   max-height: inherit;
   /* word-wrap: break-word; */
   background: url(../assets/mainAssets/stars2.gif);
-  background-color: #170e22;
+  background-color: #1c0e1f;
   background-blend-mode:color-dodge;
   padding: 10px;
   display: block;
-  border: #0f0518 3px ridge;
+  border: #251429 3px ridge;
 }
 
 #rightBar {
@@ -448,11 +448,11 @@ nav {
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
   background: url(../assets/mainAssets/stars2.gif);
-  background-color: #170e22;
+  background-color: #1c0e1f;
   background-blend-mode:color-dodge;
   padding: 10px;
   display: block;  
-  border: #0f0518 3px ridge;
+  border: #251429 3px ridge;
 }
 
 .bars {
