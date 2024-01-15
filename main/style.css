@@ -406,7 +406,7 @@ nav {
 }
 
 #mainDiv {
-  padding-top: 5vw !important;
+  padding-top: 2vw !important;
   line-height: 1vw;
   font-size: 1vw;
   padding: 20px;
@@ -430,8 +430,7 @@ nav {
 #leftBar {
   line-height: 1vw;
   font-size: 0.8vw;
-  max-width: 15%;
-  max-height: inherit;
+  width: 28vw;
   /* word-wrap: break-word; */
   background: url(../assets/mainAssets/stars2.gif);
   background-color: #1c0e1f;
@@ -444,7 +443,7 @@ nav {
 #rightBar {
   line-height: 1vw;
   font-size: 0.8vw;
-  min-width: 15%;
+  width: 28vw;
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
   background: url(../assets/mainAssets/stars2.gif);
@@ -594,6 +593,16 @@ nav {
 .titleStatus {
   background-color: #114740;
   border: 2px outset #0a332a;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.league {
+  background-color: rgb(116, 91, 31);
+  border: 2px outset rgb(155, 106, 32);
   color: white;
   font-size: 12px;
   font-weight: 400;

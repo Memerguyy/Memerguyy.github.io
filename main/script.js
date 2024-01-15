@@ -16,6 +16,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const tab1 = document.getElementById("tab1")
 const tab2 = document.getElementById("tab2")
+const tab3 = document.getElementById("tab3")
 const gaming = document.getElementById("specialTitle")
 
 const container = document.getElementById("thoughtTabs")
@@ -78,18 +79,29 @@ container.addEventListener("click", (e) => {
         clickedTab.style.backgroundColor = '#644686'
     } else if (clickedTab.id == 'tab2') {
         container.style.backgroundImage = 'url(assets/mainAssets/StatusBg.gif)'
+    } else if (clickedTab.id == 'tab3'){
+        container.style.backgroundImage = 'url(assets/mainAssets/leagueBg.jpg'
     }
     
     switchTab(clickedTab)
     clickedTab.style.backgroundColor = '#644686'
 
     if (whichHref == '#statuscafe') {
-        console.log(tab2.style = 'background-color: #1c6d62 !important; border: 2px outset #0a332a;')
+        tab2.style = 'background-color: #1c6d62 !important; border: 2px outset #0a332a;'
         tab1.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
+        tab3.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
         gaming.classList.remove("title")
+        gaming.classList.remove("league")
         gaming.classList.add("titleStatus")        
+    } else if (whichHref == '#League'){
+        tab1.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
+        tab2.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
+        tab3.style = 'background-color: rgb(155, 121, 37); border: 2px outset rgb(155, 106, 32)'
+        gaming.classList.remove("title")
+        gaming.classList.add("league")
     } else {
         gaming.classList.remove("titleStatus")
+        gaming.classList.remove("league")
         gaming.classList.add("title")
     }
 });
@@ -112,7 +124,7 @@ function startMeow() {
 }
 
 async function itsMyBest() {
-    jScript.style.opacity = 0
+    jScript.setAttribute("hidden", true)
 }
 // add jarek button that fades in obscuring entire screen because funny
 

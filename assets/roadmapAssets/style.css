@@ -1,0 +1,53 @@
+@font-face {
+    font-family: windows;
+    src: url(https://dl.dropbox.com/s/cn0l1yjacta4whv/W95FA.otf);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: url(../cursor.cur), default !important;
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline wavy;
+}
+
+body html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(background.png);
+    background-blend-mode:multiply;
+    background-color:#3b444d;
+    height: 90vh;
+    overflow-y: hidden;
+    font-family: windows;
+    color: white;
+    font-size: 1vw;    
+    text-shadow: 3px 3px rgb(17, 0, 32);
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+#roadbackgrond{
+    position: relative;
+    top: -20px;
+    padding-top: 20px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin: 0 auto;
+    background-image: url(ROADmap.png);
+    background-size: contain;
+    width: 25vw;
+    height: 100vh;
+}

@@ -25,6 +25,7 @@ html, body {
 
 hr {
     background-color: rgba(104, 12, 23, 0.5);
+    opacity: 0.45;
     background-image: url(divider.jpg);
     background-blend-mode:darken;
     height: 30px;
@@ -42,6 +43,10 @@ body {
 
 #cLogContainer {
     padding: 120px;
+}
+
+#cdhomepage {    
+    text-align: right;
 }
 
 #cLogContainer > ul {
