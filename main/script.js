@@ -1,4 +1,7 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
+const audioStop = document.getElementById("audioStop")
+const portal = document.getElementById("portalAudio")
+
 const tabXclass = document.getElementsByClassName("x")
 const specialX = document.getElementById("x-special")
 
@@ -27,6 +30,40 @@ const tabPanels = container.querySelectorAll("#tabsPanels > div")
 let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
+
+let elemClickInt = 1
+document.addEventListener('click', (e) => {
+    let elemClick = e.target;
+    if (elemClick == document.querySelector("body")) {
+        return 
+    } else if (elemClick) {
+        elemClick.parentElement.style.zIndex = elemClickInt +1
+        i++
+    }
+    console.log(elemClick)
+});
+
+let stopcount = 1
+audioStop.onclick = () => {
+    if (stopcount < 2) {
+        console.log('stop1 ' + stopcount) 
+        portal.pause()
+        stopcount += 1
+    } else {
+        console.log('stop2 ' + stopcount)
+        portal.play()
+        stopcount = 1
+    }
+}
+
+// window.onload = () => {
+//     console.log("▄▀█ █▄░█ █▄█   █▀▀ █▀█ █▄░█ █▀ █▀█ █░░ █▀▀   █░░ █▀█ █▀▀ █▀   █▄█ █▀█ █░█   █▀ █▀▀ █▀▀   ▄▀█ █▀█ █▀▀\n█▀█ █░▀█ ░█░   █▄▄ █▄█ █░▀█ ▄█ █▄█ █▄▄ ██▄   █▄▄ █▄█ █▄█ ▄█   ░█░ █▄█ █▄█   ▄█ ██▄ ██▄   █▀█ █▀▄ ██▄\n█▀█ █░█ █▀█ █▀▀ █░░ █▄█   █▀▀ █▀█ █▀█   █▀▄ █▀▀ █▄▄ █░█ █▀▀   █▀█ █░█ █▀█ █▀█ █▀█ █▀ █▀▀ █▀ ░   █\n█▀▀ █▄█ █▀▄ ██▄ █▄▄ ░█░   █▀░ █▄█ █▀▄   █▄▀ ██▄ █▄█ █▄█ █▄█   █▀▀ █▄█ █▀▄ █▀▀ █▄█ ▄█ ██▄ ▄█ █   █\n█▀▀ ▄▀█ █▄░█ ▀ ▀█▀   █▄▄ █▀▀   █▄▄ █▀█ ▀█▀ █░█ █▀▀ █▀█ █▀▀ █▀▄   ▀█▀ █▀█   █▀█ █▀▀ █▀▄▀█ █▀█ █░█ █▀▀   ▀█▀ █░█ █▀▀ █▀▄▀█\n█▄▄ █▀█ █░▀█ ░ ░█░   █▄█ ██▄   █▄█ █▄█ ░█░ █▀█ ██▄ █▀▄ ██▄ █▄▀   ░█░ █▄█   █▀▄ ██▄ █░▀░█ █▄█ ▀▄▀ ██▄   ░█░ █▀█ ██▄ █░▀░█")
+// }
+
+// window.onload = () => {
+//     let totalElements = document.getElementsByTagName('*').length;
+//     console.log('Total elements: ', totalElements);
+// } debug code dont mind this
 
 async function memerButton() {
     XPExclem.play()

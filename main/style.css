@@ -370,6 +370,7 @@ body {
   font-family: ADDSBP__;
   text-shadow: 3px 4px rgb(17, 0, 32);
   word-wrap: normal;
+  overflow-x: hidden;
 }
 
 a {
@@ -469,6 +470,10 @@ nav {
   background: url(../assets/mainAssets/purplerosesblkbg.gif);
   background-repeat: repeat;
   padding-top: 20px;
+}
+
+#header > div {
+  margin-bottom: 50px;
 }
 
 #box {

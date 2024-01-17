@@ -17,7 +17,8 @@
     <title>Homepage!!</title>
 </head>
 <body>
-    <audio autoplay loop preload="auto">
+    <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
+    <audio autoplay loop preload="auto" id="portalAudio">
         <source src="/assets/mainAssets/portalOstBGmusic.mp3" type="audio/mp3">
     </audio>
     <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 100px; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag"></a>
@@ -26,11 +27,11 @@
         <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
         <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
     </div>
+    <div style="width: 1vw; height: 1vw; background-color: darkgray; border: inset 2px white; position: absolute; right: 0; margin: 20px; padding: 2px;" class="drag" id="audioStop">
+        <img src="/assets/mainAssets/mute.png" style="width: inherit; height: inherit;" alt="">
+    </div>
     <div id="container">
-        <div id="header">
-            <span>
-                <span class="x">x</span>
-            </span>
+        <div id="header" style="overflow-y: hidden;">
             <div id="fourchanWarning" hidden>
                 <div class="title">No.<span class="x">x</span></div>
                 <div class="text">Originally I thought of this taking you to a 4chan board but decidedagainst it for obvious reasons</div>
@@ -45,7 +46,7 @@
             </div> 
         </div>
     <span>
-    <span class="drag">
+    <span class="drag" style="z-index: 999 !important;">
         <nav id="navbar">
             <ul>
                 <li><a href="homepage">Home</a></li>
@@ -199,7 +200,5 @@
     <audio src="main/windowsXpChordSfx.mp3" id="audiotag" preload="auto"></audio>
     <audio src="main/windowsXpExclemationSound.mp3" id="exclemSound" preload="auto"></audio>
     <script src="main/script.js"></script>
-    <script>NekoType="ghost"</script>
-    <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>    
 </body>
 </html>
