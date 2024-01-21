@@ -387,6 +387,8 @@ a:visited {
 
 a:hover {
   text-decoration: underline dashed;
+  text-shadow: none;
+  text-underline-offset: 2px;
   cursor: url(../assets/cursor.cur), auto;
 }
 
