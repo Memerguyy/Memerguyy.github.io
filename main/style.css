@@ -550,6 +550,38 @@ nav {
   background: url(/assets/mainAssets/memerButtonBg.jpg);
 }
 
+@keyframes sdBrScrl {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-50%);
+  }
+}
+
+#infSidebar {
+  position: absolute;
+  top: 30vw;
+  right: 10vw;
+  height: 500px;
+  overflow: hidden;
+}
+
+#infSidebar ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  animation: sdBrScrl 18s linear infinite;
+}
+
+#infSidebar ul li img{
+  width: 8vw;
+  padding-bottom: 3px;
+}
+
 #statuscafe {
   padding: .5em;
   background-color: #3c5753;

@@ -27,14 +27,32 @@ const tabsList = container.querySelector("ul")
 const tabButtons = tabsList.querySelectorAll(".buttons")
 const tabPanels = container.querySelectorAll("#tabsPanels > div")
 
+const sdBar = document.getElementById("infSidebar")
+
 let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
 
+
 window.onload = () => {
     console.log("▄▀█ █▄░█ █▄█   █▀▀ █▀█ █▄░█ █▀ █▀█ █░░ █▀▀   █░░ █▀█ █▀▀ █▀   █▄█ █▀█ █░█   █▀ █▀▀ █▀▀   ▄▀█ █▀█ █▀▀\n█▀█ █░▀█ ░█░   █▄▄ █▄█ █░▀█ ▄█ █▄█ █▄▄ ██▄   █▄▄ █▄█ █▄█ ▄█   ░█░ █▄█ █▄█   ▄█ ██▄ ██▄   █▀█ █▀▄ ██▄\n█▀█ █░█ █▀█ █▀▀ █░░ █▄█   █▀▀ █▀█ █▀█   █▀▄ █▀▀ █▄▄ █░█ █▀▀   █▀█ █░█ █▀█ █▀█ █▀█ █▀ █▀▀ █▀ ░   █\n█▀▀ █▄█ █▀▄ ██▄ █▄▄ ░█░   █▀░ █▄█ █▀▄   █▄▀ ██▄ █▄█ █▄█ █▄█   █▀▀ █▄█ █▀▄ █▀▀ █▄█ ▄█ ██▄ ▄█ █   █\n█▀▀ ▄▀█ █▄░█ ▀ ▀█▀   █▄▄ █▀▀   █▄▄ █▀█ ▀█▀ █░█ █▀▀ █▀█ █▀▀ █▀▄   ▀█▀ █▀█   █▀█ █▀▀ █▀▄▀█ █▀█ █░█ █▀▀   ▀█▀ █░█ █▀▀ █▀▄▀█\n█▄▄ █▀█ █░▀█ ░ ░█░   █▄█ ██▄   █▄█ █▄█ ░█░ █▀█ ██▄ █▀▄ ██▄ █▄▀   ░█░ █▄█   █▀▄ ██▄ █░▀░█ █▄█ ▀▄▀ ██▄   ░█░ █▀█ ██▄ █░▀░█")
+    sidebar()
 }
-
+// -----------------------------------------------------------------------------------------------
+function sidebar() {
+    const sidebarStopOrPlay = document.querySelectorAll("#infSidebar > ul")
+    console.log(sidebarStopOrPlay + " this is a test")
+    sidebarStopOrPlay.forEach((e) => {
+        e.addEventListener('mouseover', () =>{
+            e.style = 'animation-play-state: paused;'
+        })
+        e.addEventListener('mouseout', () => {
+            e.style = 'animation-play-state: running;'
+        })
+        
+    })
+}
+// -----------------------------------------------------------------------------------------------
 let elemClickInt = 1
 document.addEventListener('click', (e) => {
     let elemClick = e.target;
@@ -46,7 +64,7 @@ document.addEventListener('click', (e) => {
     }
     console.log(elemClick)
 });
-
+// -----------------------------------------------------------------------------------------------
 let stopcount = 1
 audioStop.onclick = () => {
     if (stopcount < 2) {
@@ -59,28 +77,23 @@ audioStop.onclick = () => {
         stopcount = 1
     }
 }
-
-// window.onload = () => {
-//     let totalElements = document.getElementsByTagName('*').length;
-//     console.log('Total elements: ', totalElements);
-// } debug code dont mind this
-
+// -----------------------------------------------------------------------------------------------
+for (let i = 0; i < tabXclass.length; i++) {
+    tabXclass[i].addEventListener('click', (e) => {
+        console.log(tabXclass[i].parentElement.parentElement.style = "display:none;")
+    })
+}
+// -----------------------------------------------------------------------------------------------
+specialX.addEventListener('click', (e) => {
+    specialX.parentElement.parentElement.style = "display:none;"
+})
+// -----------------------------------------------------------------------------------------------
 async function memerButton() {
     XPExclem.play()
     memer.removeAttribute("hidden")
     await delay(8000)
     memer.setAttribute("hidden", true)
 }
-
-for (let i = 0; i < tabXclass.length; i++) {
-    tabXclass[i].addEventListener('click', (e) => {
-        console.log(tabXclass[i].parentElement.parentElement.style = "display:none;")
-    })
-}
-
-specialX.addEventListener('click', (e) => {
-    specialX.parentElement.parentElement.style = "display:none;"
-})
 
 async function Ahrimessage() {
     await delay(700)
@@ -96,7 +109,7 @@ async function fourChanWarning() {
     await delay(5000)
     fourchan.setAttribute("hidden", true)
 }
-
+// -----------------------------------------------------------------------------------------------
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
     // const forStyle = e.target.closest("href")
@@ -151,20 +164,20 @@ function switchTab(newTab) {
     });
     activePanel.removeAttribute("hidden")
 }
-
+// -----------------------------------------------------------------------------------------------
 function alertLol(){
     alert("Lol I'm not for hire I'm wayy too lazy")
 }
-
+// -----------------------------------------------------------------------------------------------
 function startMeow() {
     meowThing.play()
 }
-
+// -----------------------------------------------------------------------------------------------
 async function itsMyBest() {
     jScript.setAttribute("hidden", true)
 }
 // add jarek button that fades in obscuring entire screen because funny
-
+// -----------------------------------------------------------------------------------------------
 cboxTitle.addEventListener("click", (e) => {
     cbox.click()
     console.log("clicked!")

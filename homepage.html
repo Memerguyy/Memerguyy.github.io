@@ -20,7 +20,7 @@
     <audio autoplay loop preload="auto" id="portalAudio">
         <source src="/assets/mainAssets/portalOstBGmusic.mp3" type="audio/mp3">
     </audio>
-    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 100px; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag"></a>
+    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag"></a>
     <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank"><img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag"></a>
     <div class="cbox drag">
         <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
@@ -44,7 +44,55 @@
                 <div class="text">This is my button! Use it if you want to link my website! Click <a href="https://memer.online/assets/mainAssets/memerOnlineButton.png"target="_blank"><span style="color: rgb(155, 228, 155);">here</span></a> to get taken to the maxRes image</div>
             </div> 
         </div>
-    <span>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                var $infSidebar = $('#infSidebar ul li');
+                var $infSidebarClone = $('#infSidebar ul');
+                var $clonedContent = $infSidebar.clone();
+                $infSidebarClone.append($clonedContent);
+            });
+    </script>
+    <!--
+         code made by me using jQuery! Feel free to steal for your site lol, explenation on how it works is:
+        "$(document).ready(function () {" = calls the function which we're about to do when the page loads;
+        
+        "var $infSidebar = $('#infSidebar ul li');" = declares a variable by the name infSidebar, inside you're gonna have to change the selector to the parent of your images or something like that (depends on if you're doing it with my method or if ur just stealing lul)
+        
+        "var $infSidebarClone = $('#infSidebar ul')" = declaring a variable of the PARENT OF THE <li> TAG, this is needed or else the cloning just completely fucks up, try messing around with it!
+
+        "var $clonedContent = $infSidebar.clone();" = finally the good stuff, this is the thing that clones the images
+
+        "$infSidebarClone.append($clonedContent);" = it well... appends the... cloned content to the correct selector, self explanatory
+     -->
+    <div id="infSidebar">
+        <ul>
+            <li><img src="/assets/mainAssets/pepsi.gif" alt=""></li>
+            <li><img src="/assets/mightNeedLater.gif" alt=""></li>
+            <li><img src="/assets/buttons/978ee999.png" alt=""></li>
+            <li><img src="/assets/buttons/discord-no-way.gif" alt=""></li>
+            <li><img src="assets/buttons/IMG_9480.jpg" alt=""></li>
+            <li><img src="assets/buttons/ahriBtn.png" alt=""></li>
+            <li><img src="assets/buttons/msn.gif" alt=""></li>
+            <li><img src="assets/buttons/arizona.gif" alt=""></li>
+            <li><img src="assets/buttons/yumenikki.gif" alt=""></li>
+            <li><img src="assets/buttons/vscbutton.gif" alt=""></li>
+            <li><img src="assets/buttons/portal1.png" alt=""></li>
+            <li><img src="assets/buttons/portal2.png" alt=""></li>
+            <li><img src="assets/buttons/got_html.gif" alt=""></li>
+            <li><img src="assets/buttons/glowstamp.gif" alt=""></li>
+            <li><img src="assets/buttons/dark-mode.gif" alt=""></li>
+            <li><a href="https://99gifshop.neocities.org"><img src="assets/buttons/99gifshop.png" alt=""></a></li>
+            <li><img src="assets/buttons/97x31_wwwbutton.gif" alt=""></li>
+            <li><img src="assets/buttons/e.gif" alt=""></li>
+            <li><img src="assets/buttons/gmod.png" alt=""></li>
+            <li><img src="assets/buttons/1copy2.gif" title="This is actually semi true, its not OFFICIALY licensed by this but the CC BY-NC-SA 4.0 should be honored"></li>
+            <li><img src="assets/buttons/ilovemusic.gif" alt=""></li>
+            <li><img src="assets/buttons/suggestion.png" alt=""></li>
+            <li><img src="assets/buttons/sharing.gif" alt=""></li>
+            <li><img src="assets/buttons/anime_eyes.gif" alt=""></li>
+            <li><a href="https://yesterweb.org/no-to-web3/"><img src="assets/buttons/roly-saynotoweb3.gif" alt=""></a></li>
+        </ul>
+    </div>
     <span class="drag" style="z-index: 999 !important;">
         <nav id="navbar">
             <ul>
