@@ -396,6 +396,14 @@ nav {
   display: block;
 }
 
+hr {
+  background-image: url("/assets/mainAssets/divider.gif");
+  background-size: auto 0.8vw;
+  background-position: 56%;
+  height: 0.8vw;
+  border: none;
+}
+
 #navbar ul {
   border: 2px outset rgb(67, 41, 82);
   padding: 8px;
@@ -561,9 +569,10 @@ nav {
 
 #infSidebar {
   position: absolute;
-  top: 30vw;
-  right: 10vw;
-  height: 500px;
+  top: 35vw;
+  right: 0;
+  padding-right: 6vw;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -574,7 +583,7 @@ nav {
   align-items: center;
   padding: 0;
   margin: 0;
-  animation: sdBrScrl 18s linear infinite;
+  animation: sdBrScrl 24s linear infinite;
 }
 
 #infSidebar ul li img{
