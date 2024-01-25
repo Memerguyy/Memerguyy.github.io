@@ -3,6 +3,11 @@
     src: url(https://dl.dropbox.com/s/cn0l1yjacta4whv/W95FA.otf);
 }
 
+@font-face {
+    font-family: Positions;
+    src: url(/assets/PositionsByArixbored-Regular\ .otf);
+}
+
 a{
     text-decoration: none;
     color: inherit;
