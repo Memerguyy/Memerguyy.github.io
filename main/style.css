@@ -71,6 +71,7 @@
 .window {
   box-shadow: var(--border-window-outer), var(--border-window-inner);
   background: rgb(180, 111, 111);
+  font-size: 0.8vw;
   padding: 3px;
 }
 
@@ -406,7 +407,7 @@ hr {
 
 #navbar ul {
   border: 2px outset rgb(67, 41, 82);
-  padding: 8px;
+  padding: 0.5vw;
   word-wrap: normal;
   font-size: 0.7vw;
   background-color: rgb(70, 39, 95);
@@ -576,6 +577,15 @@ hr {
   overflow: hidden;
 }
 
+#thoughtTabs > ul > li {
+  width: 4vw;
+  height: auto;
+}
+
+#thoughtTabs > ul > li > a {
+  font-size: 0.7vw;
+}
+
 #infSidebar ul{
   display: flex;
   flex-direction: column;
@@ -607,9 +617,9 @@ hr {
   border: 2px outset rgb(67, 41, 82);
   background-color: rgb(70, 39, 95);
   color: white;
-  font-size: 12px;
+  font-size: 0.6vw;
   font-weight: 400;
-  padding: 5px;
+  padding: 0.35vw;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -642,9 +652,9 @@ hr {
   background-color: #114740;
   border: 2px outset #0a332a;
   color: white;
-  font-size: 12px;
+  font-size: 0.7vw;
   font-weight: 400;
-  padding: 5px;
+  padding: 0.35vw;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -652,8 +662,8 @@ hr {
   background-color: rgb(116, 91, 31);
   border: 2px outset rgb(155, 106, 32);
   color: white;
-  font-size: 12px;
+  font-size: 0.7vw;
   font-weight: 400;
-  padding: 5px;
+  padding: 0.35vw;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
