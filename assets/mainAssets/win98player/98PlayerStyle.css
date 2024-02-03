@@ -1,0 +1,32 @@
+.player {
+    width: 0.8vw;
+    border: black solid 1px;
+    border-width: 1px 0px 0px 1px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    text-shadow: none;
+    left: 50px;
+    top: 350px;
+}
+
+#musicplayer > table > tbody > tr > td > div {
+    width: 1.6vw;
+}
+
+body > div.player.drag.ui-draggable.ui-draggable-handle > div > div.title-bar {
+    background: rgb(67,29,73);
+    background: linear-gradient(45deg, rgba(67,29,73,1) 35%, rgba(173,5,177,1) 100%);
+}
+
+i.fas:hover {
+    cursor: help;
+}
+
+i.fas.fa-pause,
+i.fas.fa-play,
+i.fas.fa-forward,
+i.fas.fa-backward {
+    color: #000;
+    /* color of controls */
+}

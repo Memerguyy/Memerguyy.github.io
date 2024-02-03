@@ -1,0 +1,425 @@
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 21px;
+    width: 11px;
+    background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+    transform: translateY(-8px);
+    box-shadow: none;
+    border: none;
+}
+
+input[type="range"].has-box-indicator::-webkit-slider-thumb {
+    background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-rectangle-horizontal.svg");
+    transform: translateY(-10px);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 21px;
+    width: 11px;
+    border: 0;
+    border-radius: 0;
+    background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+    transform: translateY(2px);
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-horizontal.svg");
+    border: 0;
+    border-radius: 0;
+    height: 21px;
+    transform: translateY(2px);
+    width: 11px;
+}
+
+input[type="range"].has-box-indicator::-moz-range-thumb {
+    background: svg-load("https://raw.githubusercontent.com/jdan/98.css/main/icon/indicator-rectangle-horizontal.svg");
+    transform: translateY(0px);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    box-sizing: border-box;
+    background: black;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey,
+        -1px -1px 0 darkgrey, 0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    box-sizing: border-box;
+    background: black;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey,
+        -1px -1px 0 darkgrey, 0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+
+button,
+input,
+label,
+option,
+select,
+table,
+textarea,
+ul.tree-view {
+    -webkit-font-smoothing: none;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 11px
+}
+
+h1 {
+    font-size: 5rem
+}
+
+h2 {
+    font-size: 2.5rem
+}
+
+h3 {
+    font-size: 2rem
+}
+
+h4 {
+    font-size: 1.5rem
+}
+
+u {
+    border-bottom: .5px solid #222;
+    text-decoration: none
+}
+
+button,
+input[type=reset],
+input[type=submit] {
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: transparent;
+    min-height: 23px;
+    min-width: 75px;
+    padding: 0 12px;
+    text-shadow: 0 0 #222
+}
+
+.vertical-bar,
+button,
+input[type=reset],
+input[type=submit] {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
+}
+
+.vertical-bar {
+    height: 20px;
+    width: 4px
+}
+
+button:not(:disabled):active,
+input[type=reset]:not(:disabled):active,
+input[type=submit]:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222
+}
+
+@media (not(hover)) {
+
+    button:not(:disabled):hover,
+    input[type=reset]:not(:disabled):hover,
+    input[type=submit]:not(:disabled):hover {
+        box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey
+    }
+}
+
+button:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px
+}
+
+button::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner {
+    border: 0
+}
+
+:disabled,
+:disabled+label,
+input[readonly],
+input[readonly]+label {
+    color: grey
+}
+
+:disabled+label,
+button:disabled,
+input[type=reset]:disabled,
+input[type=submit]:disabled {
+    text-shadow: 1px 1px 0 #fff
+}
+
+.title-bar-controls button {
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: transparent;
+    min-height: 23px;
+    min-width: 75px;
+    padding: 0 12px;
+    text-shadow: 0 0 #222
+}
+
+.title-bar-controls button {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
+}
+
+.title-bar-controls button:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222
+}
+
+@media (not(hover)) {
+    button:not(:disabled):hover {
+        box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey
+    }
+}
+
+.title-bar-controls button:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px
+}
+
+.title-bar-controls button::-moz-focus-inner {
+    border: 0
+}
+
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("https://files.catbox.moe/1za99g.woff") format("woff");
+    src: url("https://files.catbox.moe/8fwbkl.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("https://files.catbox.moe/z7csle.woff") format("woff");
+    src: url("https://files.catbox.moe/moqhx6.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.player > .window, .title-bar {
+    font-family: "Pixelated MS Sans Serif", Arial;
+    -webkit-font-smoothing: none;
+    font-size: 11px;
+}
+
+.window {
+    box-shadow: inset -1px -1px #0a0a0a,
+        inset 1px 1px #dfdfdf, inset -2px -2px #808080,
+        inset 2px 2px #ffffff;
+    background: #c0c0c0;
+    padding: 3px;
+    width: 13vw;
+    height: auto;
+}
+
+.title-bar {
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar-text {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0;
+    margin-right: 24px;
+}
+
+.title-bar-controls {
+    display: flex;
+}
+
+.title-bar-controls button {
+    padding: 0;
+    display: block;
+    min-width: 16px;
+    min-height: 14px;
+}
+
+.title-bar-controls button:active {
+    padding: 0;
+}
+
+.title-bar-controls button:focus {
+    outline: none;
+}
+
+.title-bar-controls button[aria-label=Minimize] {
+    background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
+    background-position: bottom 3px left 4px;
+    background-repeat: no-repeat
+}
+
+.title-bar-controls button[aria-label=Maximize] {
+    background-image: url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
+    background-position: top 2px left 3px;
+    background-repeat: no-repeat
+}
+
+.title-bar-controls button[aria-label=Close] {
+    background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
+    background-position: top 3px left 4px;
+    background-repeat: no-repeat;
+    margin-left: 2px
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/* settings for chrome browsers */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    /* thickness of seeking track */
+    cursor: help;
+}
+
+
+/* settings for firefox browsers */
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    /* thickness of seeking track */
+    cursor: help;
+}
+
+.flex {
+    display: flex;
+}
+
+.titlebaricon {
+    height: 14px;
+    width: 14px;
+}
+
+
+.songtitlewindow {
+    background-color: #fff;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+}
+
+#musicplayer {
+    border: 2px solid silver;
+    /* border around player */
+    border-width: 2px 0px 0px 0px;
+    width: 8vw;
+    /* width of the player */
+}
+
+#imagestyle {
+    background: silver;
+    /* background color of player */
+    border: 2px solid silver;
+    /* border around player */
+    width: 4.3vw;
+    /* width of the player */
+    height: 4.3vw;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+}
+
+.ic {
+    width: 4vw;
+    position: relative;
+    bottom: 1px;
+    right: 1px;
+    overflow: hidden;
+    padding: 2px;
+    border: 2px solid transparent;
+}
+
+.songtitlearrow {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(https://files.catbox.moe/f5e8np.png);
+    height: 1vw;
+    width: 1vw;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    border: 0px solid transparent;
+    border-width: 0px 0px 0px 0px;
+}
+
+.songtitle {
+    color: black;
+    position: relative;
+    padding: 5px;
+    /* padding around song title */
+    border-bottom: 0px;
+    /* border under song title */
+    display: block;
+    font-family: Pixelated MS Sans Serif;
+}
+
+.controls {
+    font-size: 18px !important;
+    /* size of controls */
+    text-align: center;
+    width: 1vw;
+    position: relative;
+    bottom: 10px;
+}
+
+.controls td {
+    padding: 8px 5px 0px 5px;
+    /* padding around controls */
+}
+
+button {
+    min-width: 1vw;
+}
+
+.seeking {
+    background-color: #c0c0c0;
+    /* background color of seeking bar */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 14px;
+    /* padding around seeking bar */
+}
+
+.current-time {
+    padding-right: 5px;
+}
+
+.total-duration {
+    padding-left: 5px;
+}

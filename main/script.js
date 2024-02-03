@@ -65,19 +65,6 @@ document.addEventListener('click', (e) => {
     console.log(elemClick)
 });
 // -----------------------------------------------------------------------------------------------
-let stopcount = 1
-audioStop.onclick = () => {
-    if (stopcount < 2) {
-        console.log('stop1 ' + stopcount) 
-        portal.pause()
-        stopcount += 1
-    } else {
-        console.log('stop2 ' + stopcount)
-        portal.play()
-        stopcount = 1
-    }
-}
-// -----------------------------------------------------------------------------------------------
 for (let i = 0; i < tabXclass.length; i++) {
     tabXclass[i].addEventListener('click', (e) => {
         console.log(tabXclass[i].parentElement.parentElement.style = "display:none;")

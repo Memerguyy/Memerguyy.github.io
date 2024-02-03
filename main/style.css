@@ -1,6 +1,9 @@
 /* thank you to the person who made 98.css, true lifesaver, check them out at https://jdan.github.io/98.css/ while im not using his whole library (just the scrollbar) I still thought I should credit him*/
 :root {
 
+  /* Misc */
+  --mContent: fit-content;
+
   /* Color */
   --text-color: #222222;
   --surface: #c0c0c0;
@@ -80,6 +83,7 @@
       var(--dialog-blue),
       var(--dialog-blue-light));
   padding: 3px 2px 3px 3px;
+  height: 1vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,6 +99,7 @@
   font-weight: bold;
   color: white;
   letter-spacing: 0;
+  font-size: .7vw;
   margin-right: 24px;
 }
 
@@ -249,8 +254,8 @@
 .title-bar-controls button {
   padding: 0;
   display: block;
-  min-width: 16px;
-  min-height: 14px;
+  min-width: .9vw !important;
+  min-height: .8vw !important;
 }
 
 .title-bar-controls button:active {
@@ -313,7 +318,7 @@
 
 @font-face {
   font-family: ADDSBP__;
-  src: url(../assets/ADDSBP__.TTF);
+  src: url(../assets/pixelmix.ttf);
 }
 
 footer {
@@ -345,9 +350,10 @@ ul {
 
 ul .buttons {
   border: 2px outset rgb(67, 41, 82);
-  padding: 8px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-top: .5vw !important; padding-bottom: .5vw !important;
+  width: fit-content;
+  height: auto;
+  padding: .7vw;
   font-size: small;
   background-color: #5e3070;
   display: flex;
@@ -371,7 +377,7 @@ body {
   font-family: ADDSBP__;
   text-shadow: 3px 4px rgb(17, 0, 32);
   word-wrap: normal;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -407,7 +413,7 @@ hr {
 
 #navbar ul {
   border: 2px outset rgb(67, 41, 82);
-  padding: 0.5vw;
+  padding: 0.4vw;
   word-wrap: normal;
   font-size: 0.7vw;
   background-color: rgb(70, 39, 95);
@@ -420,7 +426,7 @@ hr {
 #mainDiv {
   padding-top: 2vw !important;
   line-height: 1vw;
-  font-size: 1vw;
+  font-size: 0.2vw;
   padding: 20px;
   text-align: center;
   background: url(/assets/mainAssets/purplesatinbg.gif);
@@ -468,6 +474,11 @@ hr {
 
 .bars {
   text-align: center;
+  font-size: .8vw;
+}
+
+.barsContainer {
+  max-width: 20vw !important;
   font-size: 1vw;
 }
 
@@ -516,7 +527,10 @@ hr {
   flex-direction: column;
   width: 100%;
   background: url(../assets/mainAssets/flowerzdark.png);
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding-bottom: 20px;
 }
 
 #tablist {
@@ -617,9 +631,10 @@ hr {
   border: 2px outset rgb(67, 41, 82);
   background-color: rgb(70, 39, 95);
   color: white;
+  padding-bottom: .6vw !important;
   font-size: 0.6vw;
   font-weight: 400;
-  padding: 0.35vw;
+  padding: .3vw;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -637,7 +652,8 @@ hr {
 
 .text {
   padding: 15px;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
+  line-height: 1.2em;
 }
 
 .cbox {
@@ -647,6 +663,13 @@ hr {
   bottom: 0;
 }
 
+#specialTitle {
+  font-size: 0.6vw;
+  font-weight: 400;
+  padding: 0.35vw;
+  padding-bottom: 0.35vw !important;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
 
 .titleStatus {
   background-color: #114740;

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="assets/mainAssets/win98player/98Effect.css">
+    <link rel="stylesheet" href="assets/mainAssets/win98player/98PlayerStyle.css">
     <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
     <script src="jQuery/jquery.js" type="text/javascript"></script>
     <script src="jQuery/jquery-ui.min.js" type="text/javascript"></script>
@@ -17,17 +19,56 @@
     <title>Homepage!!</title>
 </head>
 <body>
-    <audio autoplay loop preload="auto" id="portalAudio">
-        <source src="/assets/mainAssets/portalOstBGmusic.mp3" type="audio/mp3">
-    </audio>
+    <div class="player drag">
+        <audio id="music" src="assets/mainAssets/portalOstBGmusic.mp3" preload="auto"></audio> 
+        <div class="window">
+          <div class="title-bar">
+            <div class="title-bar-text"><sub><img class="titlebaricon" src="https://files.catbox.moe/tg55zp.png" alt="cd player icon"></sub> CD player</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close" class="x"></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <div class="flex">
+        <div id="imagestyle"><img class="ic" src="https://files.catbox.moe/7f1lut.png" alt="momo icon"></div>
+            <div id="musicplayer">
+                <div class="songtitlewindow">
+                    <div class="flex"><marquee scrollamount="4" class="songtitle"></marquee><div class="songtitlearrow"></div></div>
+                </div>
+         
+         <div class="seeking">
+                    <div class="current-time">00:00</div>
+         
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+         
+                    <div class="total-duration">0:00</div>
+                </div>
+         
+                <table class="controls">
+                    <tr>
+                        <td>
+                            <div class="prev-track" onclick="prevTrack()"><button><i class="fas fa-backward"></i></button></div>
+                        </td>
+                        <td>
+                            <div class="playpause-track" onclick="playpauseTrack()" ><button><i class="fas fa-play"></i></button></div>
+                        </td>
+                        <td>
+                            <div class="next-track" onclick="nextTrack()"><button><i class="fas fa-forward"></i></button></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag"></a>
     <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank"><img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag"></a>
     <div class="cbox drag">
         <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
         <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
-    </div>
-    <div style="width: 1vw; height: 1vw; background-color: darkgray; border: inset 2px white; position: absolute; right: 0; margin: 20px; padding: 2px;" class="drag" id="audioStop">
-        <img src="/assets/mainAssets/mute.png" style="width: inherit; height: inherit; position: inherit;" alt="">
     </div>
     <div id="container">
         <div id="header" style="overflow-y: hidden;">
@@ -122,7 +163,7 @@
             <li><img src="assets/buttons/stamp.png" alt=""></li>
             <li><img src="assets/buttons/steam.gif" alt=""></li>
             <li><img src="assets/buttons/telegram.gif" alt=""></li>
-            <li><img src="assets/buttons/tf2" alt=""></li>
+            <li><img src="assets/buttons/tf2.jpg" alt=""></li>
             <li><img src="assets/buttons/THEENTIRETYOFBADAPPLEAPPARENTALY.gif" alt=""></li>
             <li><img src="assets/buttons/volta.gif" alt=""></li>
             <li><img src="assets/buttons/wikipedia.gif" alt=""></li>
@@ -141,7 +182,7 @@
             </ul>
         </nav>
         <div id="flexDiv">
-            <section id="leftBar" class="bars">
+            <section id="leftBar" class="bars barsContainer">
                 <a href="https://masterychart.com/profile/eune/Memer-Ahrii" target="_blank" onclick="Ahrimessage()">
                     <img src="/assets/mainAssets/wifeFrame.png" alt="" height="150px" class="drag">
                 </a>
@@ -168,12 +209,15 @@
                     </ul>
                 </span>             -->
             </section>
-            <section id="rightBar" class="bars">            
+            <section id="rightBar" class="bars barsContainer">            
                 <a href="https://jme.moe/">
                     <img src="/assets/mainAssets/jmebiobutton.gif" style="padding-left: 1vw;" alt="">
                 </a>
                 <a href="https://kiwimeowo.neocities.org/" target="_blank" style="color: #2d3758; text-shadow: 2px 2px #97B8B5;">
                     <img src="./assets/buttons/kiwimeowoButton.png" style="padding-right: 1vw;" alt="">
+                </a>
+                <a href="https://sadgrl.online/" target="_blank">
+                    <img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif">
                 </a>
                 <hr>
                 Other links:
@@ -191,25 +235,25 @@
     </span>
     <div id="box">
         <div id="musicbox" class="drag">
-            <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&nbsp; <sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+            <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&emsp; <sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
             <div class="text">
                 My favourite genre of music is <span style="color: darksalmon;">breakcore</span><span style="color: #ffffff5d;"><sub>(as well as anything related to it such as <span style="color: cadetblue;">DnB</span> and<span style="color: cornflowerblue;"> jungle</span>)</sub></span>, and by breakcore I don't mean artists like <span style="color: rgb(118, 0, 148);">Sewerslvt</span> or <span style="color: rgb(15, 145, 15);">Goreshit</span>, while I do enjoy them, they more fall under the DnB category <span style="color: #76b9e670;">(Goreshit DOES make breakcore but he's more of a variety artist)</span><br><br>I'm more of a fan of old-gen breakcore/breakcore where they actually honor the meaning of the word, some of my fav artists are <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=50fe885609e041e0" style="color: rgb(0, 0, 0); text-shadow: 2px 2px rgb(155, 155, 155); background-color: white; padding: 2px;">hkmori</a>, <a href="https://open.spotify.com/artist/6XPrvweB1zFfzTQv3ajRHC?si=Os6IW3CwTYelE3_J4HCL4A" style="color: rgb(255, 214, 221); text-shadow: 2px 2px aliceblue;">Yem</a>, <a href="https://open.spotify.com/artist/7eKIP3IoPoUAZgZuvMM6hf?si=Y1sfLCFlQLyZeWgEq8cOXw" style="color: goldenrod;">Venetian Snares</a>  and more recently <a href="https://open.spotify.com/artist/35LM3RHYCFdizCendce2Iw?si=j5zV231yRaOBb0OwBtVH5A" style="color:#3d7ebb; text-shadow: 2px 2px rgb(97, 3, 3);">Nacho</a>
             </div>
         </div>
         <div id="games" class="drag">
-            <div class="title">homebrew&nbsp; <sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+            <div class="title">homebrew&emsp; <sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
             <div class="text">
                 I LOVE LOVE LOVE LOVE HOMEBREW!!<sub><img src="assets/mainAssets/STUPIDCAT.gif" alt="" style="width: 1vw;"></sub><br><br>I could go on all day about how much I love homebrew and how I would recommend it to ANYONE (especially anyone with an old console like the ds/3ds family of consoles), but instead let me just list points as to why I think people should homebrew <br><br>
-                &nbsp;&nbsp;&nbsp;➥&nbsp;&nbsp;"Ease of access" to games <br>
-                &nbsp;&nbsp;&nbsp;➥&nbsp;&nbsp;Able to run custom games<br>
-                &nbsp;&nbsp;&nbsp;➥&nbsp;&nbsp;Easy to do and opens up a TON of customizibility <br>
-                &nbsp;&nbsp;&nbsp;➥&nbsp;&nbsp;Street cred<sub><img src="/assets/mainAssets/catgaming.gif" style="width: 1vw;" alt=""></sub>
+                &emsp; ➥ "Ease of access" to games <br>
+                &emsp; ➥ Able to run custom games<br>
+                &emsp; ➥ Easy to do and opens up a TON of customizibility <br>
+                &emsp; ➥ Street cred<sub><img src="/assets/mainAssets/catgaming.gif" style="width: 1vw;" alt=""></sub>
             </div>
         </div>
     </div>
     <section id="box" class="drag">
         <div id="webmaster" style="text-shadow: 2px 2px black; font-weight: 600;">
-            <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&nbsp; <sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
+            <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&emsp; <sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
             <h1 class="text" style="text-align: center;">Hello, this is the webmaster, here to say a few things about myself</h1>  
             <div style="display: flex;">
                 <div class="window" style="width: 55%; margin: 10px; margin-left: 10%; display: flexbox; height:fit-content;">
@@ -258,7 +302,7 @@
         </div>
     </section>
     <section id="tablist" class="drag">
-        <div class="title" id="specialTitle">Other things!!&nbsp; <sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
+        <div class="title" id="specialTitle">other things!!&emsp;<sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
         <div id="thoughtTabs">
             <ul>
                 <li><a id="tab1" class="buttons" href="#VSRGs">VSRG's</a></li>
@@ -266,14 +310,14 @@
                 <li><a id="tab3" class="buttons" href="#League">League</a></li>
                 <!-- <li><a id="tab2" class="buttons" href="#meow2">placeholder</a></li> -->
             </ul>
-            <div id="tabsPanels">
+            <div id="tabsPanels" class="text">
                 <div id="VSRGs" hidden>
                     I absolutely adore VSRG's, I've been playing them for as long as I can remember with my first one being piano tiles (lol), but surprisingly after that I picked up <a href="https://osu.ppy.sh/users/10773549" style="color: pink;">osu!</a><br><br>But not osu!STD oh no, I played it for a while and I was HORRIBLE at it, so after that I picked up !mania and that is basically what got me into VSRG's<br><br>And while osu!mania is still my fav one, I also think that others such as etterna, vivid/stasis, quaver, muse dash (if you turn your screen sideways lol). As for ALL rhythm games... I might make a page for that in the future
                 </div>
                 <div id="statuscafe" hidden>
                     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=memer" defer></script>
                 </div>
-                <div id="League" hidden>
+                <div id="League" class="text" hidden>
                     Yes, I play League of Legends, SHOCKER! It's not like the cursor is league themed and I have Ahri plastered all over the page. All jokes aside, as much as I despise this game I can't help but to come back to it because in all fairness, ignoring the community I actually DO enjoy the game, as evident in my 500+ hours invested into it, and as long as I ignore the horrible community the gameplay is actually pretty good once you get the hang of it <br><br> <span style="font-family:'Times New Roman', Times, serif">But please, for the love of god, don't play it. It's not worth it.</span>
                 </div>
                 <!-- <div id="meow2">
@@ -286,6 +330,8 @@
     <audio src="main/windowsXpExclemationSound.mp3" id="exclemSound" preload="auto"></audio>
     <script src="main/script.js"></script>
     <script>NekoType="white"</script>
+    <script type="text/javascript" src="assets\mainAssets\win98player\98Script.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/f936906ae0.js"></script>
     <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
 </body>
 </html>
