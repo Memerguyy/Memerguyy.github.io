@@ -567,7 +567,7 @@ hr {
 }
 
 #memerButton {
-  width: 30vw;
+  width: 20vw;
   margin: 0 auto;
   text-align: center;
   background: url(/assets/mainAssets/memerButtonBg.jpg);
@@ -625,6 +625,12 @@ hr {
 }
 #statuscafe-content {
   margin: 0 1em 0.5em 1em;
+}
+
+#buttonHref {
+  border-radius: 4px;
+  background-color: black;
+  color: forestgreen;
 }
 
 .title {
