@@ -8,6 +8,7 @@ let track_name = document.querySelector(".songtitle");
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
+let loop_btn = document.querySelector(".loop-track");
 
 let seek_slider = document.querySelector(".seek_slider");
 let curr_time = document.querySelector(".current-time");
@@ -15,6 +16,7 @@ let total_duration = document.querySelector(".total-duration");
 
 let track_index = 0;
 let isMusicPlaying = false;
+let trackLooping = true;
 let updateTimer;
 
 // create new audio element
@@ -29,7 +31,7 @@ console.log(curr_time)
 let track_list = [
     {
         name: "Deltarune OST: 28 - Hip Shop",
-        path: "https://files.catbox.moe/ptug0y.wav"
+        path: "https://files.catbox.moe/n92z99.mp3"
     },
     {
         name: "Ghost Hack (feat. Cling Ring)",
@@ -38,6 +40,10 @@ let track_list = [
     {
         name: "Goreshit - Fine night",
         path: "https://files.catbox.moe/uwaak6.mp3"
+    },
+    {
+        name: "availax & pikaro - NYUTOPIA",
+        path: "https://files.catbox.moe/ems1dq.mp3"
     }
 ];
 
@@ -54,16 +60,14 @@ function loadTrack(track_index) {
 
     // set an interval of 1000 milliseconds for updating the seek slider
     updateTimer = setInterval(seekUpdate, 1000);
-
-    // move to the next track if the current one finishes playing 
-    curr_track.addEventListener("ended", nextTrack);
 }
 
 // reset values
 function resetValues() {
     curr_time.textContent = "0:00";
     total_duration.textContent = "0:00";
-    seek_slider.value = 0;
+    curr_time.currentTime = 0;
+    playTrack()
 }
 
 // checks if song is playing
@@ -111,9 +115,23 @@ function prevTrack() {
     playTrack();
 }
 
+function loopTrack() {
+    if (trackLooping == true) {
+        curr_track.removeEventListener("ended", nextTrack)
+        curr_track.addEventListener("ended", resetValues)
+        console.log("Looping has been enabled! \n\ntrackLooping bool status: " + trackLooping)        
+        trackLooping = !trackLooping
+    } else if (trackLooping == false){
+        console.log("Looping disabled :( \n\ntrackLooping bool status: " + trackLooping)
+        curr_track.removeEventListener("ended", resetValues)
+        curr_track.addEventListener("ended", nextTrack)
+        trackLooping = !trackLooping
+    }
+}
+
 // seeker slider
 function seekTo() {
-    seekto = curr_track.duration * (seek_slider.value / 100);
+    console.log(seekto = curr_track.duration * (seek_slider.value / 100))
     curr_track.currentTime = seekto;
 }
 
@@ -145,3 +163,4 @@ function seekUpdate() {
 // load the first track in the tracklist
 loadTrack(track_index);
 playpauseTrack()
+console.log(loopTrack() + " succefully loaded")

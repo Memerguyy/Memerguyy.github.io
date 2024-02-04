@@ -375,6 +375,7 @@ body {
   min-height: 100%;
   font-weight: 400;
   font-family: ADDSBP__;
+  /* font-family: ms ui gothic; */
   text-shadow: 3px 4px rgb(17, 0, 32);
   word-wrap: normal;
   overflow-x: hidden !important;
@@ -448,7 +449,7 @@ hr {
 #leftBar {
   line-height: 1vw;
   font-size: 0.8vw;
-  width: 28vw;
+  width: fit-content;
   /* word-wrap: break-word; */
   background: url(../assets/mainAssets/stars2.gif);
   background-color: #1c0e1f;
@@ -461,14 +462,14 @@ hr {
 #rightBar {
   line-height: 1vw;
   font-size: 0.8vw;
-  width: 28vw;
+  width: fit-content;
   /* word-wrap: break-word; */
   background-color: rgb(80, 45, 107);
   background: url(../assets/mainAssets/stars2.gif);
   background-color: #1c0e1f;
   background-blend-mode:color-dodge;
   padding: 10px;
-  display: block;  
+  display: block;
   border: #251429 3px ridge;
 }
 
@@ -478,8 +479,9 @@ hr {
 }
 
 .barsContainer {
-  max-width: 20vw !important;
+  max-width: 10vw !important;
   font-size: 1vw;
+  min-width: 9vw !important;
 }
 
 #container {
@@ -630,7 +632,16 @@ hr {
 #buttonHref {
   border-radius: 4px;
   background-color: black;
-  color: forestgreen;
+  color: rgb(139, 34, 121);
+  width: 7vw;
+  align-self: center; 
+  height: 1.8vw; 
+  resize: vertical;
+}
+
+#midnightHouse {
+  font-family: ms ui gothic;
+  font-size: 12px;
 }
 
 .title {

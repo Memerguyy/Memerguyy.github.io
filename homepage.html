@@ -19,59 +19,66 @@
     <title>Homepage!!</title>
 </head>
 <body>
-    <div class="player drag">
-        <audio id="music" src="assets/mainAssets/portalOstBGmusic.mp3" preload="auto"></audio> 
-        <div class="window">
-          <div class="title-bar">
-            <div class="title-bar-text"><sub><img class="titlebaricon" src="https://files.catbox.moe/tg55zp.png" alt="cd player icon"></sub> CD player</div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close" class="x"></button>
-            </div>
-          </div>
-          <div class="window-body">
-            <div class="flex">
-        <div id="imagestyle"><img class="ic" src="https://files.catbox.moe/7f1lut.png" alt="momo icon"></div>
-            <div id="musicplayer">
-                <div class="songtitlewindow">
-                    <div class="flex"><marquee scrollamount="4" class="songtitle"></marquee><div class="songtitlearrow"></div></div>
-                </div>
-         
-         <div class="seeking">
-                    <div class="current-time">00:00</div>
-         
-                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-         
-                    <div class="total-duration">0:00</div>
-                </div>
-         
-                <table class="controls">
-                    <tr>
-                        <td>
-                            <div class="prev-track" onclick="prevTrack()"><button><i class="fas fa-backward"></i></button></div>
-                        </td>
-                        <td>
-                            <div class="playpause-track" onclick="playpauseTrack()" ><button><i class="fas fa-play"></i></button></div>
-                        </td>
-                        <td>
-                            <div class="next-track" onclick="nextTrack()"><button><i class="fas fa-forward"></i></button></div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            </div>
-          </div>
+<div class="player drag">
+    <audio id="music" src="assets/mainAssets/portalOstBGmusic.mp3" preload="auto"></audio> 
+    <div class="window">
+    <div class="title-bar">
+        <div class="title-bar-text"><sub><img class="titlebaricon" src="https://files.catbox.moe/tg55zp.png" alt="cd player icon"></sub> CD player</div>
+        <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" class="x"></button>
         </div>
     </div>
-    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank"><img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag"></a>
-    <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank"><img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag"></a>
-    <div class="cbox drag">
-        <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
-        <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
+    <div class="window-body">
+        <div class="flex">
+    <div id="imagestyle"><img class="ic" src="https://files.catbox.moe/7f1lut.png" alt="momo icon"></div>
+        <div id="musicplayer">
+            <div class="songtitlewindow">
+                <div class="flex"><marquee scrollamount="4" class="songtitle"></marquee><div class="songtitlearrow"></div></div>
+            </div>
+    
+    <div class="seeking">
+                <div class="current-time">00:00</div>
+    
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+    
+                <div class="total-duration">0:00</div>
+            </div>
+    
+            <table class="controls">
+                <tr>
+                    <td>
+                        <div class="prev-track" onclick="prevTrack()"><button><i class="fas fa-backward"></i></button></div>
+                    </td>
+                    <td>
+                        <div class="playpause-track" onclick="playpauseTrack()" ><button><i class="fas fa-play"></i></button></div>
+                    </td>
+                    <td>
+                        <div class="next-track" onclick="nextTrack()"><button><i class="fas fa-forward"></i></button></div>
+                    </td>
+                    <td>
+                        <div class="loop-track" onclick="loopTrack()"><button><i class="fa-solid fa-rotate"></i></button></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
     </div>
-    <div id="container">
-        <div id="header" style="overflow-y: hidden;">
+    </div>
+</div>
+<a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">
+    <img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag">
+</a>
+<a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank">
+    <img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag">
+</a>
+<div class="cbox drag">
+    <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
+    <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
+</div>
+<div id="container">
+    <div id="header" style="overflow-y: hidden;">
             <div id="fourchanWarning" hidden>
                 <div class="title">No.<span class="x">x</span></div>
                 <div class="text">Originally I thought of this taking you to a 4chan board but decidedagainst it for obvious reasons</div>
@@ -94,7 +101,7 @@
         });
     </script>
     <!--
-         code made by me using jQuery! Feel free to steal for your site lol, explenation on how it works is:
+        code made by me using jQuery! Feel free to steal for your site lol, explenation on how it works is:
         "$(document).ready(function () {" = calls the function which we're about to do when the page loads;
         
         "var $infSidebar = $('#infSidebar ul li');" = declares a variable by the name infSidebar, inside you're gonna have to change the selector to the parent of your images or something like that (depends on if you're doing it with my method or if ur just stealing lul)
@@ -104,7 +111,7 @@
         "var $clonedContent = $infSidebar.clone();" = finally the good stuff, this is the thing that clones the images
 
         "$infSidebarClone.append($clonedContent);" = it well... appends the... cloned content to the correct selector, self explanatory
-     -->
+    -->
     <div id="infSidebar">
         <ul>
             <li><img src="/assets/mainAssets/pepsi.gif" alt=""></li>
@@ -187,13 +194,16 @@
                     <img src="/assets/mainAssets/wifeFrame.png" alt="" height="150px" class="drag">
                 </a>
                 <hr>
-                <img src="assets//mainAssets/get-java.gif" alt="" id="javascript" onclick="itsMyBest()" style="transform: rotateZ(-3deg);padding-bottom: 8px;" class="drag"><a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3" target="_blank"><img src="/assets/buttons/nft.gif" style="padding-right: 17px;" alt=""></a>
-                <br> 
-                <a href="https://www.leagueoflegends.com/en-us/champions/ahri/" target="_blank">
-                    <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt="">
-                </a><br>
-                <img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt="">            
-            </section>
+                <span>
+                    <a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3" target="_blank"><img src="/assets/buttons/nft.gif" style="padding-right: 17px;" alt=""></a>
+                    <br> 
+                    <a href="https://www.leagueoflegends.com/en-us/champions/ahri/" target="_blank">
+                        <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt="">
+                    </a><br>
+                    <img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt="">
+                </span><br><br><br><hr>
+                <span>Link me!<br><br><span style="text-align: center; display: flex; flex-direction: column;"><img src="assets/mainAssets/memerOnlineButton.png" onclick="memerButton()" style="width: 8vw; align-self: center;" alt=""><br><textarea id="buttonHref"><a href="https://memer.online"><img src="https://memer.online/assets/mainAssets/memerOnlineButton.png" alt=""></a></textarea></span>
+                </section></span>
             <section id="mainDiv"> 
                 <span class="bars">Site still very much W.I.P, expect shit to break especially on mobile, thank you in advance <img src="assets/mainAssets/chomp.gif" alt="" style="width: 6%;"></span><br>
                 <br><span class="bars">I have to add, this site is HIGHLY interactive, everything is here for a reason and so you can click on just about anything, have fun exploring!!!<img src="/assets/mainAssets/womean.gif" style="width: 1vw;" alt=""></span><br>
@@ -224,8 +234,7 @@
                     <span style="text-align: left;"><ol style="list-style-type: disc; padding: 0;">
                         <span>[+] <a href="changelog">ChLog<img src="/assets/mainAssets/changelog.gif" style="width: 1vw;" alt=""></a></span><br>
                         <span>[+] <a href="roadmap">Roadmap<img src="assets/mainAssets/stupidCatButINeedARoadmapGraphic.gif" style="width: 1vw;" alt=""></a></span>
-                    </ol></span><hr>
-                Link me!<br><br><img src="assets/mainAssets/memerOnlineButton.png" onclick="memerButton()" style="width: 5vw; position: relative; top: -5px;" alt=""><textarea id="buttonHref" style="width: 3vw; height: 2vw; resize: vertical;"><a href="https://memer.online"><img src="https://memer.online/assets/mainAssets/memerOnlineButton.png" alt=""></a></textarea>
+                    </ol></span>
                 <hr>
                 Sign my<a href="http://memer.123Guestbook.com/"> guestbook!</a><img src="/assets/mainAssets/guestbook.gif" style="width: 1vw; position: relative; top: 0.1vw;" alt="">
             </section>
@@ -258,15 +267,15 @@
             <div style="display: flex;">
                 <div class="window" style="width: 55%; margin: 10px; margin-left: 10%; display: flexbox; height:fit-content;">
                     <div class="title-bar" >
-                      <div class="title-bar-text">Who am I</div>
-                      <div class="title-bar-controls">
+                    <div class="title-bar-text">Who am I</div>
+                    <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
                         <button aria-label="Close"></button>
-                      </div>
+                    </div>
                     </div>
                     <div class="window-body">
-                      <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
+                    <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
                     </div>                    
                 </div>
             </div>    
@@ -274,26 +283,26 @@
             <img src="assets/mainAssets/made_by_QiTian_On_Artstation.png" style="position: relative; margin-left: 8vw; height: 12vw; align-self: center;"  alt=""> 
                 <div class="window" style="width: 35%; margin: 10px; margin-left: 20%;">
                     <div class="title-bar" >
-                      <div class="title-bar-text">How do I look like</div>
-                      <div class="title-bar-controls">
+                    <div class="title-bar-text">How do I look like</div>
+                    <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
                         <button aria-label="Close"></button>
-                      </div>
+                    </div>
                     </div>
                     <div class="window-body">                            
-                      <p style="word-wrap: break-word;">While I won't put a picture of myself for obvious reasons, I'll still describe myself. <br><br> I'm around 165cm, wear glasses, have medium length brown hair, relatively clear skin, and I'm also incredibly skinny </p>
+                    <p style="word-wrap: break-word;">While I won't put a picture of myself for obvious reasons, I'll still describe myself. <br><br> I'm around 165cm, wear glasses, have medium length brown hair, relatively clear skin, and I'm also incredibly skinny </p>
                     </div>
                 </div>              
             </div>
             <div class="window" style="width: 45%; margin: 10px; margin-left: 20%;">
                 <div class="title-bar" >
-                  <div class="title-bar-text">Interests</div>
-                  <div class="title-bar-controls">
+                <div class="title-bar-text">Interests</div>
+                <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
                     <button aria-label="Maximize"></button>
                     <button aria-label="Close"></button>
-                  </div>
+                </div>
                 </div>
                 <div class="window-body">
                   <p style="word-wrap: break-word;">I'm heavily interested in League, Minecraft, Ultrakill and as of *very* recently Lethal Company, I could go on all day about how much I love that game but I don't wanna take up the whole page with it lol <sub>and I also really like foxgirls</sub></p>
@@ -326,10 +335,15 @@
             </div>
         </div>
     </section>
+</div>
+<div style="text-align: right;" id="midnightHouse">
+    <span style="display: inline-block; width: 150px; position: relative; text-align: center; top: -3vw;">You see a strange door with a warm light shining through, enter?</span><a href="https://memer.midnight.pub" target="_blank" title="Gimmie a drink, bar, tender."><img src="assets/mainAssets/midnightHouse.png" style="position: relative; float: right; width: 10vw; top: -10vw; padding-right: 2vw;" alt=""></a>
+</div>
     <audio src="main/windowsXpChordSfx.mp3" id="audiotag" preload="auto"></audio>
     <audio src="main/windowsXpExclemationSound.mp3" id="exclemSound" preload="auto"></audio>
     <script src="main/script.js"></script>
     <script>NekoType="white"</script>
+    <script src="https://kit.fontawesome.com/c89975c0a0.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets\mainAssets\win98player\98Script.js"></script>
     <script type="text/javascript" src="https://kit.fontawesome.com/f936906ae0.js"></script>
     <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
