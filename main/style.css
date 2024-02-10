@@ -481,7 +481,7 @@ hr {
 .barsContainer {
   max-width: 10vw !important;
   font-size: 1vw;
-  min-width: 9vw !important;
+  min-width: 10vw !important;
 }
 
 #container {
