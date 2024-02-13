@@ -10,6 +10,10 @@
     top: 350px;
 }
 
+#musicplayer > div.songtitlewindow {
+    width: inherit;
+}
+
 #musicplayer > table > tbody > tr > td > div {
     width: 1.6vw;
 }
@@ -23,10 +27,17 @@ i.fas:hover {
     cursor: help;
 }
 
+body > div.player.drag.ui-draggable.ui-draggable-handle > div {
+    width: 290px;
+}
+
 i.fas.fa-pause,
 i.fas.fa-play,
 i.fas.fa-forward,
-i.fas.fa-backward {
+i.fas.fa-backward,
+i.fa-rotate {
     color: #000;
+    font-size: 0.6vw;
+    text-align: center;
     /* color of controls */
 }

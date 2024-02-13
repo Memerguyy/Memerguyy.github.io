@@ -162,5 +162,5 @@ function seekUpdate() {
 
 // load the first track in the tracklist
 loadTrack(track_index);
-playpauseTrack()
+playTrack()
 console.log(loopTrack() + " succefully loaded")

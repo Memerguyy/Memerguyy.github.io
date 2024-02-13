@@ -40,7 +40,7 @@ body {
     background-blend-mode: color-burn;
     background-color: rgba(90, 0, 71, 0.726);
     border: double 3px rgb(56, 17, 22);
-    padding: 20px;
+    padding: 3vw;
     width: 30vw;
     margin: 0 auto;
     position: absolute;
