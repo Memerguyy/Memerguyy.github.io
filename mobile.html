@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/mobileAssets/" type="image/x-icon">
+    <link rel="stylesheet" href="assets/mobileAssets/style.css">
+    <title>Mobile = bad</title>    
+    <script src="jQuery/jquery.js" type="text/javascript"></script>
+    <script src="jQuery/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        let msg = document.title;
+        let speed = 600;
+        let pos = 0;
+
+        function moveTitle() {
+            let ml = msg.length;
+
+            title = msg.substr(pos, ml) + ' ' + msg.substr(0, pos);
+            document.title = title;
+
+            pos++;
+            if (pos > ml){
+                pos = 0;
+            }
+            if (!document.hasFocus()) {
+                document.title = 'Mobile = bad'
+            }
+            window.setTimeout("moveTitle()", speed);
+            console.log('ml: ' + ml + ' title: ' + title + ' pos: ' + pos)
+        }
+        moveTitle();
+    </script>
+</head>
+<body>
+        <main id="container">
+        <div id="main">
+            <h3>Hi! If you're seeing this, it seems that you're on a mobile device! ...Or at least on a width that kinda fucks with my site</h3>
+            <span>My site wasn't really made for mobile devices, so I made this redirect to just let you know that there's a VERY high chance of everything breaking! Even on desktop mode!</span><br><br>
+            <span>If you're sure you'd like to continue, click <a href="https://memer.online/homepage">here</a></span><br><br>
+            <span>If you WOULDN'T like to continue... go someplace else idk ヾ(•ω•`)o</span>
+        </div>
+    </main>
+    <script type="text/javascript">
+        let elWIdth = document.documentElement.clientWidth    
+        let changeText = document.getElementById("main")
+
+        function isMobile() {
+            if (elWIdth >= 1080) {
+                changeText.innerHTML = "<h3>This website checks if my site is compatible with your device's width! Looks like you're good to go! You should be redirected to the main page soon!</h3>"
+                setTimeout(() => {
+                    window.location.href = 'https://memer.online/homepage';
+                }, 5100)
+            }
+        }
+        
+        isMobile()
+    </script>
+</body>
+</html>

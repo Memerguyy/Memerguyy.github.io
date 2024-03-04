@@ -7,7 +7,7 @@
     position: absolute;
     text-shadow: none;
     left: 50px;
-    top: 350px;
+    top: 250px;
 }
 
 #musicplayer > div.songtitlewindow {
@@ -28,7 +28,7 @@ i.fas:hover {
 }
 
 body > div.player.drag.ui-draggable.ui-draggable-handle > div {
-    width: 290px;
+    width: 16vw;
 }
 
 i.fas.fa-pause,

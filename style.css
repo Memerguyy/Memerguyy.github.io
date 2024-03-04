@@ -28,8 +28,6 @@ html{
 
 body {
     background: url(assets/mainBg.png);
-    background-color: rgba(34, 34, 34, 0.699);
-    background-blend-mode:color-burn;
     color: white;
     font-size: 1.5vw;
     font-family: ADDSBP__;

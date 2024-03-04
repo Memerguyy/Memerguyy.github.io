@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+* {    
+    text-shadow: 1px 2px 0 black;
+    font-family: ms ui gothic;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: ms ui gothic;
+    background-color: #FFF5C3;
+    background-image: url(mobileBg.gif);
+    background-repeat: repeat-x;
+}
+
+#container {
+    top: 20vw;
+    position: relative;
+    padding: 1vw;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(248,220,159,1) 0%, rgba(252,198,136,1) 50%, rgb(255, 194, 136) 100%);
+    margin: 0 auto;
+    width: 70vw;
+    border-radius: 20px;
+    border: double white 4px;
+}
+
+@media screen and (max-width: 1080px) {
+    a {
+        text-decoration: underline solid;
+        color: rgb(112, 73, 0);
+        cursor: url(../assets/cursor.cur), auto;
+    }
+    
+    a:visited {
+        color: rgb(112, 73, 0);
+        text-decoration: underline solid;
+        cursor: url(../assets/cursor.cur), auto;
+    }
+    
+    a:hover {
+        text-decoration: underline dashed;
+        text-shadow: none;
+        text-underline-offset: 2px;
+        cursor: url(../assets/cursor.cur), auto;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    * {    
+        text-shadow: 1px 2px 0 black;
+        font-family: ms ui gothic;
+    }
+    
+    body {
+        height: 100%;
+        color: white;
+        text-shadow: 1px 1px black;
+        font-family: ms ui gothic;
+        background-color: #FFF5C3;
+        background-image: url(mobileBg.gif);
+        background-repeat: repeat-x;
+    }
+
+    #container {
+        top: 20vw;
+        position: relative;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(248,220,159,1) 0%, rgba(252,198,136,1) 50%, rgb(255, 194, 136) 100%);
+        margin: 0 auto;
+        width: 70vw;
+        border-radius: 20px;
+        border: double white 4px;
+    }
+}
