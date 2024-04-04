@@ -67,12 +67,12 @@ document.addEventListener('click', (e) => {
 // -----------------------------------------------------------------------------------------------
 for (let i = 0; i < tabXclass.length; i++) {
     tabXclass[i].addEventListener('click', (e) => {
-        console.log(tabXclass[i].parentElement.parentElement.style = "display:none;")
+        console.log(tabXclass[i].parentElement.parentElement.style = "visibility: hidden;")
     })
 }
 // -----------------------------------------------------------------------------------------------
 specialX.addEventListener('click', (e) => {
-    specialX.parentElement.parentElement.style = "display:none;"
+    specialX.parentElement.parentElement.style = "visibility: hidden;"
 })
 // -----------------------------------------------------------------------------------------------
 async function memerButton() {

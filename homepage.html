@@ -19,6 +19,23 @@
     <title>Homepage!!</title>
 </head>
 <body>
+        <div style="display: flex;">
+                <div class="window" style="width: 10%; position: absolute; top: 15%; left: 5%; display: flexbox; height:fit-content; ">
+                    <div class="title-bar" style="background: rgb(67,29,73); background: linear-gradient(45deg, rgba(67,29,73,1) 35%, rgba(173,5,177,1) 100%);" >
+                    <div class="title-bar-text">Volume!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                    </div>
+                    <div class="window-body">
+                    <p><div class="slidecontainer ">
+                        <input type="range" value="70" min="0" max="70"  class="slider volSlider" onclick="volume()">
+                    </div></p>                      
+                    </div>                    
+                </div>
+        </div>
 <div class="player drag">
     <audio id="music" src="assets/mainAssets/portalOstBGmusic.mp3" preload="auto"></audio> 
     <div class="window">
@@ -342,7 +359,7 @@
     </section>
 </div>
 <div style="text-align: right;" id="midnightHouse">
-    <span style="display: inline-block; width: 150px; position: relative; text-align: center; top: -3vw;">You see a strange door with a what looks to be a street light shining through, enter?</span><a href="https://memer.midnight.pub/" target="_blank" title="Gimmie a drink, bar, tender."><img src="assets/mainAssets/midnightHouse.png" style="position: relative; float: right; width: 10vw; top: -10vw; padding-right: 2vw;" alt=""></a>
+    <span style="display: inline-block; width: 150px; position: relative; text-align: center; top: -3vw;"></span><a href="https://memer.midnight.pub/" target="_blank" title="Milk-chan!"><img src="assets/mainAssets/milkchan.png" style="position: relative; float: right; width: 15vw; top: -15vw; padding-right: 2vw;" alt=""></a>
 </div>
     <audio src="main/windowsXpChordSfx.mp3" id="audiotag" preload="auto"></audio>
     <audio src="main/windowsXpExclemationSound.mp3" id="exclemSound" preload="auto"></audio>

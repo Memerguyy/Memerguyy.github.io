@@ -111,7 +111,6 @@ input[type=submit] {
     box-sizing: border-box;
     color: transparent;
     min-height: 23px;
-    min-width: 75px;
     padding: 0 12px;
     text-shadow: 0 0 #222
 }
@@ -401,10 +400,6 @@ input[type=range]::-moz-range-track {
 .controls td {
     padding: 8px 5px 0px 5px;
     /* padding around controls */
-}
-
-button {
-    min-width: 1vw;
 }
 
 .seeking {

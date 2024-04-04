@@ -11,11 +11,12 @@
 }
 
 #musicplayer > div.songtitlewindow {
-    width: inherit;
+    width: 110%;
 }
 
-#musicplayer > table > tbody > tr > td > div {
-    width: 1.6vw;
+#musicplayer > table > tbody > tr > td > div > button {
+    width: 120%;
+    padding: 0 8px;
 }
 
 body > div.player.drag.ui-draggable.ui-draggable-handle > div > div.title-bar {
@@ -28,7 +29,7 @@ i.fas:hover {
 }
 
 body > div.player.drag.ui-draggable.ui-draggable-handle > div {
-    width: 16vw;
+    width: 15vw;
 }
 
 i.fas.fa-pause,
