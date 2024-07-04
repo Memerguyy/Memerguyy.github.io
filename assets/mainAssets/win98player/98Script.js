@@ -52,11 +52,11 @@ let track_list = [
     },
     {
         name: "Yem - Crushed Lunar Pill",
-        path: "https://t4.bcbits.com/stream/7bf7242a84189a9abbcff9427b7bc875/mp3-128/1408440168?p=0&ts=1712328948&t=446d6ab6cb0bf45559379de5b8750c1e3904ad16&token=1712328948_2fbbbf8394650a1198bef582fcdb936d1d1eceab"
+        path: "https://files.catbox.moe/q9v95b.mp3"
     },
     {
         name: "lhk - NIGHTMARE TECHNICIAN",
-        path: "https://t4.bcbits.com/stream/ea7720cf3818fa76795cc8c2b5f6a74b/mp3-128/1393171079?p=0&ts=1712333049&t=53723ad4e2b4bf2430e858db9524330c0ca69289&token=1712333049_c521d78c4b2659f7fc86b37831949d7ce84698f5"
+        path: "https://files.catbox.moe/62zev9.mp3"
     },
     {
         name: "bye2 - Aortic Pressure Valve",

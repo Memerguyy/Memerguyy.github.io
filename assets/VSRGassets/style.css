@@ -1,58 +1,63 @@
 @font-face {
-    font-family: ADDSBP__;
-    src: url(../ADDSBP__.TTF);
+	font-family: jetBrainsMono;
+	src: url(../VSRGassets/JetBrainsMono-Regular.ttf);
+}
+
+*::-webkit-scrollbar {
+	width: 0 !important;
+	height: 0 !important;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-y: hidden;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-y: hidden;
+	overflow-x: scroll !important;
+	color: rgb(0, 0, 0);
+}
 
+html, body {
+	min-height: 100vh;
+	min-width: 220vw;
+	box-shadow: 0 0 200px rgb(0, 0, 0) inset;
 }
 
 body {
-    display: flex;
-    font-family: ADDSBP__;
-    background: url(/assets/VSRGassets/yellowstar.gif);
-    text-shadow: 3px 3px rgb(0, 0, 0);
+	font-family: jetBrainsMono;
+	background: url(/assets/VSRGassets/yellowstar.gif);
+	text-shadow: 3px 3px rgb(255, 255, 255);
+	/* overflow-y: hidden; */
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    color: white;
-    flex: none;
-}
-
-section p1 {
-    margin-top: 30px;
-    line-height: 30px;
-    width: 85%;
-    text-align: justify;
-}
-
-#placeholder {
-    width: 600px;
-    height: 400px;
-    background-color: aliceblue;    
-    justify-content: start !important; 
+tr {
+	vertical-align: top;
 }
 
 .title {
-    border: 2px outset rgb(124, 78, 26);
-    background-color: rgb(139, 99, 24);
-    color: white;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 5px;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+	border: 2px outset rgb(255, 255, 255);
+	background-color: rgb(231, 231, 231);
+	padding-bottom: .6vw !important;
+	font-size: 0.6vw;
+	font-weight: 400;
+	padding: .3vw;
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
-  
-.title::after {
-  content: "x";
-  float: right;
+
+.friendInsideMe {
+	padding: 10px;
+	background-color: whitesmoke;
+	border: 2px outset;
+	border-top: 0;
+}
+
+#page-wrap {
+	position: absolute;
+	height: fit-content;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.post {
+	width: 500px;
 }

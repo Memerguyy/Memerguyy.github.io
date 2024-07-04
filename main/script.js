@@ -83,7 +83,6 @@ async function memerButton() {
 }
 
 async function Ahrimessage() {
-    await delay(700)
     XPChord.play()
     Ahri.removeAttribute("hidden")
     await delay(5000)
@@ -182,3 +181,33 @@ cbox.onclick = () => {
         cboxCounter = 1
     }
 }
+
+function shittyRedirect() {
+    window.location.href = "http://memer.online/rgs"
+    //  DO NOT FUCKING FORGET. TO REPLACE THIS. WITH "http://memer.online/rgs"
+}
+
+(function () {
+    var angle = 0;
+    var p = document.querySelector('.rainbowAllTheWay');
+    var text = p.textContent.split('');
+    var len = text.length;
+    var phaseJump = 360 / len;
+    var spans;
+    
+    p.innerHTML = text.map(function (char) {
+      return '<span>' + char + '</span>';
+    }).join('');
+
+    spans = p.children;
+
+    (function wheee () {
+      for (var i = 0; i < len; i++) {
+        spans[i].style.color = 'hsl(' + (angle + Math.floor(i * phaseJump * .8)) + ', 65%, 70%)';
+      }
+      angle--;
+      requestAnimationFrame(wheee);
+    })();
+
+    document.querySelector('.rainbowAllTheWay').innerHTML.addEventListener("click")
+  })();

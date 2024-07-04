@@ -5,16 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>holy horizontally scrolling page</title>
     <link rel="stylesheet" href="/assets/VSRGassets/style.css">
+    <link rel="shortcut icon" href="/assets/VSRGassets/thethingidfk.png" type="image/x-icon">
+    <script src="jQuery/jquery.js" type="text/javascript"></script>
+    <script src="jQuery/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
+            $(".post").wrap("<td>");
+        });
+    </script>
+    <link rel="stylesheet" href="/assets/VSRGassets/crt.css">
+    <link rel="stylesheet" href="/node_modules/7.css/dist/7.css">
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> ADD FAVICON!!!!-->
 </head>
 <body>
-    <section style="width: 55%;">
-        <h1 style="text-align: left; width: 65%; padding-left: 20vw; text-shadow: 3px 3px rgb(165, 120, 53);">PRESS SHIFT + SCROLL TO SCROLL THIS SITE!!</h1>
-    </section>
-    <section>
-        <section id="placeholder">
-            <div class="title">test</div>
-        </section>
-    </section>
+    <button style="position: fixed; top: 10px; left: 15px; z-index: 99; opacity: 0.2;" id="btnSlct" onclick="slctTxt()">Toggle text selection</button>
+    <div id="page-wrap" style="position: absolute; left: 0px;">
+        <div class="post">
+            <div class="background">
+                <div class="window violet glass active" style="max-width: 100%;">
+                    <div class="title-bar">
+                        <div class="title-bar-text">About this page</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>Welcome! First of all, you can use shift to scroll this page, I think vertical pages are for LOSERS and boring, second, this is a page dedicated to everything RG and VSRG related! <br><br>Well, to start scrolling, press shift while scrolling with your mouse wheel! And if you're on mobile... <br><br> Tough luck buddy! -\_(ツ)_/-  I'll probably never make my websites phone friendly, I'm too lazy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="background">
+                <div class="window violet glass active" style="max-width: 60%; margin-top: 140px;">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Osu!(mania)</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>So, unsurprisingly, I'm an <img src="/assets/VSRGassets/osu!logo.png" style="max-width: 24px; margin-bottom: -7px;" alt="osu!"> player, but even though I started with osu!, I've mostly moved to osu!mania seeing as I'm somewhat dogshit at standard... not really much else to say here, I still play it on-and-off occasionaly, but as it stands, I've slowly stopped engaging myself in it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="background">
+                <div class="window violet glass active" style="max-width: 60%; margin-right: 140px;">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Muse dash <img src="assets/VSRGassets/museDash.png"     style="width: 16px; margin-bottom: -5px;"></div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>Muse dash is genuinely, one of my favourite non-4k, non-VSRG rhythm games, something which I love about it <i>aside from the graphics and the general gameplay of it</i> is the pricing model it uses, you buy a single DLC and receive updates indefinitely (or until the game's lifespan ends)<br><br>Of course, this DOES cause the game's price to inflate overtime but that's to be expected since, more content = higher price, but honestly that DLC was worth every single penny I spent on it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="background">
+                <div class="window violet glass active" style="max-width: 90%; margin-top: 40px;">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Crypt of the NecroDancer <img src="/assets/VSRGassets/CotND.png" style="width: 16px; margin-bottom: -5px;" alt=""> </div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>God this game... this game has a large history with me that I won't be able to fit into this tiny-ass box, however, what I can fit into this game is my recommendation for this game. If I were to pick ANY game out of all the ones mentioned here for someone to play, it would be this. CoTND is a <i>relatively</i> beginner friendly game, it starts off slow, and is pretty short at the beginning, but as you delve deeper, the game spikes in difficulty <br><br> Base game? Yeah that took me probably a total of 3-4 hours to beat. <br><br>And when I started trying to beat it with other characters? Yeah good-fucking-luck with that lol. But as cruel as I'm making CoTND seem to be, it's a blast of a roguelike, it takes the best from a rhythm game stand point, the best from a roguelike standpoint, and mushes them in together into this beautiful concoction of a game</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post"><div class="background">
+            <div class="window violet glass active" style="max-width: 80%; margin-bottom: 110px;">
+                <div class="title-bar">
+                    <div class="title-bar-text">Everhood <img src="/assets/VSRGassets/everhood.jpg" style="width: 16px; margin-bottom: -5px;" alt=""></div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <p>Oh my GOD!!! It is time for me to finally talk about one of my most favourite, most UNDERRATED games of all time, that game? Everhood!!! The best way to describe it would be <b>"Rhythm game undertale but you took LSD and shrooms before playing"</b>, this game is a whole expirience, from the intricate lore, to the fighting system, to the multiple endings, to the merch, workshop, mods; community; custom levels; you name it and everhood has it!!!! <br><br>Even though I'm done with this game already, I still come back to it every once in a while, still haven't gotten around to doing 100% achievements so I might just try that, the game can either be INSANELY difficult or a fun casual expirience, whichever one your heart desires. <br><br>Honestly? This game is so damn good, I'll even <a href="https://store.steampowered.com/app/1229380/Everhood/" style="z-index: 999999 !important;">link it for you</a>, yes! Just for you! And for no one else :) <s>(pay no mind to the fact this is a public website)</s>. Just click the toggle text button to make text selectable and go buy the game A.S.A.P.</p>
+                </div>
+            </div>
+        </div></div>
+        <div class="post"><div class="background">
+            <div class="window violet glass active" style="max-width: 65%; margin-top: 75px;">
+                <div class="title-bar">
+                    <div class="title-bar-text">Project Arrythmia <img src="/assets/VSRGassets/Arrythmia.jpg" style="width: 16px; margin-bottom: -5px;" alt=""></div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <p>And lastly, one honorable mention: Project Arrythmia. While I haven't played a LOT of this game, I'd still say it stands out a lot as it's the only rhythm game that I can truly say has an insanely unique mechanic, which would be the fact that it focuses purely on bossfights. It's honestly all I could ever dream of; sick music, sick bossfights, what more can you want from a game? <br><br> I'd love to play more of it and I just might, writing this paragraph made me REALLY hungry for rhythm games</p>
+                </div>
+            </div>
+        </div></div>
+    </div>
+    <div id="particles-js" style="width: 100%; height: 100%; z-index: 1 !important;"></div>
+    <div class="video-overlay" style="user-select: none;">
+    </div>
+    <div class="status-bar" style="position: fixed; bottom: 0; left: 0; width: 100%;">
+        <p class="status-bar-field">Press F1 for help</p>
+        <p class="status-bar-field">Slide 1</p>
+        <p class="status-bar-field" id="CPUNumberGen">CPU Usage: 14% <sup>Disclaimer: Not real CPU usage</sup></p>
+    </div>
+    <!-- THIS TOOK ME FUCKING 2-3 HOURS TO GET WORKING BECAUSE IM A GODDAMN RETARD AND DIDNT SEE Z-INDEX WAS ON 99 KILL MEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+    <script src="/assets/VSRGassets/particles.js"></script>
+    <script src="/assets/VSRGassets/app.js"></script>
+    <script src="/assets/VSRGassets/main.js"></script>
 </body>
 </html>
