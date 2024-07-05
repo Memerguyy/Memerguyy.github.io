@@ -1,4 +1,7 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
+
+console.log(webamp.options.initialTracks)
+
 const audioStop = document.getElementById("audioStop")
 const portal = document.getElementById("portalAudio")
 

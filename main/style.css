@@ -348,6 +348,16 @@ hr {
   justify-content: space-evenly;
 }
 
+#thoughtTabs > ul{
+  padding: 10px;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
 ul .buttons {
   border: 2px outset rgb(67, 41, 82);
   padding-top: .5vw !important; padding-bottom: .5vw !important;
