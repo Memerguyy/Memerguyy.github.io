@@ -1,6 +1,7 @@
+
 const Winamp = window.Webamp;
     // All configuration options are optional.
-    const webamp = new Webamp({
+    let webamp = new Webamp({
         // Optional.
         initialTracks: [
             {
@@ -99,3 +100,33 @@ const Winamp = window.Webamp;
         },
     });
     webamp.renderWhenReady(document.getElementById('winamp-container'));
+
+function port1(arr, el) {
+    let ind = arr.indexOf(el);
+    if (ind > -1)
+      arr.splice(ind, 1);
+    arr.push(el);
+ }
+console.log(webamp.options.initialTracks[13])
+
+port1(webamp.options.initialTracks, {metaData: {artist: "Tosdy fox",title: "Deltarune sgdsgs: 28 - Hip Shop",},url:"https://files.catbox.moe/n92z99.mp3"},)
+
+console.log(webamp.options.initialTracks[13])
+
+function skibidiUnleashed() {
+    webamp = new Webamp({
+        // Optional.
+        initialTracks: [
+            {metaData: {artist: "Satan himself",title: "Skibidi toilet",},url:"https://files.catbox.moe/5ln7w5.mp3"},
+          ],
+          initialSkin: {
+            url: "https://files.catbox.moe/ti8t2n.wsz"
+        },
+    });
+    webamp.renderWhenReady(document.getElementById('winamp-container'));
+}
+
+
+// webamp.options.initialTracks.push({
+//     metaData: {artist: "Tosdy fox",title: "Deltarune sgdsgs: 28 - Hip Shop",},url:"https://files.catbox.moe/n92z99.mp3",
+// })

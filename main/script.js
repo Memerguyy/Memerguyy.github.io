@@ -1,6 +1,9 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
 
-console.log(webamp.options.initialTracks)
+
+// webamp.options.initialTracks.push({
+//     metaData: {artist: "Tosdy fox",title: "Deltarune sgdsgs: 28 - Hip Shop",},url: "https://files.catbox.moe/n92z99.mp3",
+// })
 
 const audioStop = document.getElementById("audioStop")
 const portal = document.getElementById("portalAudio")
