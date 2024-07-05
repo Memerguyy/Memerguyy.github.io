@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main/style.css">
-    <link rel="stylesheet" href="assets/mainAssets/win98player/98Effect.css">
-    <link rel="stylesheet" href="assets/mainAssets/win98player/98PlayerStyle.css">
+    <!-- <link rel="stylesheet" href="assets/mainAssets/win98player/98Effect.css">
+    <link rel="stylesheet" href="assets/mainAssets/win98player/98PlayerStyle.css"> -->
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
     <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
     <script src="jQuery/jquery.js" type="text/javascript"></script>
     <script src="jQuery/jquery-ui.min.js" type="text/javascript"></script>
@@ -19,79 +20,16 @@
     <title>Homepage!!</title>
 </head>
 <body>
-        <div style="display: flex;">
-                <div class="window drag" style="width: 10%; position: absolute; top: 15%; left: 5%; display: flexbox; height:fit-content; ">
-                    <div class="title-bar" style="background: rgb(67,29,73); background: linear-gradient(45deg, rgba(67,29,73,1) 35%, rgba(173,5,177,1) 100%);" >
-                    <div class="title-bar-text">Volume!</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                    </div>
-                    <div class="window-body">
-                        <p>
-                            <div class="slidecontainer ">
-                                <input type="range" value="70" min="0" max="70"  class="slider volSlider" onclick="volume()">
-                            </div>
-                        </p>
-                    </div>                    
-                </div>
-            </div>
-    <div class="player drag">
-    <audio id="music" src="assets/mainAssets/portalOstBGmusic.mp3" preload="auto"></audio> 
-    <div class="window">
-    <div class="title-bar">
-        <div class="title-bar-text"><sub><img class="titlebaricon" src="https://files.catbox.moe/tg55zp.png" alt="cd player icon"></sub> CD player</div>
-        <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" class="x"></button>
-        </div>
+    <div style="width:40px; height:40px; position:absolute; top: 240px; left:170px; text-shadow: none;">
+        <div id="winamp-container" style="text-shadow: none !important;"></div>
     </div>
-    <div class="window-body">
-        <div class="flex">
-    <div id="imagestyle"><img class="ic" src="https://files.catbox.moe/7f1lut.png" alt="momo icon"></div>
-        <div id="musicplayer">
-            <div class="songtitlewindow">
-                <div class="flex"><marquee scrollamount="4" class="songtitle"></marquee><div class="songtitlearrow"></div></div>
-            </div>
-    
-    <div class="seeking">
-                <div class="current-time">00:00</div>
-    
-                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-    
-                <div class="total-duration">0:00</div>
-            </div>
-    
-            <table class="controls">
-                <tr>
-                    <td>
-                        <div class="prev-track" onclick="prevTrack()"><button><i class="fas fa-backward"></i></button></div>
-                    </td>
-                    <td>
-                        <div class="playpause-track" onclick="playpauseTrack()" ><button><i class="fas fa-play"></i></button></div>
-                    </td>
-                    <td>
-                        <div class="next-track" onclick="nextTrack()"><button><i class="fas fa-forward"></i></button></div>
-                    </td>
-                    <td>
-                        <div class="loop-track" onclick="loopTrack()"><button><i class="fa-solid fa-rotate"></i></button></div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
-<a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">
-    <img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag">
-</a>
-<a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank">
-    <img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag">
-</a>
+    <script src="assets/mainAssets/winampscript.js"></script>
+    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">
+        <img src="assets/mainAssets/ultrakill.png"  style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;" alt="" class="drag">
+    </a>
+    <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank">
+        <img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag">
+    </a>
 <!-- <div class="window drag" style="width: 20%; position: absolute;">
     <div class="title-bar" style="background: #28304b !important;" >
     <div class="title-bar-text">Like rhythm games? Click here!</div>
@@ -105,207 +43,237 @@
     <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
     </div>                    
 </div>  //--might reuse someday idk--// -->
-<div class="cbox drag">
-    <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
-    <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
-</div>
-<div id="container">
-    <div id="header" style="overflow-y: hidden;">
-            <div id="fourchanWarning" hidden>
-                <div class="title">No.<span class="x">x</span></div>
-                <div class="text">Originally I thought of this taking you to a 4chan board but decidedagainst it for obvious reasons</div>
-            </div>            
-            <div id="replacewith'ahriMessage'forsomethingidk" hidden>
-                <div class="title">COOL!!!!<span class="x">x</span></div>
-                <div class="text">Really awesome edit of my profile pic made by my friend _dedmos_ on discord</div>
-            </div>                        
-            <div id="memerButton" hidden>
-                <div class="title">Made by 'redzze' on discord<span class="x">x</span></div>
-                <div class="text">This is my button! Use it if you want to link my website! Click <a href="https://memer.online/assets/mainAssets/memerOnlineButton.png"target="_blank"><span style="color: rgb(155, 228, 155);">here</span></a> to get taken to the maxRes image</div>
-            </div> 
-        </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var $infSidebar = $('#infSidebar ul li');
-            var $infSidebarClone = $('#infSidebar ul');
-            var $clonedContent = $infSidebar.clone();
-            $infSidebarClone.append($clonedContent);
-        });
-    </script>
-    <!--
-        code made by me using jQuery! Feel free to steal for your site lol, explenation on how it works is:
-        "$(document).ready(function () {" = calls the function which we're about to do when the page loads;
-        
-        "var $infSidebar = $('#infSidebar ul li');" = declares a variable by the name infSidebar, inside you're gonna have to change the selector to the parent of your images or something like that (depends on if you're doing it with my method or if ur just stealing lul)
-        
-        "var $infSidebarClone = $('#infSidebar ul')" = declaring a variable of the PARENT OF THE <li> TAG, this is needed or else the cloning just completely fucks up, try messing around with it!
-
-        "var $clonedContent = $infSidebar.clone();" = finally the good stuff, this is the thing that clones the images
-
-        "$infSidebarClone.append($clonedContent);" = it well... appends the... cloned content to the correct selector, self explanatory
-    -->
-    <div id="infSidebar">
-        <ul>
-            <li><img src="assets/buttons/nonbinary.gif" alt=""></li>
-            <li><img src="/assets/buttons/webdesign.png" alt=""></li>
-            <li><img src="/assets/mainAssets/pepsi.gif" alt=""></li>
-            <li><img src="assets/buttons/wifeHeartEmoji.png" alt=""></li>
-            <li><img src="/assets/mightNeedLater.gif" alt=""></li>
-            <li><img src="/assets/buttons/978ee999.png" alt=""></li>
-            <li><img src="/assets/buttons/discord-no-way.gif" alt=""></li>
-            <li><img src="assets/buttons/IMG_9480.jpg" alt=""></li>
-            <li><img src="assets/buttons/ahriBtn.png" alt=""></li>
-            <li><img src="assets/buttons/msn.gif" alt=""></li>
-            <li><img src="assets/buttons/arizona.gif" alt=""></li>
-            <li><img src="assets/buttons/yumenikki.gif" alt=""></li>
-            <li><img src="assets/buttons/vscbutton.gif" alt=""></li>
-            <li><img src="assets/buttons/portal1.png" alt=""></li>
-            <li><img src="assets/buttons/portal2.png" alt=""></li>
-            <li><img src="assets/buttons/got_html.gif" alt=""></li>
-            <li><img src="assets/buttons/glowstamp.gif" alt=""></li>
-            <li><img src="assets/buttons/dark-mode.gif" alt=""></li>
-            <li><a href="https://99gifshop.neocities.org"><img src="assets/buttons/99gifshop.png" alt=""></a></li>
-            <li><img src="assets/buttons/97x31_wwwbutton.gif" alt=""></li>
-            <li><img src="assets/buttons/e.gif" alt=""></li>
-            <li><img src="assets/buttons/gmod.png" alt=""></li>
-            <li><img src="assets/buttons/1copy2.gif" title="This is actually semi true, its not OFFICIALY licensed by this but the CC BY-NC-SA 4.0 should be honored"></li>
-            <li><img src="assets/buttons/ilovemusic.gif" alt=""></li>
-            <li><img src="assets/buttons/cute.png" alt=""></li>
-            <li><img src="assets/buttons/suggestion.png" alt=""></li>
-            <li><img src="assets/buttons/sharing.gif" alt=""></li>
-            <li><img src="assets/buttons/anime_eyes.gif" alt=""></li>
-            <li><a href="https://yesterweb.org/no-to-web3/"><img src="assets/buttons/roly-saynotoweb3.gif" alt=""></a></li>
-            <li><img src="assets/buttons/bored.gif" alt=""></li>
-            <li><img src="assets/buttons/graphicdesign.jpg" alt=""></li>
-            <li><img src="assets/buttons/n64.gif" alt=""></li>
-            <li><img src="assets/buttons/osu.png" alt=""></li>
-            <li><img src="assets/buttons/waterfall.png" alt=""></li>
-            <li><img src="assets/buttons/anime88x31.gif" alt=""></li>
-            <li><img src="assets/buttons/ahri.png" alt=""></li>
-            <li><img src="assets/buttons/ahriCute.png" alt=""></li>
-            <li><img src="assets/buttons/atsume.gif" alt=""></li>
-            <li><img src="assets/buttons/bigshot.gif" alt=""></li>
-            <li><img src="assets/buttons/ahriArcade.png" alt=""></li>
-            <li><img src="assets/buttons/deltarunefucker.gif" alt=""></li>
-            <li><img src="assets/buttons/VISUALSTUDIO.gif" alt=""></li>
-            <li><img src="assets/buttons/eeveelutions-umbreon.gif" alt=""></li>
-            <li><img src="assets/buttons/fuckingwebmaster.gif" alt=""></li>
-            <li><img src="assets/buttons/fuck-nfts.gif" alt=""></li>
-            <li><img src="assets/buttons/github-check.gif" alt=""></li>
-            <li><img src="assets/buttons/icetea.gif" alt=""></li>
-            <li><img src="assets/buttons/idiot.gif" alt=""></li>
-            <li><img src="assets/buttons/keepassxc.gif" alt=""></li>
-            <li><img src="assets/buttons/mafumafu.gif" alt=""></li>
-            <li><img src="assets/buttons/newlambda.gif" alt=""></li>
-            <li><img src="assets/buttons/nintendo-hh-3ds.gif" alt=""></li>
-            <li><img src="assets/buttons/preserve.gif" alt=""></li>
-            <li><img src="assets/buttons/smokey2.gif" alt=""></li>
-            <li><img src="assets/buttons/snowWife.png" alt=""></li>
-            <li><img src="assets/buttons/spotify.gif" alt=""></li>
-            <li><img src="assets/buttons/stamp.png" alt=""></li>
-            <li><img src="assets/buttons/steam.gif" alt=""></li>
-            <li><img src="assets/buttons/telegram.gif" alt=""></li>
-            <li><img src="assets/buttons/tf2.jpg" alt=""></li>
-            <li><img src="assets/buttons/THEENTIRETYOFBADAPPLEAPPARENTALY.gif" alt=""></li>
-            <li><img src="assets/buttons/volta.gif" alt=""></li>
-            <li><img src="assets/buttons/wikipedia.gif" alt=""></li>
-        </ul>
+    <div class="cbox drag">
+        <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
+        <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
     </div>
-    <span class="drag" style="z-index: 999 !important;">
-        <nav id="navbar">
+    <div id="container">
+        <div id="header" style="overflow-y: hidden;">
+                <div id="fourchanWarning" hidden>
+                    <div class="title">No.<span class="x">x</span></div>
+                    <div class="text">Originally I thought of this taking you to a 4chan board but decidedagainst it for obvious reasons</div>
+                </div>            
+                <div id="replacewith'ahriMessage'forsomethingidk" hidden>
+                    <div class="title">COOL!!!!<span class="x">x</span></div>
+                    <div class="text">Really awesome edit of my profile pic made by my friend _dedmos_ on discord</div>
+                </div>                        
+                <div id="memerButton" hidden>
+                    <div class="title">Made by 'redzze' on discord<span class="x">x</span></div>
+                    <div class="text">This is my button! Use it if you want to link my website! Click <a href="https://memer.online/assets/mainAssets/memerOnlineButton.png"target="_blank"><span style="color: rgb(155, 228, 155);">here</span></a> to get taken to the maxRes image</div>
+                </div> 
+            </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var $infSidebar = $('#infSidebar ul li');
+                var $infSidebarClone = $('#infSidebar ul');
+                var $clonedContent = $infSidebar.clone();
+                $infSidebarClone.append($clonedContent);
+            });
+        </script>
+        <!--
+            code made by me using jQuery! Feel free to steal for your site lol, explenation on how it works is:
+            "$(document).ready(function () {" = calls the function which we're about to do when the page loads;
+            
+            "var $infSidebar = $('#infSidebar ul li');" = declares a variable by the name infSidebar, inside you're gonna have to change the selector to the parent of your images or something like that (depends on if you're doing it with my method or if ur just stealing lul)
+            
+            "var $infSidebarClone = $('#infSidebar ul')" = declaring a variable of the PARENT OF THE <li> TAG, this is needed or else the cloning just completely fucks up, try messing around with it!
+
+            "var $clonedContent = $infSidebar.clone();" = finally the good stuff, this is the thing that clones the images
+
+            "$infSidebarClone.append($clonedContent);" = it well... appends the... cloned content to the correct selector, self explanatory
+        -->
+        <div id="infSidebar">
             <ul>
-                <li><a href="homepage">Home</a></li>
-                <li><a href="" onclick="alertLol()">Contact</a></li>
-                <li onclick="startMeow()" style="cursor: pointer;"><audio src="main/meow.mp3" id="meow"></audio><a target="_self">Meow</a></li>
-                <li><a href="inspirations">Inspirations</a></li>
-                <li><a href="thoughts">Thoughts</a></li>
-                <li><a href="404">Rhythm games</a></li>
-                <li><a href="https://status.cafe/users/memer">status.cafe</a></li>
+                <li><img src="assets/buttons/nonbinary.gif" alt=""></li>
+                <li><img src="/assets/buttons/webdesign.png" alt=""></li>
+                <li><img src="/assets/mainAssets/pepsi.gif" alt=""></li>
+                <li><img src="assets/buttons/wifeHeartEmoji.png" alt=""></li>
+                <li><img src="/assets/mightNeedLater.gif" alt=""></li>
+                <li><img src="/assets/buttons/978ee999.png" alt=""></li>
+                <li><img src="/assets/buttons/discord-no-way.gif" alt=""></li>
+                <li><img src="assets/buttons/IMG_9480.jpg" alt=""></li>
+                <li><img src="assets/buttons/ahriBtn.png" alt=""></li>
+                <li><img src="assets/buttons/msn.gif" alt=""></li>
+                <li><img src="assets/buttons/arizona.gif" alt=""></li>
+                <li><img src="assets/buttons/yumenikki.gif" alt=""></li>
+                <li><img src="assets/buttons/vscbutton.gif" alt=""></li>
+                <li><img src="assets/buttons/portal1.png" alt=""></li>
+                <li><img src="assets/buttons/portal2.png" alt=""></li>
+                <li><img src="assets/buttons/got_html.gif" alt=""></li>
+                <li><img src="assets/buttons/glowstamp.gif" alt=""></li>
+                <li><img src="assets/buttons/dark-mode.gif" alt=""></li>
+                <li><a href="https://99gifshop.neocities.org"><img src="assets/buttons/99gifshop.png" alt=""></a></li>
+                <li><img src="assets/buttons/97x31_wwwbutton.gif" alt=""></li>
+                <li><img src="assets/buttons/e.gif" alt=""></li>
+                <li><img src="assets/buttons/gmod.png" alt=""></li>
+                <li><img src="assets/buttons/1copy2.gif" title="This is actually semi true, its not OFFICIALY licensed by this but the CC BY-NC-SA 4.0 should be honored"></li>
+                <li><img src="assets/buttons/ilovemusic.gif" alt=""></li>
+                <li><img src="assets/buttons/cute.png" alt=""></li>
+                <li><img src="assets/buttons/suggestion.png" alt=""></li>
+                <li><img src="assets/buttons/sharing.gif" alt=""></li>
+                <li><img src="assets/buttons/anime_eyes.gif" alt=""></li>
+                <li><a href="https://yesterweb.org/no-to-web3/"><img src="assets/buttons/roly-saynotoweb3.gif" alt=""></a></li>
+                <li><img src="assets/buttons/bored.gif" alt=""></li>
+                <li><img src="assets/buttons/graphicdesign.jpg" alt=""></li>
+                <li><img src="assets/buttons/n64.gif" alt=""></li>
+                <li><img src="assets/buttons/osu.png" alt=""></li>
+                <li><img src="assets/buttons/waterfall.png" alt=""></li>
+                <li><img src="assets/buttons/anime88x31.gif" alt=""></li>
+                <li><img src="assets/buttons/ahri.png" alt=""></li>
+                <li><img src="assets/buttons/ahriCute.png" alt=""></li>
+                <li><img src="assets/buttons/atsume.gif" alt=""></li>
+                <li><img src="assets/buttons/bigshot.gif" alt=""></li>
+                <li><img src="assets/buttons/ahriArcade.png" alt=""></li>
+                <li><img src="assets/buttons/deltarunefucker.gif" alt=""></li>
+                <li><img src="assets/buttons/VISUALSTUDIO.gif" alt=""></li>
+                <li><img src="assets/buttons/eeveelutions-umbreon.gif" alt=""></li>
+                <li><img src="assets/buttons/fuckingwebmaster.gif" alt=""></li>
+                <li><img src="assets/buttons/fuck-nfts.gif" alt=""></li>
+                <li><img src="assets/buttons/github-check.gif" alt=""></li>
+                <li><img src="assets/buttons/icetea.gif" alt=""></li>
+                <li><img src="assets/buttons/idiot.gif" alt=""></li>
+                <li><img src="assets/buttons/keepassxc.gif" alt=""></li>
+                <li><img src="assets/buttons/mafumafu.gif" alt=""></li>
+                <li><img src="assets/buttons/newlambda.gif" alt=""></li>
+                <li><img src="assets/buttons/nintendo-hh-3ds.gif" alt=""></li>
+                <li><img src="assets/buttons/preserve.gif" alt=""></li>
+                <li><img src="assets/buttons/smokey2.gif" alt=""></li>
+                <li><img src="assets/buttons/snowWife.png" alt=""></li>
+                <li><img src="assets/buttons/spotify.gif" alt=""></li>
+                <li><img src="assets/buttons/stamp.png" alt=""></li>
+                <li><img src="assets/buttons/steam.gif" alt=""></li>
+                <li><img src="assets/buttons/telegram.gif" alt=""></li>
+                <li><img src="assets/buttons/tf2.jpg" alt=""></li>
+                <li><img src="assets/buttons/THEENTIRETYOFBADAPPLEAPPARENTALY.gif" alt=""></li>
+                <li><img src="assets/buttons/volta.gif" alt=""></li>
+                <li><img src="assets/buttons/wikipedia.gif" alt=""></li>
             </ul>
-        </nav>
-        <div id="flexDiv">
-            <section id="leftBar" class="bars barsContainer">
-                <a onclick="Ahrimessage()">
-                    <img src="/assets/mainAssets/wifeFrame.png" alt="" style="width: 80%; height: max-content"  class="drag">
-                </a>
-                <hr>
-                <span>
-                    <a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3" target="_blank"><img src="/assets/buttons/nft.gif" style="padding-right: 17px;" alt=""></a>
-                    <br> 
-                    <a href="https://www.leagueoflegends.com/en-us/champions/ahri/" target="_blank">
-                        <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt="">
-                    </a><br>
-                    <img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt="">
-                </span><br><br><br><hr>
-                <span>Link me!<br><br><span style="text-align: center; display: flex; flex-direction: column;"><img src="assets/mainAssets/memerOnlineButton.png" onclick="memerButton()" style="width: 8vw; align-self: center;" alt=""><br><textarea id="buttonHref"><a href="https://memer.online"><img src="https://memer.online/assets/mainAssets/memerOnlineButton.png" alt=""></a></textarea></span>
-                </section></span>
-            <section id="mainDiv">
-                <span class="bars">Site still very much W.I.P, expect shit to break especially on mobile, thank you in advance <img src="assets/mainAssets/chomp.gif" alt="" style="width: 6%;"></span><br>
-                <br><span class="bars">I have to add, this site is HIGHLY interactive, everything is here for a reason and so you can click on just about anything, have fun exploring!!!<img src="/assets/mainAssets/womean.gif" style="width: 1vw;" alt=""></span><br>
-                <br><span class="bars" style="text-align: left;">Also look in the top left corner there's a cat click on the cat you know you want to click on the cat<sub><img src="/assets/mainAssets/miniCat.gif" style="width: 1vw;" alt=""></sub></span><br>
-                <br><span class="bars">All sites linked from here under the memer.online domain I tried to make look different and unique, please give me any and all feedback!</span>
-                <!-- <br><span class="bars">Current roadmap for the site is this : 
-                    <ul style="display: grid; text-decoration: none; line-height: 2vh; font-size: 0.8vw; background-color: #0e070f9f;">
-                        <li><s>❥ Add Ahri shrine</s> Done somewhat but hidden cuz ugly, will remake in future}]</li>
-                        <li>❥ Add page about rhythm games; <sub>▓▓▓▒▒▒▒▒▒▒</sub> 30%, webpage done, just need to decorate}]</li>
-                        <li>❥ Decorate main page with more stuff <sup style="font-size: 0.4vw;">infinitely scaling task</sup>}]</li>
-                        <li><s>❥ Add a CBOX maybe??? idk??? probably??</s> DONE!}]</li><br>
-                        <li>❥ Make a horizontally scrolling site</li>
-                    </ul>
-                </span>             -->
-            </section>
-            <section id="rightBar" class="bars barsContainer">            
-                <a href="https://jme.moe/">
-                    <img src="/assets/mainAssets/jmebiobutton.gif" style="padding-left: 1vw;" alt="">
-                </a>
-                <a href="https://kiwimeowo.neocities.org/" target="_blank" style="color: #2d3758; text-shadow: 2px 2px #97B8B5;">
-                    <img src="./assets/buttons/kiwimeowoButton.png" style="padding-right: 1vw;" alt="">
-                </a>
-                <a href="https://sadgrl.online/" target="_blank">
-                    <img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif">
-                </a>
-                <hr>
-                Other links:
-                    <span style="text-align: left;"><ol style="list-style-type: disc; padding: 0;">
-                        <span>[+] <a href="changelog">ChLog<img src="/assets/mainAssets/changelog.gif" style="width: 1vw;" alt=""></a></span><br>
-                        <span>[+] <a href="roadmap">Roadmap<img src="assets/mainAssets/stupidCatButINeedARoadmapGraphic.gif" style="width: 1vw;" alt=""></a></span>
-                    </ol></span>
-                <hr>
-                Sign my<a href="http://memer.123Guestbook.com/"> guestbook!</a><img src="/assets/mainAssets/guestbook.gif" style="width: 1vw; position: relative; top: 0.1vw;" alt="">
-                <hr>
-                <a href="https://nightfall.city" target="_blank"><img src="assets/mainAssets/nightfallDotCity.png" alt="" style="width: 7vw;"></a><br><span style="font-size: 0.6vw; font-family: ms ui gothic;">``` From the hills of Dusk's End to the small alleys of Main Street, you feel drawn to the lights of this vibrant metropolis in an uncharted internet territory. The sign reads "Nightfall". ```</span>
-            </section>
-            <!-- ADD NIGHTFALL.CITY HERE -->
         </div>
-        <footer>This site is open source on <a href="https://github.com/Memerguyy">my github</a>, feel free to take inspiration from it! <sub style="font-size: 0.4vw;">since I did so as well from other sites</sub></footer> 
-    </span>
-    </span>
-    <div id="box">
-        <div id="musicbox" class="drag">
-            <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&emsp; <sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
-            <div class="text">
-                My favourite genre of music is <span style="color: darksalmon;">breakcore</span><span style="color: #ffffff5d;"><sub>(as well as anything related to it such as <span style="color: cadetblue;">DnB</span> and<span style="color: cornflowerblue;"> jungle</span>)</sub></span>, and by breakcore I don't mean artists like <span style="color: rgb(118, 0, 148);">Sewerslvt</span> or <span style="color: rgb(15, 145, 15);">Goreshit</span>, while I do enjoy them, they more fall under the DnB category <span style="color: #76b9e670;">(Goreshit DOES make breakcore but he's more of a variety artist)</span><br><br>I'm more of a fan of old-gen breakcore/breakcore where they actually honor the meaning of the word, some of my fav artists are <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=50fe885609e041e0" style="color: rgb(0, 0, 0); text-shadow: 2px 2px rgb(155, 155, 155); background-color: white; padding: 2px;">hkmori</a>, <a href="https://open.spotify.com/artist/6XPrvweB1zFfzTQv3ajRHC?si=Os6IW3CwTYelE3_J4HCL4A" style="color: rgb(255, 214, 221); text-shadow: 2px 2px aliceblue;">Yem</a>, <a href="https://open.spotify.com/artist/7eKIP3IoPoUAZgZuvMM6hf?si=Y1sfLCFlQLyZeWgEq8cOXw" style="color: goldenrod;">Venetian Snares</a>  and more recently <a href="https://open.spotify.com/artist/35LM3RHYCFdizCendce2Iw?si=j5zV231yRaOBb0OwBtVH5A" style="color:#3d7ebb; text-shadow: 2px 2px rgb(97, 3, 3);">Nacho</a>
+        <span class="drag" style="z-index: 999 !important;">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="homepage">Home</a></li>
+                    <li><a href="" onclick="alertLol()">Contact</a></li>
+                    <li onclick="startMeow()" style="cursor: pointer;"><audio src="main/meow.mp3" id="meow"></audio><a target="_self">Meow</a></li>
+                    <li><a href="inspirations">Inspirations</a></li>
+                    <li><a href="thoughts">Thoughts</a></li>
+                    <li><a href="404">Rhythm games</a></li>
+                    <li><a href="https://status.cafe/users/memer">status.cafe</a></li>
+                </ul>
+            </nav>
+            <div id="flexDiv">
+                <section id="leftBar" class="bars barsContainer">
+                    <a onclick="Ahrimessage()">
+                        <img src="/assets/mainAssets/wifeFrame.png" alt="" style="width: 80%; height: max-content"  class="drag">
+                    </a>
+                    <hr>
+                    <span>
+                        <a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3" target="_blank"><img src="/assets/buttons/nft.gif" style="padding-right: 17px;" alt=""></a>
+                        <br> 
+                        <a href="https://www.leagueoflegends.com/en-us/champions/ahri/" target="_blank">
+                            <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt="">
+                        </a><br>
+                        <img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt="">
+                    </span><br><br><br><hr>
+                    <span>Link me!<br><br><span style="text-align: center; display: flex; flex-direction: column;"><img src="assets/mainAssets/memerOnlineButton.png" onclick="memerButton()" style="width: 8vw; align-self: center;" alt=""><br><textarea id="buttonHref"><a href="https://memer.online"><img src="https://memer.online/assets/mainAssets/memerOnlineButton.png" alt=""></a></textarea></span>
+                    </section></span>
+                <section id="mainDiv">
+                    <span class="bars">Site still very much W.I.P, expect shit to break especially on mobile, thank you in advance <img src="assets/mainAssets/chomp.gif" alt="" style="width: 6%;"></span><br>
+                    <br><span class="bars">I have to add, this site is HIGHLY interactive, everything is here for a reason and so you can click on just about anything, have fun exploring!!!<img src="/assets/mainAssets/womean.gif" style="width: 1vw;" alt=""></span><br>
+                    <br><span class="bars" style="text-align: left;">Also look in the top left corner there's a cat click on the cat you know you want to click on the cat<sub><img src="/assets/mainAssets/miniCat.gif" style="width: 1vw;" alt=""></sub></span><br>
+                    <br><span class="bars">All sites linked from here under the memer.online domain I tried to make look different and unique, please give me any and all feedback!</span>
+                    <!-- <br><span class="bars">Current roadmap for the site is this : 
+                        <ul style="display: grid; text-decoration: none; line-height: 2vh; font-size: 0.8vw; background-color: #0e070f9f;">
+                            <li><s>❥ Add Ahri shrine</s> Done somewhat but hidden cuz ugly, will remake in future}]</li>
+                            <li>❥ Add page about rhythm games; <sub>▓▓▓▒▒▒▒▒▒▒</sub> 30%, webpage done, just need to decorate}]</li>
+                            <li>❥ Decorate main page with more stuff <sup style="font-size: 0.4vw;">infinitely scaling task</sup>}]</li>
+                            <li><s>❥ Add a CBOX maybe??? idk??? probably??</s> DONE!}]</li><br>
+                            <li>❥ Make a horizontally scrolling site</li>
+                        </ul>
+                    </span>             -->
+                </section>
+                <section id="rightBar" class="bars barsContainer">            
+                    <a href="https://jme.moe/">
+                        <img src="/assets/mainAssets/jmebiobutton.gif" style="padding-left: 1vw;" alt="">
+                    </a>
+                    <a href="https://kiwimeowo.neocities.org/" target="_blank" style="color: #2d3758; text-shadow: 2px 2px #97B8B5;">
+                        <img src="./assets/buttons/kiwimeowoButton.png" style="padding-right: 1vw;" alt="">
+                    </a>
+                    <a href="https://sadgrl.online/" target="_blank">
+                        <img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif">
+                    </a>
+                    <hr>
+                    Other links:
+                        <span style="text-align: left;"><ol style="list-style-type: disc; padding: 0;">
+                            <span>[+] <a href="changelog">ChLog<img src="/assets/mainAssets/changelog.gif" style="width: 1vw;" alt=""></a></span><br>
+                            <span>[+] <a href="roadmap">Roadmap<img src="assets/mainAssets/stupidCatButINeedARoadmapGraphic.gif" style="width: 1vw;" alt=""></a></span>
+                        </ol></span>
+                    <hr>
+                    Sign my<a href="http://memer.123Guestbook.com/"> guestbook!</a><img src="/assets/mainAssets/guestbook.gif" style="width: 1vw; position: relative; top: 0.1vw;" alt="">
+                    <hr>
+                    <a href="https://nightfall.city" target="_blank"><img src="assets/mainAssets/nightfallDotCity.png" alt="" style="width: 7vw;"></a><br><span style="font-size: 0.6vw; font-family: ms ui gothic;">``` From the hills of Dusk's End to the small alleys of Main Street, you feel drawn to the lights of this vibrant metropolis in an uncharted internet territory. The sign reads "Nightfall". ```</span>
+                </section>
+                <!-- ADD NIGHTFALL.CITY HERE -->
+            </div>
+            <footer>This site is open source on <a href="https://github.com/Memerguyy">my github</a>, feel free to take inspiration from it! <sub style="font-size: 0.4vw;">since I did so as well from other sites</sub></footer> 
+        </span>
+        </span>
+        <div id="box">
+            <div id="musicbox" class="drag">
+                <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&emsp; <sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+                <div class="text">
+                    My favourite genre of music is <span style="color: darksalmon;">breakcore</span><span style="color: #ffffff5d;"><sub>(as well as anything related to it such as <span style="color: cadetblue;">DnB</span> and<span style="color: cornflowerblue;"> jungle</span>)</sub></span>, and by breakcore I don't mean artists like <span style="color: rgb(118, 0, 148);">Sewerslvt</span> or <span style="color: rgb(15, 145, 15);">Goreshit</span>, while I do enjoy them, they more fall under the DnB category <span style="color: #76b9e670;">(Goreshit DOES make breakcore but he's more of a variety artist)</span><br><br>I'm more of a fan of old-gen breakcore/breakcore where they actually honor the meaning of the word, some of my fav artists are <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=50fe885609e041e0" style="color: rgb(0, 0, 0); text-shadow: 2px 2px rgb(155, 155, 155); background-color: white; padding: 2px;">hkmori</a>, <a href="https://open.spotify.com/artist/6XPrvweB1zFfzTQv3ajRHC?si=Os6IW3CwTYelE3_J4HCL4A" style="color: rgb(255, 214, 221); text-shadow: 2px 2px aliceblue;">Yem</a>, <a href="https://open.spotify.com/artist/7eKIP3IoPoUAZgZuvMM6hf?si=Y1sfLCFlQLyZeWgEq8cOXw" style="color: goldenrod;">Venetian Snares</a>  and more recently <a href="https://open.spotify.com/artist/35LM3RHYCFdizCendce2Iw?si=j5zV231yRaOBb0OwBtVH5A" style="color:#3d7ebb; text-shadow: 2px 2px rgb(97, 3, 3);">Nacho</a>
+                </div>
+            </div>
+            <div id="games" class="drag">
+                <div class="title">homebrew&emsp; <sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+                <div class="text">
+                    I LOVE LOVE LOVE LOVE HOMEBREW!!<sub><img src="assets/mainAssets/STUPIDCAT.gif" alt="" style="width: 1vw;"></sub><br><br>I could go on all day about how much I love homebrew and how I would recommend it to ANYONE (especially anyone with an old console like the ds/3ds family of consoles), but instead let me just list points as to why I think people should homebrew <br><br>
+                    &emsp; ➥ "Ease of access" to games <br>
+                    &emsp; ➥ Able to run custom games<br>
+                    &emsp; ➥ Easy to do and opens up a TON of customizibility <br>
+                    &emsp; ➥ Street cred<sub><img src="/assets/mainAssets/catgaming.gif" style="width: 1vw;" alt=""></sub>
+                </div>
             </div>
         </div>
-        <div id="games" class="drag">
-            <div class="title">homebrew&emsp; <sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
-            <div class="text">
-                I LOVE LOVE LOVE LOVE HOMEBREW!!<sub><img src="assets/mainAssets/STUPIDCAT.gif" alt="" style="width: 1vw;"></sub><br><br>I could go on all day about how much I love homebrew and how I would recommend it to ANYONE (especially anyone with an old console like the ds/3ds family of consoles), but instead let me just list points as to why I think people should homebrew <br><br>
-                &emsp; ➥ "Ease of access" to games <br>
-                &emsp; ➥ Able to run custom games<br>
-                &emsp; ➥ Easy to do and opens up a TON of customizibility <br>
-                &emsp; ➥ Street cred<sub><img src="/assets/mainAssets/catgaming.gif" style="width: 1vw;" alt=""></sub>
-            </div>
-        </div>
-    </div>
-    <section id="box" class="drag">
-        <div id="webmaster" style="text-shadow: 2px 2px black; font-weight: 600;">
-            <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&emsp; <sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
-            <h1 class="text" style="text-align: center;">Hello, this is the webmaster, here to say a few things about myself</h1>  
-            <div style="display: flex;">
-                <div class="window" style="width: 55%; margin: 10px; margin-left: 10%; display: flexbox; height:fit-content;">
+        <section id="box" class="drag">
+            <div id="webmaster" style="text-shadow: 2px 2px black; font-weight: 600;">
+                <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&emsp; <sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
+                <h1 class="text" style="text-align: center;">Hello, this is the webmaster, here to say a few things about myself</h1>  
+                <div style="display: flex;">
+                    <div class="window" style="width: 55%; margin: 10px; margin-left: 10%; display: flexbox; height:fit-content;">
+                        <div class="title-bar" >
+                        <div class="title-bar-text">Who am I</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                        </div>
+                        <div class="window-body">
+                        <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
+                        </div>                    
+                    </div>
+                </div>    
+                <div style="display: flex;">                                        
+                <img src="assets/mainAssets/made_by_QiTian_On_Artstation.png" style="position: relative; margin-left: 8vw; height: 12vw; align-self: center;"  alt=""> 
+                    <div class="window" style="width: 35%; margin: 10px; margin-left: 20%;">
+                        <div class="title-bar" >
+                        <div class="title-bar-text">How do I look like</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                        </div>
+                        <div class="window-body">                            
+                        <p style="word-wrap: break-word;">While I won't put a picture of myself for obvious reasons, I'll still describe myself. <br><br> I'm around 165cm, wear glasses, have medium length brown hair, relatively clear skin, and I'm also incredibly skinny </p>
+                        </div>
+                    </div>              
+                </div>
+                <div class="window" style="width: 45%; margin: 10px; margin-left: 20%;">
                     <div class="title-bar" >
-                    <div class="title-bar-text">Who am I</div>
+                    <div class="title-bar-text">Interests</div>
                     <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -313,67 +281,37 @@
                     </div>
                     </div>
                     <div class="window-body">
-                    <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
-                    </div>                    
-                </div>
-            </div>    
-            <div style="display: flex;">                                        
-            <img src="assets/mainAssets/made_by_QiTian_On_Artstation.png" style="position: relative; margin-left: 8vw; height: 12vw; align-self: center;"  alt=""> 
-                <div class="window" style="width: 35%; margin: 10px; margin-left: 20%;">
-                    <div class="title-bar" >
-                    <div class="title-bar-text">How do I look like</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
+                    <p style="word-wrap: break-word;">I'm heavily interested in League, Minecraft, Ultrakill and as of *very* recently Lethal Company, I could go on all day about how much I love that game but I don't wanna take up the whole page with it lol <sub>and I also really like foxgirls</sub></p>
                     </div>
-                    </div>
-                    <div class="window-body">                            
-                    <p style="word-wrap: break-word;">While I won't put a picture of myself for obvious reasons, I'll still describe myself. <br><br> I'm around 165cm, wear glasses, have medium length brown hair, relatively clear skin, and I'm also incredibly skinny </p>
-                    </div>
-                </div>              
-            </div>
-            <div class="window" style="width: 45%; margin: 10px; margin-left: 20%;">
-                <div class="title-bar" >
-                <div class="title-bar-text">Interests</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                </div>
-                </div>
-                <div class="window-body">
-                  <p style="word-wrap: break-word;">I'm heavily interested in League, Minecraft, Ultrakill and as of *very* recently Lethal Company, I could go on all day about how much I love that game but I don't wanna take up the whole page with it lol <sub>and I also really like foxgirls</sub></p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="tablist" class="drag">
-        <div class="title" id="specialTitle">other things!!&emsp;<sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
-        <div id="thoughtTabs">
-            <ul>
-                <li><a id="tab1" class="buttons" href="#VSRGs">VSRG's</a></li>
-                <li><a id="tab2" class="buttons" href="#statuscafe">Status</a></li>
-                <li><a id="tab3" class="buttons" href="#League">League</a></li>
-                <!-- <li><a id="tab2" class="buttons" href="#meow2">placeholder</a></li> -->
-            </ul>
-            <div id="tabsPanels" class="text">
-                <div id="VSRGs" hidden>
-                    I absolutely adore VSRG's, I've been playing them for as long as I can remember with my first one being piano tiles (lol), but surprisingly after that I picked up <a href="https://osu.ppy.sh/users/10773549" style="color: pink;">osu!</a><br><br>But not osu!STD oh no, I played it for a while and I was HORRIBLE at it, so after that I picked up !mania and that is basically what got me into VSRG's<br><br>And while osu!mania is still my fav one, I also think that others such as etterna, vivid/stasis, quaver, muse dash (if you turn your screen sideways lol). As for ALL rhythm games, check out <span onclick="shittyRedirect()" class="rainbowAllTheWay">this site</span>
+        </section>
+        <section id="tablist" class="drag">
+            <div class="title" id="specialTitle">other things!!&emsp;<sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
+            <div id="thoughtTabs">
+                <ul>
+                    <li><a id="tab1" class="buttons" href="#VSRGs">VSRG's</a></li>
+                    <li><a id="tab2" class="buttons" href="#statuscafe">Status</a></li>
+                    <li><a id="tab3" class="buttons" href="#League">League</a></li>
+                    <!-- <li><a id="tab2" class="buttons" href="#meow2">placeholder</a></li> -->
+                </ul>
+                <div id="tabsPanels" class="text">
+                    <div id="VSRGs" hidden>
+                        I absolutely adore VSRG's, I've been playing them for as long as I can remember with my first one being piano tiles (lol), but surprisingly after that I picked up <a href="https://osu.ppy.sh/users/10773549" style="color: pink;">osu!</a><br><br>But not osu!STD oh no, I played it for a while and I was HORRIBLE at it, so after that I picked up !mania and that is basically what got me into VSRG's<br><br>And while osu!mania is still my fav one, I also think that others such as etterna, vivid/stasis, quaver, muse dash (if you turn your screen sideways lol). As for ALL rhythm games, check out <span onclick="shittyRedirect()" class="rainbowAllTheWay">this site</span>
+                    </div>
+                    <div id="statuscafe" hidden>
+                        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=memer" defer></script>
+                    </div>
+                    <div id="League" class="text" hidden>
+                        Yes, I play League of Legends, SHOCKER! It's not like the cursor is league themed and I have Ahri plastered all over the page. All jokes aside, as much as I despise this game I can't help but to come back to it because in all fairness, ignoring the community I actually DO enjoy the game, as evident in my 500+ hours invested into it, and as long as I ignore the horrible community the gameplay is actually pretty good once you get the hang of it <br><br> <span style="font-family:'Times New Roman', Times, serif">But please, for the love of god, don't play it. It's not worth it.</span>
+                    </div>
+                    <!-- <div id="meow2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae saepe perspiciatis suscipit, consequatur voluptatibus unde repudiandae impedit! Magni ad, officia, sunt repellendus nostrum sit eum, esse fuga dignissimos at fugiat.
+                    </div> -->
                 </div>
-                <div id="statuscafe" hidden>
-                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=memer" defer></script>
-                </div>
-                <div id="League" class="text" hidden>
-                    Yes, I play League of Legends, SHOCKER! It's not like the cursor is league themed and I have Ahri plastered all over the page. All jokes aside, as much as I despise this game I can't help but to come back to it because in all fairness, ignoring the community I actually DO enjoy the game, as evident in my 500+ hours invested into it, and as long as I ignore the horrible community the gameplay is actually pretty good once you get the hang of it <br><br> <span style="font-family:'Times New Roman', Times, serif">But please, for the love of god, don't play it. It's not worth it.</span>
-                </div>
-                <!-- <div id="meow2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae saepe perspiciatis suscipit, consequatur voluptatibus unde repudiandae impedit! Magni ad, officia, sunt repellendus nostrum sit eum, esse fuga dignissimos at fugiat.
-                </div> -->
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 <div style="text-align: right;" id="midnightHouse">
     <span style="display: inline-block; width: 150px; position: relative; text-align: center; top: -3vw;"></span><a href="https://memer.midnight.pub/" target="_blank" title="Milk-chan!"><img src="assets/mainAssets/milkchan.png" style="position: relative; float: right; width: 15vw; top: -15vw; padding-right: 2vw;" alt=""></a>
 </div>

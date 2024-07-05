@@ -339,7 +339,7 @@ hr {
   border-style:dashed;
 }
 
-ul {
+#infSidebar > ul {
   padding: 10px;
   font-size: small;
   display: flex;
@@ -376,7 +376,7 @@ body {
   font-weight: 100;
   /* font-family: ADDSBP__; */
   font-family: ms ui gothic;
-  text-shadow: 3px 4px rgb(17, 0, 32);
+  /* text-shadow: 3px 4px rgb(17, 0, 32); */
   word-wrap: normal;
   overflow-x: hidden !important;
 }
