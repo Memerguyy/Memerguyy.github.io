@@ -1,0 +1,20 @@
+* {
+    font-family: ms ui gothic;
+}
+body {
+    background: url(./bg.jpg);
+    background-size: 8%;
+}
+
+button {
+    background-color: #d6abdf;
+    
+}
+
+#lighter {
+    color:  #f2b2ff
+}
+
+#darker {
+    color: #a593da
+}

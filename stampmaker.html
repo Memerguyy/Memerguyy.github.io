@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            font-family: ms ui gothic;
-            color: white;
-            padding: 20px;
-            background: url(assets/mainAssets/RGbg.gif);
+    <title>Stamp maker!!!</title>
+    <link rel="stylesheet" href="./assets/stampAssets/style.css">
+    <!-- <style>
+        canvas {
+          border: 1px solid black;
         }
-      </style>
+      </style> -->
 </head>
-<body>
-  <h1>Memer's stamp maker (very WIP)</h1>
+<body style="background-color: black;color:white;">
+  <div style="float: right; padding-right: 5rem;">
+    <img src="./assets/stampAssets/stamp.png" alt="" id="tempOne" style="display: inline; transform: translateX(-5rem);">
+    <img src="./assets/stampAssets/stamp2.png" id="tempTwo" style="display: inline; transform: translateX(-5rem);" alt="">
+    <span><--- awesome templates you can use!!!</span>
+  </div>
+  <center><h1>Memer's stamp maker (very WIP)</h1></center>
+  <button id="slice">Halve the size</button>
+  <button id="ecils">Double the size</button>
     <form>
         <div>
           <input type="file" accept="image/*" id="choose-file" name="choose-file" />
+          <input type="number" placeholder="width" id="width" value="">
+          <input type="number" placeholder="height" id="height" value="">
         </div>
     </form>
     <canvas id="canvas"></canvas>
