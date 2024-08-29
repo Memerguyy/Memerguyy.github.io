@@ -95,9 +95,6 @@ const Winamp = window.Webamp;
                 url:  "https://files.catbox.moe/ejlw1c.mp3",
             },
           ],
-          initialSkin: {
-            url: "https://files.catbox.moe/ti8t2n.wsz"
-        },
     });
     webamp.renderWhenReady(document.getElementById('winamp-container'));
 
@@ -119,9 +116,6 @@ function skibidiUnleashed() {
         initialTracks: [
             {metaData: {artist: "Satan himself",title: "Skibidi toilet",},url:"https://files.catbox.moe/5ln7w5.mp3"},
           ],
-          initialSkin: {
-            url: "https://files.catbox.moe/ti8t2n.wsz"
-        },
     });
     webamp.renderWhenReady(document.getElementById('winamp-container'));
 }
