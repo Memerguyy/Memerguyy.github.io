@@ -188,13 +188,6 @@ height.oninput = function() {
   drawImage()
 }
 
-
-
-// console.log(msmArr)
-// if(x % 2 != 1) {
-//   console.log(msmArr[x])
-//   // MSM.innerHTML = msmArr[x]
-// } else {
-//   // console.log(msmArr.substring(x, x+1) + ' nomod2')
-//   // MSM.innerHTML = msmArr[x]
-// }
+canvBtn.addEventListener("click", () => {
+  canv.toBlob((blob) => {navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);}, "image/png");
+})
