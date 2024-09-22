@@ -21,7 +21,7 @@
 </head>
 <body>
     <img src="assets/mainAssets/maygodsaveyou.png" style="position: absolute; width: 29px; right: 10%; top: 25%;" onclick="skibidiUnleashed()" alt="god has no mercy">
-    <div style="width:40px; height:40px; position:absolute; top: 240px; left:170px; text-shadow: none;">
+    <div style="width:40px; height:40px; position:absolute; text-shadow: none; top: 15em;" id="winampCont">
         <div id="winamp-container" style="text-shadow: none !important;"></div>
     </div>
     <script src="assets/mainAssets/winampscript.js"></script>
@@ -31,19 +31,6 @@
     <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank">
         <img src="assets/mainAssets/yomiHustle.png" style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag">
     </a>
-<!-- <div class="window drag" style="width: 20%; position: absolute;">
-    <div class="title-bar" style="background: #28304b !important;" >
-    <div class="title-bar-text">Like rhythm games? Click here!</div>
-    <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-    </div>
-    </div>
-    <div class="window-body">
-    <p>Hi, my name is memer / memerr / memerguy / memerguyy, or at least that's how I go by online. I'm polish, currently studying programming, and this website is kinda a hobby project (since HTML isnt really related to programming)</p>                      
-    </div>                    
-</div>  //--might reuse someday idk--// -->
     <div class="cbox drag">
         <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>
         <iframe src="https://www5.cbox.ws/box/?boxid=948580&boxtag=Pa7qh6" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" hidden id="cbox"></iframe>
@@ -175,13 +162,13 @@
                             <img src="/assets/mainAssets/ahriButton.png" style="float: left; padding: 5px;" alt="">
                         </a><br>
                         <img src="/assets/mainAssets/buriNiceButton.png" style="padding: 5px; float: right;" onclick="fourChanWarning()" alt="">
-                    </span><br><br><br><hr>
+                    </span><br><br><br><br><hr>
                     <span>Link me! <span style="font-size: 8px;">(Now with a properly resized button!)</span><br><br><span style="text-align: center; display: flex; flex-direction: column;"><img src="assets/mainAssets/memerOnlineButtonHQ.png" onclick="memerButton()" style="width: 8vw; align-self: center;" alt=""><br><textarea id="buttonHref"><a href="https://memer.online"><img src="https://memer.online/assets/mainAssets/memerOnlineButton.png" alt=""></a></textarea></span>
                     </section></span>
                 <section id="mainDiv">
-                    <span class="bars">Site still very much W.I.P, expect shit to break especially on mobile, thank you in advance <img src="assets/mainAssets/chomp.gif" alt="" style="width: 6%;"></span><br>
-                    <br><span class="bars">I have to add, this site is HIGHLY interactive, everything is here for a reason and so you can click on just about anything, have fun exploring!!!<img src="/assets/mainAssets/womean.gif" style="width: 1vw;" alt=""></span><br>
-                    <br><span class="bars" style="text-align: left;">Also look in the top left corner there's a cat click on the cat you know you want to click on the cat<sub><img src="/assets/mainAssets/miniCat.gif" style="width: 1vw;" alt=""></sub></span><br>
+                    <span class="bars">Site still very much W.I.P, expect shit to break especially on mobile, thank you in advance <img src="assets/mainAssets/chomp.gif" alt="" style="width: 1vw"></span><br>
+                    <br><span class="bars">I have to add, this site is HIGHLY interactive, everything is here for a reason and so you can click on just about anything, have fun exploring!!!<img src="/assets/mainAssets/womean.gif" style="width: 1vw" alt=""></span><br>
+                    <br><span class="bars" style="text-align: left;">Also look in the top left corner there's a cat click on the cat you know you want to click on the cat<img src="/assets/mainAssets/miniCat.gif" style="width: 1vw" alt=""></span><br>
                     <br><span class="bars">All sites linked from here under the memer.online domain I tried to make look different and unique, please give me any and all feedback!</span>
                     <!-- <br><span class="bars">Current roadmap for the site is this : 
                         <ul style="display: grid; text-decoration: none; line-height: 2vh; font-size: 0.8vw; background-color: #0e070f9f;">
@@ -212,7 +199,7 @@
                             <span>[+] <a href="roadmap">Roadmap<img src="assets/mainAssets/stupidCatButINeedARoadmapGraphic.gif" style="width: 1vw;" alt=""></a></span>
                         </ol></span>
                     <hr>
-                    Sign my<a href="http://memer.123Guestbook.com/"> guestbook!</a><img src="/assets/mainAssets/guestbook.gif" style="width: 1vw; position: relative; top: 0.1vw;" alt="">
+                    Sign my<a href="http://memer.123Guestbook.com/"> guestbook!<img src="/assets/mainAssets/guestbook.gif" style="width: 1vw; position: relative; top: 0.1vw;" alt=""></a>
                     <hr>
                     <a href="https://nightfall.city" target="_blank"><img src="assets/mainAssets/nightfallDotCity.png" alt="" style="width: 7vw;"></a><br><span style="font-size: 0.6vw; font-family: ms ui gothic;">``` From the hills of Dusk's End to the small alleys of Main Street, you feel drawn to the lights of this vibrant metropolis in an uncharted internet territory. The sign reads "Nightfall". ```</span>
                 </section>
@@ -223,13 +210,13 @@
         </span>
         <div id="box">
             <div id="musicbox" class="drag">
-                <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&emsp; <sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+                <div class="title" style="background-color: #2d3758; border-color: #28304b;">music&thinsp;<sup><img src="/assets/mainAssets/musicPixel.webp" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
                 <div class="text">
                     My favourite genre of music is <span style="color: darksalmon;">breakcore</span><span style="color: #ffffff5d;"><sub>(as well as anything related to it such as <span style="color: cadetblue;">DnB</span> and<span style="color: cornflowerblue;"> jungle</span>)</sub></span>, and by breakcore I don't mean artists like <span style="color: rgb(118, 0, 148);">Sewerslvt</span> or <span style="color: rgb(15, 145, 15);">Goreshit</span>, while I do enjoy them, they more fall under the DnB category <span style="color: #76b9e670;">(Goreshit DOES make breakcore but he's more of a variety artist)</span><br><br>I'm more of a fan of old-gen breakcore/breakcore where they actually honor the meaning of the word, some of my fav artists are <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=50fe885609e041e0" style="color: rgb(0, 0, 0); text-shadow: 2px 2px rgb(155, 155, 155); background-color: white; padding: 2px;">hkmori</a>, <a href="https://open.spotify.com/artist/6XPrvweB1zFfzTQv3ajRHC?si=Os6IW3CwTYelE3_J4HCL4A" style="color: rgb(255, 214, 221); text-shadow: 2px 2px aliceblue;">Yem</a>, <a href="https://open.spotify.com/artist/7eKIP3IoPoUAZgZuvMM6hf?si=Y1sfLCFlQLyZeWgEq8cOXw" style="color: goldenrod;">Venetian Snares</a>  and more recently <a href="https://open.spotify.com/artist/35LM3RHYCFdizCendce2Iw?si=j5zV231yRaOBb0OwBtVH5A" style="color:#3d7ebb; text-shadow: 2px 2px rgb(97, 3, 3);">Nacho</a>
                 </div>
             </div>
             <div id="games" class="drag">
-                <div class="title">homebrew&emsp; <sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
+                <div class="title">homebrew&thinsp;<sup><img src="/assets/mainAssets/ds3.gif" style="width: 1vw; position: absolute;" alt=""></sup><span class="x">x</span></div>
                 <div class="text">
                     I LOVE LOVE LOVE LOVE HOMEBREW!!<sub><img src="assets/mainAssets/STUPIDCAT.gif" alt="" style="width: 1vw;"></sub><br><br>I could go on all day about how much I love homebrew and how I would recommend it to ANYONE (especially anyone with an old console like the ds/3ds family of consoles), but instead let me just list points as to why I think people should homebrew <br><br>
                     &emsp; ➥ "Ease of access" to games <br>
@@ -241,7 +228,7 @@
         </div>
         <section id="box" class="drag">
             <div id="webmaster" style="text-shadow: 2px 2px black; font-weight: 600;">
-                <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&emsp; <sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
+                <div class="title" style="background-color: rgb(81, 81, 81); border: 2px outset rgb(133, 133, 133);">webmaster&thinsp;<sup><img src="assets/mainAssets/webmaster.webp" style="width: 1vw; position: absolute;" alt=""></sup><span id="x-special">x</span></div>
                 <h1 class="text" style="text-align: center;">Hello, this is the webmaster, here to say a few things about myself</h1>  
                 <div style="display: flex;">
                     <div class="window" style="width: 55%; margin: 10px; margin-left: 10%; display: flexbox; height:fit-content;">
@@ -290,7 +277,7 @@
             </div>
         </section>
         <section id="tablist" class="drag">
-            <div class="title" id="specialTitle">other things!!&emsp;<sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
+            <div class="title" id="specialTitle">other things!!&thinsp;<sub><img src="/assets/mainAssets/emailme.gif" style="width: 2vw; position: absolute;" alt=""></sub><span class="x">x</span></div>
             <div id="thoughtTabs">
                 <ul>
                     <li><a id="tab1" class="buttons" href="#VSRGs">VSRG's</a></li>

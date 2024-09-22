@@ -316,6 +316,63 @@
 
 /* end of 98.css */
 
+#webamp {
+  display: visible;
+}
+
+@media screen and (max-width: 1080px) {
+  #webamp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #webamp {
+    display: none !important;
+  }
+
+  .bars {
+    font-size: 1.4vw !important;
+  }
+
+  .text {
+    font-size: 1vw !important;
+  }
+
+  .title {
+    font-size: 1vw !important;
+  }
+
+  #flexDiv {
+    display: flex;
+    img{width: 7vw !important; height: auto;};  
+    gap: 2px;
+  }
+
+  #rightBar > span > ol > span > a > img {
+    width: 1vw !important;
+  }
+  #rightBar > a:nth-child(8) > img:nth-child(1) {
+    width: 1vw !important;
+  }
+
+  #mainDiv > span> img {
+    width: 1vw !important;
+  }
+
+  #infSidebar {
+    top: 40vh !important;
+  }
+  
+  body > a:nth-child(4) > img:nth-child(1) {
+    top: 10vh !important;
+  }
+
+  body > img:nth-child(1){
+    top: 15vh !important;
+  }
+}
+
 @font-face {
   font-family: ADDSBP__;
   src: url(../assets/pixelmix.ttf);
@@ -658,10 +715,12 @@ hr {
   border: 2px outset rgb(67, 41, 82);
   background-color: rgb(70, 39, 95);
   color: white;
-  padding-bottom: .6vw !important;
+  
   font-size: 0.6vw;
   font-weight: 400;
   padding: .3vw;
+  padding-bottom: .6vw !important;
+  padding-right: 0 !important;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
