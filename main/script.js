@@ -1,10 +1,10 @@
 // if you see this, may god forgive your eyes for the shitshow that is my code, thank you, good luck
 
-
-// webamp.options.initialTracks.push({
-//     metaData: {artist: "Tosdy fox",title: "Deltarune sgdsgs: 28 - Hip Shop",},url: "https://files.catbox.moe/n92z99.mp3",
-// })
-
+window.onload = () => {
+    console.log("▄▀█ █▄░█ █▄█   █▀▀ █▀█ █▄░█ █▀ █▀█ █░░ █▀▀   █░░ █▀█ █▀▀ █▀   █▄█ █▀█ █░█   █▀ █▀▀ █▀▀   ▄▀█ █▀█ █▀▀\n█▀█ █░▀█ ░█░   █▄▄ █▄█ █░▀█ ▄█ █▄█ █▄▄ ██▄   █▄▄ █▄█ █▄█ ▄█   ░█░ █▄█ █▄█   ▄█ ██▄ ██▄   █▀█ █▀▄ ██▄\n█▀█ █░█ █▀█ █▀▀ █░░ █▄█   █▀▀ █▀█ █▀█   █▀▄ █▀▀ █▄▄ █░█ █▀▀   █▀█ █░█ █▀█ █▀█ █▀█ █▀ █▀▀ █▀ ░   █\n█▀▀ █▄█ █▀▄ ██▄ █▄▄ ░█░   █▀░ █▄█ █▀▄   █▄▀ ██▄ █▄█ █▄█ █▄█   █▀▀ █▄█ █▀▄ █▀▀ █▄█ ▄█ ██▄ ▄█ █   █\n█▀▀ ▄▀█ █▄░█ ▀ ▀█▀   █▄▄ █▀▀   █▄▄ █▀█ ▀█▀ █░█ █▀▀ █▀█ █▀▀ █▀▄   ▀█▀ █▀█   █▀█ █▀▀ █▀▄▀█ █▀█ █░█ █▀▀   ▀█▀ █░█ █▀▀ █▀▄▀█\n█▄▄ █▀█ █░▀█ ░ ░█░   █▄█ ██▄   █▄█ █▄█ ░█░ █▀█ ██▄ █▀▄ ██▄ █▄▀   ░█░ █▄█   █▀▄ ██▄ █░▀░█ █▄█ ▀▄▀ ██▄   ░█░ █▀█ ██▄ █░▀░█")
+    sidebar()
+}
+//  general variables
 const audioStop = document.getElementById("audioStop")
 const portal = document.getElementById("portalAudio")
 
@@ -39,11 +39,6 @@ let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
 
-
-window.onload = () => {
-    console.log("▄▀█ █▄░█ █▄█   █▀▀ █▀█ █▄░█ █▀ █▀█ █░░ █▀▀   █░░ █▀█ █▀▀ █▀   █▄█ █▀█ █░█   █▀ █▀▀ █▀▀   ▄▀█ █▀█ █▀▀\n█▀█ █░▀█ ░█░   █▄▄ █▄█ █░▀█ ▄█ █▄█ █▄▄ ██▄   █▄▄ █▄█ █▄█ ▄█   ░█░ █▄█ █▄█   ▄█ ██▄ ██▄   █▀█ █▀▄ ██▄\n█▀█ █░█ █▀█ █▀▀ █░░ █▄█   █▀▀ █▀█ █▀█   █▀▄ █▀▀ █▄▄ █░█ █▀▀   █▀█ █░█ █▀█ █▀█ █▀█ █▀ █▀▀ █▀ ░   █\n█▀▀ █▄█ █▀▄ ██▄ █▄▄ ░█░   █▀░ █▄█ █▀▄   █▄▀ ██▄ █▄█ █▄█ █▄█   █▀▀ █▄█ █▀▄ █▀▀ █▄█ ▄█ ██▄ ▄█ █   █\n█▀▀ ▄▀█ █▄░█ ▀ ▀█▀   █▄▄ █▀▀   █▄▄ █▀█ ▀█▀ █░█ █▀▀ █▀█ █▀▀ █▀▄   ▀█▀ █▀█   █▀█ █▀▀ █▀▄▀█ █▀█ █░█ █▀▀   ▀█▀ █░█ █▀▀ █▀▄▀█\n█▄▄ █▀█ █░▀█ ░ ░█░   █▄█ ██▄   █▄█ █▄█ ░█░ █▀█ ██▄ █▀▄ ██▄ █▄▀   ░█░ █▄█   █▀▄ ██▄ █░▀░█ █▄█ ▀▄▀ ██▄   ░█░ █▀█ ██▄ █░▀░█")
-    sidebar()
-}
 // -----------------------------------------------------------------------------------------------
 function sidebar() {
     const sidebarStopOrPlay = document.querySelectorAll("#infSidebar > ul")
@@ -104,7 +99,6 @@ async function fourChanWarning() {
 // -----------------------------------------------------------------------------------------------
 container.addEventListener("click", (e) => {
     const clickedTab = e.target.closest("a")
-    // const forStyle = e.target.closest("href")
     const whichHref = clickedTab.getAttribute("href")
     const tabber = container.querySelectorAll("ul li a")
     console.log(tabber)
@@ -116,36 +110,66 @@ container.addEventListener("click", (e) => {
         list.style.border = '2px outset rgb(67, 41, 82)'    
     })
 
-    if (clickedTab.id == 'tab1') {
-        container.style.backgroundImage = 'url(/assets/mainAssets/RGbg.gif)'
-        clickedTab.style.backgroundColor = '#644686'
-    } else if (clickedTab.id == 'tab2') {
-        container.style.backgroundImage = 'url(assets/mainAssets/StatusBg.gif)'
-    } else if (clickedTab.id == 'tab3'){
-        container.style.backgroundImage = 'url(assets/mainAssets/leagueBg.jpg'
+    if (clickedTab) {
+        document.getElementById("tabsPanels").removeAttribute("hidden")
     }
-    
-    switchTab(clickedTab)
-    clickedTab.style.backgroundColor = '#644686'
 
-    if (whichHref == '#statuscafe') {
-        tab2.style = 'background-color: #1c6d62 !important; border: 2px outset #0a332a;'
-        tab1.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
-        tab3.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
-        gaming.classList.remove("title")
-        gaming.classList.remove("league")
-        gaming.classList.add("titleStatus")        
-    } else if (whichHref == '#League'){
-        tab1.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
-        tab2.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
-        tab3.style = 'background-color: rgb(155, 121, 37); border: 2px outset rgb(155, 106, 32)'
-        gaming.classList.remove("title")
-        gaming.classList.add("league")
-    } else {
-        gaming.classList.remove("titleStatus")
-        gaming.classList.remove("league")
-        gaming.classList.add("title")
+    switch (Boolean(clickedTab)) {
+        case clickedTab.id == 'tab1':
+            container.style.backgroundImage = 'url(/assets/mainAssets/RGbg.gif)'
+            clickedTab.style.backgroundColor = '#644686'
+        break;
+        
+        case clickedTab.id == 'tab2':
+            container.style.backgroundImage = 'url(assets/mainAssets/StatusBg.gif)'
+        break;
+
+        case clickedTab.id == 'tab3':
+            container.style.backgroundImage = 'url(assets/mainAssets/leagueBg.jpg'
+        break;
     }
+
+    switch (Boolean(whichHref)) {
+        case whichHref == '#statuscafe':
+            changeStyle("t1")
+        break;
+
+        case whichHref == '#League':
+            changeStyle("t2")
+        break;
+
+        default:
+            changeStyle("t3")
+        break;
+    };
+
+    function changeStyle(mt) {
+        switch (true) {
+            case mt == "t1":
+                tab2.style = 'background-color: #1c6d62 !important; border: 2px outset #0a332a;'
+                tab1.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
+                tab3.style = 'background-color: #114740 !important; border: 2px outset #0a332a !important;'
+                gaming.classList.remove("title")
+                gaming.classList.remove("league")
+                gaming.classList.add("titleStatus")        
+            break;
+
+            case mt == "t2":
+                tab1.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
+                tab2.style = 'background-color: rgb(71, 59, 26) !important; border: 2px outset rgb(155, 106, 32) !important;'
+                tab3.style = 'background-color: rgb(155, 121, 37); border: 2px outset rgb(155, 106, 32)'
+                gaming.classList.remove("title")
+                gaming.classList.add("league")
+            break;
+
+            case mt == "t3":
+                gaming.classList.remove("titleStatus")
+                gaming.classList.remove("league")
+                gaming.classList.add("title")
+            break;
+        }
+    };
+    switchTab(clickedTab);
 });
 
 function switchTab(newTab) {
