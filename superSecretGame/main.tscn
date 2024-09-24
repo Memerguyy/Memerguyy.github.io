@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://cg7eivt0jwklc"]
+
+[ext_resource type="Texture2D" uid="uid://bwu0ut3djvmg3" path="res://assets/Character/character_0000.png" id="1_fpleq"]
+[ext_resource type="Script" path="res://player.gd" id="1_hlluf"]
+[ext_resource type="Texture2D" uid="uid://du2yc7h2mykae" path="res://assets/Character/character_0001.png" id="2_le5u4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_b2r1x"]
+size = Vector2(700, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gml2h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yaddv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fpleq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_le5u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fpleq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rthu1"]
+size = Vector2(20, 23)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(390, 225)
+zoom = Vector2(2, 2)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(378, 366)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+mesh = SubResource("QuadMesh_b2r1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(35, 5)
+shape = SubResource("RectangleShape2D_gml2h")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(330, 205)
+script = ExtResource("1_hlluf")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_yaddv")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rthu1")
