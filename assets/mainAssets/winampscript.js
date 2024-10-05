@@ -101,7 +101,7 @@ const Winamp = window.Webamp;
 function port1(arr, el) {
     let ind = arr.indexOf(el);
     if (ind > -1)
-      arr.splice(ind, 1);
+    arr.splice(ind, 1);
     arr.push(el);
  }
 console.log(webamp.options.initialTracks[13])
