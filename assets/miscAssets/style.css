@@ -1,4 +1,59 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: ms ui gothic;
+    color: white;
+}
+
+body { 
+    min-height: 100vh; 
+    background-color: black;
+}
+
+#mainPanel {
+    margin: 0 30% !important;
+    height: 25vw;    
+    border: 1px solid white;
+    transform: translateY(25vh);
+    margin: 0 auto;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    padding: 0 5px 0 5px;
+    display: flex;
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+td {
+    width: 100%;
+}
+
+#window::after{
+    content: 'x';
+}
+
+#hackerInputSigma {
+    background-color: black;
+    color: rgb(0, 209, 0);
+}
+
+#hackerInputSigma::after {
+    content: '_';
+}
+
+#hackerContainer {
+    height: 90%;
+    scrollbar-width:thin;
+    scrollbar-color: white black;
+    overflow-y: scroll;
 }

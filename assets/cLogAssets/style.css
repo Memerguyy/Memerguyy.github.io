@@ -56,3 +56,7 @@ body {
     padding-left: 75px;
     border-radius: 12px;
 }
+
+* {
+    scrollbar-width: none;
+}
