@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stamp maker!!!</title>
     <link rel="stylesheet" href="./assets/stampAssets/style.css">
+    <link rel="shortcut icon" href="./assets/stampAssets/favicon.gif" type="image/x-icon">
     <!-- <style>
         canvas {
           border: 1px solid black;
@@ -14,15 +15,20 @@
 <body style="background-color: black;color:white;">
   <!-- <h1>TODO: <br> -ADD MORE TEMPLATES</h1>   -->
   <center><p><h1><i>!! Memer's stamp maker !!</i> </h1></p></center>
-  <div style="padding-right: 2rem; display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-end;">
-    <img src="./assets/stampAssets/stamp.png" class="stamp">
-    <img src="./assets/stampAssets/stamp2.png" class="stamp">
-    <span><--- awesome templates you can use!!!</span>
+  <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-end;">
+    <div style="color: white;font-family: ms ui gothic;padding-right: 2rem;display: flex;flex-direction: column;align-items: center;width: max-content;">
+    <div style="color: white;font-family: ms ui gothic;display: flex;width: 100%;justify-content: space-between;">
+      <img src="./assets/stampAssets/stamp.png" class="stamp">
+      <img src="./assets/stampAssets/stamp2.png" class="stamp">
+    </div>
+    <span>awesome templates you can use!!!</span>
   </div>
+</div>
+  
   <center>
     <div>
-    <button class="slice" value="half">Halve the size</button>
-    <button class="slice" value="double">Double the size</button>
+    <button class="slice shadow" value="half">Halve the size</button>
+    <button class="slice shadow" value="double">Double the size</button>
     </div>
   </center>
   <form>
@@ -33,7 +39,7 @@
       </div>
   </form>
   <canvas id="canvas" height="0"></canvas>
-  <center><button id="canvBtn" style="display: block; aspect-ratio: 1/.5; font-size: large;">Copy Image</button></center>
+  <center><button id="canvBtn" style="display: block; aspect-ratio: 1/.5; font-size: large;" class="shadow">Copy Image</button></center>
   <!-- <h1>Todo: add the option to change the stamptileset</h1> -->
   <script src="./assets/stampAssets/main.js"></script>
 </body>

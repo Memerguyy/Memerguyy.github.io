@@ -11,6 +11,10 @@ button {
     
 }
 
+.shadow {
+    text-shadow: white 1px 1px;
+}
+
 .slice {
     aspect-ratio: 1/.5;
     width: 5rem;
