@@ -95,7 +95,7 @@ const Winamp = window.Webamp;
                 url:  "https://files.catbox.moe/ejlw1c.mp3",
             },
             {metaData: 
-                {artist: "JarekTEK", title: "Frankenbarf"}
+                {artist: "JarekTEK", title: "FRANKENBARF"}
             , url: "https://files.catbox.moe/wmnrsy.mp3"
             },
             {metaData: 
