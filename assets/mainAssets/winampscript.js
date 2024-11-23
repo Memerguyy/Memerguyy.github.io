@@ -94,6 +94,14 @@ const Winamp = window.Webamp;
                 },
                 url:  "https://files.catbox.moe/ejlw1c.mp3",
             },
+            {metaData: 
+                {artist: "JarekTEK", title: "Frankenbarf"}
+            , url: "https://files.catbox.moe/wmnrsy.mp3"
+            },
+            {metaData: 
+                {artist: "JarekTEK", title: "Are You Even Serious"}
+            , url: "https://files.catbox.moe/hql4kl.mp3"
+            },
           ],
     });
     webamp.renderWhenReady(document.getElementById('winamp-container'));

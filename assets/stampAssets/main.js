@@ -9,8 +9,6 @@ const height = document.getElementById("height");
 const ctx = canv.getContext("2d");
 const img = new Image();
 const stamp = new Image();
-const tempOne = document.getElementById("tempOne")
-const tempTwo = document.getElementById("tempTwo")
 
 const stampSheet = new Image();
 stampSheet.src = "./assets/stampAssets/stampsheet.png";
@@ -56,19 +54,32 @@ function drawImage() {
   }
 }
 
-const slice = document.getElementById("slice");
-slice.addEventListener("click", () => {
-  width.value = width.value / 2
-  height.value = height.value / 2
-  drawImage()
-});
+const slicersArr = Array.from(document.getElementsByClassName("slice"))
+slicersArr.forEach((e) => {
+  e.addEventListener("click", () => {
+    if (e.value == 'half') {
+      width.value = width.value / 2
+      height.value = height.value / 2
+      drawImage()
+    } else if (e.value == 'double'){
+      width.value = width.value * 2
+      height.value = height.value * 2
+      drawImage()
+    }
+  })
+})
 
-const ecils = document.getElementById("ecils");
-ecils.addEventListener("click", () => {
-  width.value = width.value * 2
-  height.value = height.value * 2
-  drawImage()
-});
+// const slice = document.getElementById("slice");
+// slice.addEventListener("click", () => {
+  
+// });
+
+// const ecils = document.getElementById("ecils");
+// ecils.addEventListener("click", () => {
+//   width.value = width.value * 2
+//   height.value = height.value * 2
+//   drawImage()
+// });
 
 const chooseFile = document.getElementById("choose-file");
 const imgPreview = document.getElementById("img-preview");
@@ -152,8 +163,9 @@ setInterval(() => {
   }
 }, 1000);
 
+const stamps = document.getElementsByClassName("stamp")
 
-tempOne.addEventListener("click", () => {
+stamps[0].addEventListener("click", () => {
   ctx.reset()
   stamp.src = "./assets/stampAssets/stamp.png";
   width.value = stamp.width
@@ -164,7 +176,7 @@ tempOne.addEventListener("click", () => {
   ctx.drawImage(stamp, 0, 0);
 });
 
-tempTwo.addEventListener("click", () => {
+stamps[1].addEventListener("click", () => {
   ctx.reset()
   stamp.src = "./assets/stampAssets/stamp2.png";
   width.value = stamp.width

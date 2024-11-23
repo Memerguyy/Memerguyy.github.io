@@ -11,10 +11,20 @@ button {
     
 }
 
+.slice {
+    aspect-ratio: 1/.5;
+    width: 5rem;
+    font-size: 1em;
+}
+
 #lighter {
-    color:  #f2b2ff
+    color:  #f2b2ff;
+    font-style: italic;
+    font-size: 5rem;
 }
 
 #darker {
-    color: #a593da
+    color: #a593da;
+    font-style: italic;
+    font-size: 5rem;
 }
