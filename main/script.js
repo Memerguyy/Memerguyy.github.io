@@ -241,3 +241,8 @@ function shittyRedirect() {
 
     document.querySelector('.rainbowAllTheWay').innerHTML.addEventListener("click")
   })();
+
+function hideText() {
+    let hidden = document.querySelector("#stampMakerRef > div.text").style;
+    hidden.display == "block" ? hidden.display = "none" : hidden.display = "block"
+}

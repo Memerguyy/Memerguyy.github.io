@@ -549,6 +549,14 @@ hr {
   margin-bottom: 50px;
 }
 
+#stampMakerRef {
+  width: 20vw; left: 20vw; position: absolute; top: 20vw; background-image: url(../assets/mainAssets/stampBg.png); display: flex; flex-direction: column-reverse;
+}
+
+#stampMakerRef > .title {
+  background-color: #8d1414; border-color: #a71f4c; padding: .3vw !important; display: flex !important;
+}
+
 #box {
   display: flex;
   width: 100%;
