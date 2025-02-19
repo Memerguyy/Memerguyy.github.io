@@ -23,27 +23,35 @@
 
 <body>
     <div id="stampMakerRef" class="drag ui-draggable ui-draggable-handle">
-        <div class="title" onclick="hideText()"><div>CLICK ME!</div></div>
+        <div class="title" onclick="hideText(this)"><div>CLICK ME!</div></div>
         <div class="text" style="display: none;">
             <p>Hey! Have you ever wanted to make some TOTALLY <i>RAD</i> stamps???</p>
             <p>Look no further! Come and check out my awesome <u><a href="stampmaker"><i>stampmaker</i></a></u> free of charge!</p>
             <p><sup><i>I'm not responsible for whatever shitpost monstrosities you or anyone referred to this site may create</i></sup></p>
         </div>
     </div>
-    <img src="assets/mainAssets/maygodsaveyou.png" style="position: absolute; width: 29px; right: 10%; top: 25%;"
-        onclick="skibidiUnleashed()" alt="god has no mercy">
+    <div id="awesomeBox" class="drag ui-draggable ui-draggable-handle">
+        <div class="title" onclick="hideText(this)"><span class="x">x</span><div>Awesome box</div></div>
+        <div class="text" style="display: none;">
+            <p>Colors are fun! And you know what else also is? CUSTOMIZATION!!!</p>
+            <input type="number" id="hueChange" style="width: 25%;" oninput="hueChange(this)" max="360" min="0">
+            <p>Type in a funny number and watch the hue of the whole site change!!! <i><sup>warning: this might break stuff, Memer. Zoo. Inc. is not responsible for any damages to you or any changes in the nearby fabric of reality</sup></i></p>
+        </div>
+    </div>    
     <div style="width:40px; height:40px; position:absolute; text-shadow: none; top: 15em; left:10em;" id="winampCont">
         <div id="winamp-container" style="text-shadow: none !important;"></div>
     </div>
     <script src="assets/mainAssets/winampscript.js"></script>
-    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">
-        <img src="assets/mainAssets/ultrakill.png"
-            style="position: relative; float: right; right: 2%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto;"
-            alt="" class="drag">
-    </a>
+    <section style="position: relative; float: right; right: 5%; margin-top: 5vw; transform: skew(1deg, -2deg); width: 13vw; height: auto; z-index: 2;">
+        <img src="assets/mainAssets/maygodsaveyou.png" style="position: absolute; float: right; margin-top: 5vw;width: 29px;"
+    onclick="skibidiUnleashed()" alt="god has no mercy">
+        <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">
+            <img src="assets/mainAssets/ultrakill.png" style="position: inherit; float: inherit; right: inherit; margin-top: inherit; transform: skew(1deg, -2deg); width: 13vw; height: auto; z-index: 2;"alt="" class="drag">
+        </a>
+    </section>
     <a href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/" target="_blank">
         <img src="assets/mainAssets/yomiHustle.png"
-            style="width: 15vw; position: absolute; left:3%; top: 58%; height: auto;" alt="" class="drag">
+            style="width: 15vw; position: relative; float: left; left: 2%; margin-top: 25vw;" alt="" class="drag">
     </a>
     <div class="cbox drag">
         <div class="title" id="cboxTitle">CBOX<span class="x">x</span></div>

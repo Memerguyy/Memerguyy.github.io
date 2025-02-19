@@ -2,7 +2,17 @@
 
 window.onload = () => {
     console.log("▄▀█ █▄░█ █▄█   █▀▀ █▀█ █▄░█ █▀ █▀█ █░░ █▀▀   █░░ █▀█ █▀▀ █▀   █▄█ █▀█ █░█   █▀ █▀▀ █▀▀   ▄▀█ █▀█ █▀▀\n█▀█ █░▀█ ░█░   █▄▄ █▄█ █░▀█ ▄█ █▄█ █▄▄ ██▄   █▄▄ █▄█ █▄█ ▄█   ░█░ █▄█ █▄█   ▄█ ██▄ ██▄   █▀█ █▀▄ ██▄\n█▀█ █░█ █▀█ █▀▀ █░░ █▄█   █▀▀ █▀█ █▀█   █▀▄ █▀▀ █▄▄ █░█ █▀▀   █▀█ █░█ █▀█ █▀█ █▀█ █▀ █▀▀ █▀ ░   █\n█▀▀ █▄█ █▀▄ ██▄ █▄▄ ░█░   █▀░ █▄█ █▀▄   █▄▀ ██▄ █▄█ █▄█ █▄█   █▀▀ █▄█ █▀▄ █▀▀ █▄█ ▄█ ██▄ ▄█ █   █\n█▀▀ ▄▀█ █▄░█ ▀ ▀█▀   █▄▄ █▀▀   █▄▄ █▀█ ▀█▀ █░█ █▀▀ █▀█ █▀▀ █▀▄   ▀█▀ █▀█   █▀█ █▀▀ █▀▄▀█ █▀█ █░█ █▀▀   ▀█▀ █░█ █▀▀ █▀▄▀█\n█▄▄ █▀█ █░▀█ ░ ░█░   █▄█ ██▄   █▄█ █▄█ ░█░ █▀█ ██▄ █▀▄ ██▄ █▄▀   ░█░ █▄█   █▀▄ ██▄ █░▀░█ █▄█ ▀▄▀ ██▄   ░█░ █▀█ ██▄ █░▀░█")
-    sidebar()
+    sidebar();
+    let hue= 0
+    const aBElems = document.querySelector(`#awesomeBox`)
+    setInterval(() => {
+        if (hue<360) {
+            hue++
+            aBElems.style.filter = `hue-rotate(${hue}deg)`
+        } else {
+            hue = 0
+        }
+    }, 10);
 }
 //  general variables
 const audioStop = document.getElementById("audioStop")
@@ -240,9 +250,19 @@ function shittyRedirect() {
     })();
 
     document.querySelector('.rainbowAllTheWay').innerHTML.addEventListener("click")
-  })();
+})();
 
-function hideText() {
-    let hidden = document.querySelector("#stampMakerRef > div.text").style;
+function hideText(clickId) {
+    // let objId = clickId.id
+    console.log(clickId.parentElement.id)
+    let hidden = document.querySelector(`#${clickId.parentElement.id} > div.text`).style;
     hidden.display == "block" ? hidden.display = "none" : hidden.display = "block"
+}
+
+function hueChange(hueNum) {
+    if (hueNum.value > 360 || hueNum.value < -360) {
+        hueNum.value = 0
+    } else {
+        document.body.style.filter = `hue-rotate(${hueNum.value}deg)`         
+    }
 }
