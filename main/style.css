@@ -431,6 +431,11 @@ body {
   overflow-x: hidden !important;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none; /* For Chrome, Safari */
+}
+
 a {
   text-decoration: none;
   color: inherit;

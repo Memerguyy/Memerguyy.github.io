@@ -48,6 +48,10 @@ const sdBar = document.getElementById("infSidebar")
 let cboxCounter = 1
 const cboxTitle = document.getElementById("cboxTitle")
 const cbox = document.getElementById("cbox")
+//  -----------------------------------------------------------------------------------------------
+async function hideScroll(elemClick) {
+    elemClick.checked ? document.body.classList.add("hide-scrollbar") : document.body.classList.remove("hide-scrollbar")
+}
 
 // -----------------------------------------------------------------------------------------------
 function sidebar() {
