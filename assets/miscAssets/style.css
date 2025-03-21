@@ -42,13 +42,32 @@ td {
     content: 'x';
 }
 
-#hackerInputSigma {
+#hackerContainer {
+    padding: 2%;
+}
+
+#hackerInputSigma, #hackerInputSigma > * {
     background-color: black;
     color: rgb(0, 209, 0);
 }
-
-#hackerInputSigma::after {
+#hackerInputSigma> div:last-child::after {
     content: '_';
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #hackerContainer {
