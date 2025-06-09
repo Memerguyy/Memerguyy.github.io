@@ -3,9 +3,10 @@
     box-sizing: border-box !important;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
-    color: cornflowerblue;
+    font-size: large;
+    color: rgb(215, 215, 215);
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgb(38, 32, 56);
+    -webkit-text-stroke-color: rgb(100, 100, 100);
 }
 
 body {
@@ -33,26 +34,46 @@ header {
 
 main {
     display: flex !important;
+    gap: 25px;
+    flex-direction: column;
+}
+
+section {
+    display: flex !important;
     flex-direction: row;
     padding: 1rem;
-    width: fit-content;
-    max-width: 50%;
+    flex-wrap: wrap;
+    width: 65%;
     align-items: center;
-    border: 6px rgb(57, 93, 122) ridge;
+    border: 6px rgb(110, 110, 110) ridge;
     background-color: rgb(31, 77, 104);
     background-blend-mode: color;
     background-image: url("background.png");
     margin: 0 auto;
+    gap: 10px;
     justify-content: center;
 }
 
+section > h1 {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
 section > a > img {
+    -webkit-filter:none !important;
+    filter: none !important;
     min-height: 6rem;
     max-height: 6rem;
 }
 
-footer {
+footer >* {
     width: 40%;
-    font-size: 0.6rem;
+    font-size: 1rem;
+    color: black !important;
     margin: 0 auto;
 }
